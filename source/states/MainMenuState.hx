@@ -133,7 +133,7 @@ class MainMenuState extends MusicBeatState
 		menuItems.add(menuItem);
 		return menuItem;
 	        }
-        }
+        
                 for (i in 0...optionShit.length)
 		{
 			var option:FlxSprite = menuItems.members[i];
