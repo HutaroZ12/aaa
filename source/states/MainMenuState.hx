@@ -132,9 +132,8 @@ class MainMenuState extends MusicBeatState
 		menuItem.scrollFactor.set();
 		menuItems.add(menuItem);
 		return menuItem;
-	        }
         
-                for (i in 0...optionShit.length)
+                for (num => option in optionShit)
 		{
 			var option:FlxSprite = menuItems.members[i];
 			
