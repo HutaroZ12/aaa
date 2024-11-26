@@ -132,6 +132,8 @@ class MainMenuState extends MusicBeatState
 		menuItem.scrollFactor.set();
 		menuItems.add(menuItem);
 		return menuItem;
+	        }
+         }
         
                 for (num => option in optionShit)
 		{
@@ -281,7 +283,7 @@ class MainMenuState extends MusicBeatState
 					if (ClientPrefs.data.flashing)
 						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
-					var item:FlxSprite;
+					/*var item:FlxSprite;
 					var option:String;
 					switch(curColumn)
 					{
@@ -296,7 +298,7 @@ class MainMenuState extends MusicBeatState
 						case RIGHT:
 							option = rightOption;
 							item = rightItem;
-					}
+				*/	}
 
 					FlxFlicker.flicker(item, 1, 0.06, false, false, function(flick:FlxFlicker)
 					{
