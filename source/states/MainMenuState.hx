@@ -15,13 +15,13 @@ class MainMenuState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
 	var optionShit:Array<String> = [
-		'story_mode',
-		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
-		#if ACHIEVEMENTS_ALLOWED 'awards', #end
-		'credits',
-		#if !switch 'donate', #end
-		'options'
+		'story_mode', // 0
+		'freeplay', // 1
+		//#if MODS_ALLOWED 'mods', #end
+		//#if ACHIEVEMENTS_ALLOWED 'awards', #end
+		'credits', // 2
+                //#if !switch 'donate', #end
+		'options' // 3
 	];
 
 	var magenta:FlxSprite;
@@ -85,6 +85,26 @@ class MainMenuState extends MusicBeatState
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.updateHitbox();
 			menuItem.screenCenter(X);
+
+			switch (i)
+			{
+			    case 0:
+				FlxTween.tween(menuItem, {x:164}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.y = 2;
+
+			    case 1:
+				FlxTween.tween(menuItem, {x:134}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.y = 41;
+
+			    case 2:
+				FlxTween.tween(menuItem, {x:114}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.y = 9;
+
+			    case 3:
+				FlxTween.tween(menuItem, {x:104}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.y = 34;
+			}	
+			
 		}
 
 		var psychVer:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
@@ -164,15 +184,15 @@ class MainMenuState extends MusicBeatState
 							case 'freeplay':
 								MusicBeatState.switchState(new FreeplayState());
 
-							#if MODS_ALLOWED
-							case 'mods':
-								MusicBeatState.switchState(new ModsMenuState());
-							#end
+							//#if MODS_ALLOWED
+							//case 'mods':
+							//	MusicBeatState.switchState(new ModsMenuState());
+							//#end
 
-							#if ACHIEVEMENTS_ALLOWED
-							case 'awards':
-								MusicBeatState.switchState(new AchievementsMenuState());
-							#end
+							//#if ACHIEVEMENTS_ALLOWED
+							//case 'awards':
+							//	MusicBeatState.switchState(new AchievementsMenuState());
+							//#end
 
 							case 'credits':
 								MusicBeatState.switchState(new CreditsState());
