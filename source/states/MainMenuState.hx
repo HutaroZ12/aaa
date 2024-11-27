@@ -194,12 +194,10 @@ class MainMenuState extends MusicBeatState
 							
 
 							FlxTween.tween(spr, {x: -2000}, 2.2, {
-								ease: FlxEase.expoInOut,
-							});
+								ease: FlxEase.expoInOut});
 
 							FlxTween.tween(spr, {alpha: 0}, 3.2, {
-								ease: FlxEase.expoInOut,
-							});
+								ease: FlxEase.expoInOut});
 							
 
 							FlxFlicker.flicker(spr, 1, 1, false, false, function(flick:FlxFlicker)
