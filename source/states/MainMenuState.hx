@@ -97,15 +97,15 @@ class MainMenuState extends MusicBeatState
 
 			    case 1:
 				FlxTween.tween(menuItem, {x:202}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.y = 41;
+				menuItem.y = 4;
 
 			    case 2:
-				FlxTween.tween(menuItem, {x:202}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.y = 9;
+				FlxTween.tween(menuItem, {x:200}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.y = 6;
 
 			    case 3:
 				FlxTween.tween(menuItem, {x:104}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.y = 34;
+				menuItem.y = 8;
 			}	
 			
 		}
