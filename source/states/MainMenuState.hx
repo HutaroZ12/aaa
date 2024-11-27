@@ -135,7 +135,7 @@ class MainMenuState extends MusicBeatState
 
 		super.create();
 
-		Ft)
+		FlxG.camera.follow(camFollow, null, 9);
 	{
 		if (FlxG.sound.music.volume < 0.8)
 		{
