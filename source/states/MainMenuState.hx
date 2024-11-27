@@ -178,7 +178,7 @@ class MainMenuState extends MusicBeatState
 
 					FlxTween.tween(menuItem, {x:1200}, 2.2, {ease: FlxEase.expoInOut});
 					
-					//if (ClientPrefs.data.flashing)
+					if (ClientPrefs.data.flashing)
 					
 						menuItems.forEach(function(spr:FlxSprite)
 					{
