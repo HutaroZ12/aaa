@@ -169,7 +169,10 @@ class MainMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 				FlxG.camera.flash(FlxColor.WHITE, 1);
 
-				FlxTween.tween(menuItem, {x:-3200}, 2.2, {ease: FlxEase.expoInOut});
+				for (i in 0...optionShit.length)
+				{
+				FlxTween.tween(menuItem, {x:-3200}, 2.2, {ease: FlxEase.expoInOut})
+				}
 				
 				if (optionShit[curSelected] == 'donate')
 				{
