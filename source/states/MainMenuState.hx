@@ -169,7 +169,6 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
-					FlxTween.tween(menuItem, {x:-3200}, 2.2, {ease: FlxEase.expoInOut});
 					
 					if (ClientPrefs.data.flashing)
 						FlxG.camera.flash(FlxColor.WHITE, 1);
