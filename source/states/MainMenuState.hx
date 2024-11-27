@@ -174,9 +174,35 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
+					FlxG.camera.flash(FlxColor.WHITE, 1);
 
-					if (ClientPrefs.data.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+					FlxTween.tween(menuItem, {x:1200}, 2.2, {ease: FlxEase.expoInOut});
+					
+					//if (ClientPrefs.data.flashing)
+					
+						menuItems.forEach(function(spr:FlxSprite)
+					{
+						if (curSelected != spr.ID)
+						{
+							FlxTween.tween(spr, {x: 2000}, 2.2, {
+								ease: FlxEase.expoInOut,
+							});
+							
+						}
+						else
+						{
+							
+
+							FlxTween.tween(spr, {x: -2000}, 2.2, {
+								ease: FlxEase.expoInOut,
+							});
+
+							FlxTween.tween(spr, {alpha: 0}, 3.2, {
+								ease: FlxEase.expoInOut,
+							});
+							
+
+							FlxFlicker.flicker(spr, 1, 1, false, false, function(flick:FlxFlicker)
 					
 					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
 					{
