@@ -167,20 +167,26 @@ class MainMenuState extends MusicBeatState
 			if (controls.ACCEPT)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
+				FlxG.camera.flash(FlxColor.WHITE, 1);
+
+				FlxTween.tween(menuItem, {x:-3200}, 2.2, {ease: FlxEase.expoInOut});
+				
 				if (optionShit[curSelected] == 'donate')
 				{
 					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
 				}
-				else
+				/*else
 				{
 					selectedSomethin = true;
+					
+					
 
-					if (ClientPrefs.data.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+					//if (ClientPrefs.data.flashing)
+					//	FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
 					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
 					{
-						switch (optionShit[curSelected])
+					*/	switch (optionShit[curSelected])
 						{
 							case 'story_mode':
 								MusicBeatState.switchState(new StoryMenuState());
