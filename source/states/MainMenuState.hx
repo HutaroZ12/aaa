@@ -159,7 +159,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.BACK)
 			{
-				endCheck = true;
+		selectedSomethin = true;
 		FlxG.sound.play(Paths.sound('confirmMenu'));
 		FlxG.camera.flash(FlxColor.WHITE, 1);
 
