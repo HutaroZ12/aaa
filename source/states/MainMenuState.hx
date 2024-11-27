@@ -1,4 +1,4 @@
-package states;
+lpackage states;
 
 import flixel.FlxObject;
 import flixel.addons.transition.FlxTransitionableState;
@@ -135,7 +135,7 @@ class MainMenuState extends MusicBeatState
 
 		super.create();
 
-		FlxG.camera.follow(camFollow, null, 9);
+		//FlxG.camera.follow(camFollow, null, 9);
 	{
 		if (FlxG.sound.music.volume < 0.8)
 		{
