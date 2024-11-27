@@ -159,7 +159,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.BACK)
 			{
-		selectedSomethin = true;
+		        selectedSomethin = true;
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				MusicBeatState.switchState(new TitleState());
 			}
@@ -175,34 +175,11 @@ class MainMenuState extends MusicBeatState
 				{
 					selectedSomethin = true;
 					FlxG.camera.flash(FlxColor.WHITE, 1);
-
-					FlxTween.tween(menuItem, {x:1200}, 2.2, {ease: FlxEase.expoInOut});
 					
 					if (ClientPrefs.data.flashing)
+						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 					
-						menuItems.forEach(function(spr:FlxSprite)
-					{
-						if (curSelected != spr.ID)
-						{
-							FlxTween.tween(spr, {x: 2000}, 2.2, {
-								ease: FlxEase.expoInOut,
-							});
-							
-						}
-						else
-						{
-							
-
-							FlxTween.tween(spr, {x: -2000}, 2.2, {
-								ease: FlxEase.expoInOut});
-
-							FlxTween.tween(spr, {alpha: 0}, 3.2, {
-								ease: FlxEase.expoInOut});
-							
-
-							FlxFlicker.flicker(spr, 1, 1, false, false, function(flick:FlxFlicker)
-	  
-					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
+					//FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
 					{
 						switch (optionShit[curSelected])
 						{
