@@ -135,7 +135,7 @@ class MainMenuState extends MusicBeatState
 
 		super.create();
 
-		//FlxG.camera.follow(camFollow, null, 9);
+		FlxG.camera.follow(camFollow, null, 9);
 	{
 		if (FlxG.sound.music.volume < 0.8)
 		{
@@ -169,11 +169,10 @@ class MainMenuState extends MusicBeatState
 				else
 				{
 					selectedSomethin = true;
-					FlxG.camera.flash(FlxColor.WHITE, 1);
-					
 					FlxTween.tween(menuItem, {x:-3200}, 2.2, {ease: FlxEase.expoInOut});
 					
-					//if (ClientPrefs.data.flashing)
+					if (ClientPrefs.data.flashing)
+						FlxG.camera.flash(FlxColor.WHITE, 1);
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
 					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
