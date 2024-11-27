@@ -80,7 +80,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 24);
 			menuItem.animation.play('idle');
-			menuItem.x = 1200;
+			menuItem.x = 3200;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if (optionShit.length < 6)
@@ -92,15 +92,15 @@ class MainMenuState extends MusicBeatState
 			switch (i)
 			{
 			    case 0:
-				FlxTween.tween(menuItem, {x:184}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:204}, 2.2, {ease: FlxEase.expoInOut});
 				menuItem.y = 2;
 
 			    case 1:
-				FlxTween.tween(menuItem, {x:134}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:202}, 2.2, {ease: FlxEase.expoInOut});
 				menuItem.y = 41;
 
 			    case 2:
-				FlxTween.tween(menuItem, {x:114}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:202}, 2.2, {ease: FlxEase.expoInOut});
 				menuItem.y = 9;
 
 			    case 3:
