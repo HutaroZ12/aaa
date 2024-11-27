@@ -97,7 +97,7 @@ class MainMenuState extends MusicBeatState
 
 			    case 1:
 				FlxTween.tween(menuItem, {x:202}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.y = 4;
+				menuItem.y = 5;
 
 			    case 2:
 				FlxTween.tween(menuItem, {x:200}, 2.2, {ease: FlxEase.expoInOut});
@@ -176,7 +176,10 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
 
 					if (ClientPrefs.data.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+						FlxG.camera.flash(FlxColor.WHITE, 1);
+					
+						FlxTween.tween(menuItem, {x:-3200}, 2.2, {ease: FlxEase.expoInOut});
+						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
 					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
 					{
