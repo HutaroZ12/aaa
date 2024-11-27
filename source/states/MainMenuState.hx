@@ -159,34 +159,49 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.BACK)
 			{
-				selectedSomethin = true;
-				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new TitleState());
+				endCheck = true;
+		FlxG.sound.play(Paths.sound('confirmMenu'));
+		FlxG.camera.flash(FlxColor.WHITE, 1);
+
+//		FlxTween.tween(zerogf, {x:-1500}, 2.4, {ease: FlxEase.expoInOut});
+
+	//	FlxTween.tween(zerobf, {x:-1500}, 2.4, {ease: FlxEase.expoInOut});
+
+	//	FlxTween.tween(mainSide, {x:1500}, 2.2, {ease: FlxEase.expoInOut});
+		
+		/*if (ClientPrefs.data.flashing)
+		FlxFlicker.flicker(magenta, 1.1, 0.15, false);*/
+
+		if (cameraTween[0] != null) cameraTween[0].cancel();
+
+		menuItems.forEach(function(spr:FlxSprite)
+		{
+			if (curSelected != spr.ID)
+						{
+							FlxTween.tween(spr, {x: 1500}, 2.2, {
+								ease: FlxEase.expoInOut,
+							});
+							
+						}
+						else
+						{
+							
+
+							FlxTween.tween(spr, {x: 1500}, 2.2, {
+								ease: FlxEase.expoInOut,
+							});
+
+							FlxTween.tween(spr, {alpha: 0}, 2.2, {
+								ease: FlxEase.expoInOut,
+							});													
 			}
+		});
 
-			if (controls.ACCEPT)
+		FlxTween.tween(camGame, {zoom: 1.1}, 1.2, {ease: FlxEase.cubeInOut});
+		FlxTween.tween(camGame, {angle: 0}, 0.8, { //not use for now
+		        ease: FlxEase.cubeInOut,
+		        onComplete: function(twn:FlxTween)
 			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
-				FlxG.camera.flash(FlxColor.WHITE, 1);
-
-				for (i in 0...optionShit.length)
-				{
-				FlxTween.tween(menuItem, {x:-3200}, 2.2, {ease: FlxEase.expoInOut})
-				}
-				
-				if (optionShit[curSelected] == 'donate')
-				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
-				}
-				else
-				{
-					selectedSomethin = true;
-					
-					
-
-					//if (ClientPrefs.data.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-
 					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
 					{
 						switch (optionShit[curSelected])
