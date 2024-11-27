@@ -201,8 +201,7 @@ class MainMenuState extends MusicBeatState
 							
 
 							FlxFlicker.flicker(spr, 1, 1, false, false, function(flick:FlxFlicker)
-
-					{	  
+	  
 					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
 					{
 						switch (optionShit[curSelected])
