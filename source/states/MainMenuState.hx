@@ -218,7 +218,6 @@ class MainMenuState extends MusicBeatState
 							continue;
 						FlxTween.tween(menuItems.members[i], {alpha: 0}, 10, {
 							ease: FlxEase.expoInOut,
-						});
 						
 						switch (i)
 			{
