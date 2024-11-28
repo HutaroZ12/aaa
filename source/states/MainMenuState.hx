@@ -80,7 +80,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 24);
 			menuItem.animation.play('idle');
-			menuItem.x = 3200;
+			menuItem.x = 2000;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if (optionShit.length < 6)
@@ -178,8 +178,6 @@ class MainMenuState extends MusicBeatState
 					if (ClientPrefs.data.flashing)
 						//FlxG.camera.flash(FlxColor.WHITE, 1);
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-
-					FlxG.camera.flash(FlxColor.WHITE, 1);
 					
 					FlxTween.tween(menuItems.members[curSelected], {x: -2000}, 2.2, {ease: FlxEase.expoInOut,onComplete: function(twn:FlxTween)
 													 
@@ -219,6 +217,7 @@ class MainMenuState extends MusicBeatState
 					{
 						if (i == curSelected)
 							continue;
+						FlxG.camera.flash(FlxColor.WHITE, 1);
 						FlxTween.tween(menuItems.members[i], {x: -2000}, 2.2, {
 							ease: FlxEase.expoInOut,
 							onComplete: function(twn:FlxTween)
