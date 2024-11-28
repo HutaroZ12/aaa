@@ -175,7 +175,7 @@ class MainMenuState extends MusicBeatState
 				{
 					selectedSomethin = true;
                                         
-					if (ClientPrefs.data.flashing;
+					if (ClientPrefs.data.flashing)
 					    FlxG.camera.flash(FlxColor.WHITE, 1);
 						//FlxG.camera.flash(FlxColor.WHITE, 1);
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
