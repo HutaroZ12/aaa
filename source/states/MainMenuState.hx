@@ -215,7 +215,7 @@ class MainMenuState extends MusicBeatState
 					{
 						if (i == curSelected)
 							continue;
-						FlxTween.tween(menuItems.members[i], {c: -2000}, 2.2, {
+						FlxTween.tween(menuItems.members[i], {x: -2000}, 2.2, {
 							ease: FlxEase.expoInOut,
 							onComplete: function(twn:FlxTween)
 							{
