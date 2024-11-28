@@ -176,10 +176,10 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
                                         
 					if (ClientPrefs.data.flashing)
-					    FlxG.camera.flash(FlxColor.WHITE, 1);
+					    
 						//FlxG.camera.flash(FlxColor.WHITE, 1);
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-					{
+					
 					FlxTween.tween(menuItems.members[curSelected], {x: -2000}, 2.2, {ease: FlxEase.expoInOut,onComplete: function(twn:FlxTween)
 													 
 																	 
@@ -214,6 +214,8 @@ class MainMenuState extends MusicBeatState
 						}
 					});
 
+					FlxG.camera.flash(FlxColor.WHITE, 1);
+					
 					for (i in 0...menuItems.members.length)
 					{
 						if (i == curSelected)
