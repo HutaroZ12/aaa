@@ -180,7 +180,8 @@ class MainMenuState extends MusicBeatState
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
 					menuItems.members[curSelected = FlxTween.tween(menuItems.members[curSelected], {x: -2000}, 2.2, {ease: FlxEase.expoInOut,onComplete: function(twn:FlxTween)
-					{
+					FlxG.camera.flash(FlxColor.WHITE, 1);
+																	 
 						switch (optionShit[curSelected])
 						{
 							case 'story_mode':
