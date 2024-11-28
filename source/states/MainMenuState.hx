@@ -179,7 +179,7 @@ class MainMenuState extends MusicBeatState
 					FlxG.camera.flash(FlxColor.WHITE, 1);
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 
-					FlxTween.tween(menuItems.members[curSelected], {x:-2000}, 2.2, {ease: FlxEase.expoInOut});
+					FlxTween.tween(menuItems.members[curSelected], {x:-2000}, 2.2, {ease: FlxEase.expoInOut,
 					{
 						switch (optionShit[curSelected])
 						{
