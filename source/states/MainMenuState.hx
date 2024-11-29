@@ -79,7 +79,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.x += 1200;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 10);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 16);
+			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 12);
 			menuItem.animation.play('idle');
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -92,20 +92,22 @@ class MainMenuState extends MusicBeatState
 			switch (i)
 			{
 			    case 0:
-				FlxTween.tween(menuItem, {x:270}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:290}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.scale.x = 1;
+			        menuItem.scale.y = 1;
 				menuItem.y = 2;
 
 			    case 1:
-				FlxTween.tween(menuItem, {x:268}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.y = 5;
-
-			    case 2:
-				FlxTween.tween(menuItem, {x:266}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:288}, 2.2, {ease: FlxEase.expoInOut});
 				menuItem.y = 7;
 
+			    case 2:
+				FlxTween.tween(menuItem, {x:286}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.y = 13;
+
 			    case 3:
-				FlxTween.tween(menuItem, {x:264}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.y = 132;
+				FlxTween.tween(menuItem, {x:284}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.y = 182;
 			}	
 			
 		}
