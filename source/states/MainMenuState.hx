@@ -93,26 +93,18 @@ class MainMenuState extends MusicBeatState
 			{
 			    case 0:
 				FlxTween.tween(menuItem, {x:290}, 2.2, {ease: FlxEase.expoInOut});
-				FlxTween.tween(menuItem.scale, {x:0.8}, 0.4, {ease: FlxEase.expoInOut});
-			        FlxTween.tween(menuItem.scale, {y:0.8}, 0.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 2;
 
 			    case 1:
 				FlxTween.tween(menuItem, {x:350}, 2.2, {ease: FlxEase.expoInOut});
-				FlxTween.tween(menuItem.scale, {x:0.7}, 0.4, {ease: FlxEase.expoInOut});
-			        FlxTween.tween(menuItem.scale, {y:0.7}, 0.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 15;
 
 			    case 2:
 				FlxTween.tween(menuItem, {x:348}, 2.2, {ease: FlxEase.expoInOut});
-				FlxTween.tween(menuItem.scale, {x:0.7}, 0.4, {ease: FlxEase.expoInOut});
-			        FlxTween.tween(menuItem.scale, {y:0.7}, 0.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 35;
 
 			    case 3:
 				FlxTween.tween(menuItem, {x:346}, 2.2, {ease: FlxEase.expoInOut});
-				FlxTween.tween(menuItem.scale, {x:0.7}, 0.4, {ease: FlxEase.expoInOut});
-			        FlxTween.tween(menuItem.scale, {y:0.7}, 0.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 200;
 			}	
 			
