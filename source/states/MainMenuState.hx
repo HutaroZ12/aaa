@@ -175,14 +175,13 @@ class MainMenuState extends MusicBeatState
 				{
 					selectedSomethin = true;
                                         
-					if (ClientPrefs.data.flashing)
-					    
-						//FlxG.camera.flash(FlxColor.WHITE, 1);
+					if (ClientPrefs.data.flashing)    
+						FlxG.camera.flash(FlxColor.WHITE, 1);
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+				}
 					
-					FlxTween.tween(menuItems.members[curSelected], {x: -2000}, 2.2, {ease: FlxEase.expoInOut,onComplete: function(twn:FlxTween)
-													 
-																	 
+					FlxFlicker.flicker(item, 1, 0.06, false, false, function(flick:FlxFlicker)
+					{												 
 						switch (optionShit[curSelected])
 						{
 							case 'story_mode':
@@ -214,13 +213,15 @@ class MainMenuState extends MusicBeatState
 						}
 					});
 
-					FlxG.camera.flash(FlxColor.WHITE, 1);
 					
 					for (i in 0...menuItems.members.length)
 					{
 						if (i == curSelected)
 							continue;
 						FlxTween.tween(menuItems.members[i], {x: -2000}, 2.2, {
+							ease: FlxEase.expoInOut});
+						
+						FlxTween.tween(menuItems.members[curSelected], {x: -2000}, 2.2, {
 							ease: FlxEase.expoInOut,
 							onComplete: function(twn:FlxTween)
 							{
