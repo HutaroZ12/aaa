@@ -75,6 +75,8 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 140) + offset);
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
 			menuItem.x += 1200;
+			menuItem.scale.x = 0.7;
+			menuItem.scale.y = 0.7;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 10);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 12);
@@ -91,26 +93,20 @@ class MainMenuState extends MusicBeatState
 			{
 			    case 0:
 				FlxTween.tween(menuItem, {x:290}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.scale.x = 0.9;
-			        menuItem.scale.y = 0.9;
+				menuItem.scale.x = 0.8;
+			        menuItem.scale.y = 0.8;
 				menuItem.y = 2;
 
 			    case 1:
 				FlxTween.tween(menuItem, {x:288}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.scale.x = 0.7;
-			        menuItem.scale.y = 0.7;
 				menuItem.y = 7;
 
 			    case 2:
 				FlxTween.tween(menuItem, {x:286}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.scale.x = 0.7;
-			        menuItem.scale.y = 0.7;
 				menuItem.y = 13;
 
 			    case 3:
 				FlxTween.tween(menuItem, {x:284}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.scale.x = 0.7;
-			        menuItem.scale.y = 0.7;
 				menuItem.y = 182;
 			}	
 			
