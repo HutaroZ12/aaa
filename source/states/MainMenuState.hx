@@ -78,8 +78,8 @@ class MainMenuState extends MusicBeatState
 			menuItem.scale.y = 0.7;
 			menuItem.x += 2000;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
-			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 24);
-			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 24);
+			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 16);
+			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 16);
 			menuItem.animation.play('idle');
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -87,7 +87,7 @@ class MainMenuState extends MusicBeatState
 				scr = 0;
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.updateHitbox();
-			menuItem.screenCenter(X);
+			//menuItem.screenCenter(X);
 
 			switch (i)
 			{
