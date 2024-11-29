@@ -76,11 +76,11 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
 			menuItem.scale.x = 0.7;
 			menuItem.scale.y = 0.7;
+			menuItem.x += 2000;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 24);
 			menuItem.animation.play('idle');
-			menuItem.x = 2000;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if (optionShit.length < 6)
@@ -180,8 +180,8 @@ class MainMenuState extends MusicBeatState
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 				
 					
-					FlxFlicker.flicker(menuItems.members[curSelected], 1, 0.06, false, false, function(flick:FlxFlicker)
-					{												 
+					FlxTween.tween(menuItems.members[curSelected], {x: -2000}, 2.2, {ease: FlxEase.expoInOut: function(twn:FlxTween)
+																	 
 						switch (optionShit[curSelected])
 						{
 							case 'story_mode':
@@ -219,9 +219,6 @@ class MainMenuState extends MusicBeatState
 						if (i == curSelected)
 							continue;
 						FlxTween.tween(menuItems.members[i], {x: -2000}, 2.2, {
-							ease: FlxEase.expoInOut});
-						
-						FlxTween.tween(menuItems.members[curSelected], {x: -2000}, 2.2, {
 							ease: FlxEase.expoInOut,
 							onComplete: function(twn:FlxTween)
 							{
