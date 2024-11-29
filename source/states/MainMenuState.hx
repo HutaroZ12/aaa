@@ -75,8 +75,8 @@ class MainMenuState extends MusicBeatState
 			var menuItem:FlxSprite = new FlxSprite(0, (i * 140) + offset);
 			menuItem.antialiasing = ClientPrefs.data.antialiasing;
 			menuItem.x += 1200;
-			menuItem.scale.x = 0.7;
-			menuItem.scale.y = 0.7;
+			//menuItem.scale.x = 0.7;
+	                //menuItem.scale.y = 0.7;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " idle", 10);
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " selected", 12);
@@ -99,14 +99,20 @@ class MainMenuState extends MusicBeatState
 
 			    case 1:
 				FlxTween.tween(menuItem, {x:350}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.scale.x = 0.7;
+			        menuItem.scale.y = 0.7;
 				menuItem.y = 15;
 
 			    case 2:
 				FlxTween.tween(menuItem, {x:348}, 2.2, {ease: FlxEase.expoInOut});
-				menuItem.y = 25;
+				menuItem.scale.x = 0.7;
+			        menuItem.scale.y = 0.7;
+				menuItem.y = 35;
 
 			    case 3:
 				FlxTween.tween(menuItem, {x:346}, 2.2, {ease: FlxEase.expoInOut});
+				menuItem.scale.x = 0.7;
+			        menuItem.scale.y = 0.7;
 				menuItem.y = 200;
 			}	
 			
@@ -250,10 +256,10 @@ class MainMenuState extends MusicBeatState
 		curSelected = FlxMath.wrap(curSelected + change, 0, menuItems.length - 1);
 
 		menuItems.members[curSelected].animation.play('selected');
-		menuItems.members[curSelected].centerOffsets();
+		//menuItems.members[curSelected].centerOffsets();
 		//menuItems.members[curSelected].screenCenter(X);
 
-		camFollow.setPosition(menuItems.members[curSelected].getGraphicMidpoint().x,
+		//camFollow.setPosition(menuItems.members[curSelected].getGraphicMidpoint().x,
 			menuItems.members[curSelected].getGraphicMidpoint().y - (menuItems.length > 4 ? menuItems.length * 8 : 0));
 	}
 }
