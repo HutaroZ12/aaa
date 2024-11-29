@@ -2,19 +2,15 @@
 <TextureAtlas imagePath="menu_credits.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="credits idle0000" x="0" y="394" width="481" height="187" frameX="-714" frameY="-488" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits idle0001" x="0" y="394" width="481" height="187" frameX="-714" frameY="-488" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits idle0002" x="0" y="394" width="481" height="187" frameX="-714" frameY="-488" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits idle0003" x="0" y="394" width="481" height="187" frameX="-714" frameY="-488" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits idle0004" x="481" y="394" width="482" height="163" frameX="-711" frameY="-516" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits idle0005" x="481" y="394" width="482" height="163" frameX="-711" frameY="-516" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits idle0006" x="481" y="394" width="482" height="163" frameX="-711" frameY="-516" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits idle0007" x="481" y="394" width="482" height="163" frameX="-711" frameY="-516" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits selected0000" x="0" y="0" width="560" height="198" frameX="-665" frameY="-486" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits selected0001" x="0" y="198" width="552" height="196" frameX="-669" frameY="-487" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits selected0002" x="560" y="0" width="534" height="190" frameX="-678" frameY="-490" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits selected0003" x="560" y="190" width="530" height="188" frameX="-680" frameY="-491" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits selected0004" x="560" y="190" width="530" height="188" frameX="-680" frameY="-491" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits selected0005" x="560" y="190" width="530" height="188" frameX="-680" frameY="-491" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="credits selected0006" x="560" y="190" width="530" height="188" frameX="-680" frameY="-491" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits selected0000" x="537" y="421" width="533" height="184" frameX="-669" frameY="-507" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits selected0001" x="0" y="0" width="591" height="209" frameX="-640" frameY="-497" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits selected0002" x="0" y="209" width="567" height="212" frameX="-652" frameY="-501" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits selected0003" x="591" y="0" width="557" height="215" frameX="-657" frameY="-501" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits selected0004" x="591" y="215" width="557" height="192" frameX="-657" frameY="-503" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits selected0005" x="591" y="215" width="557" height="192" frameX="-657" frameY="-503" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits selected0006" x="591" y="215" width="557" height="192" frameX="-657" frameY="-503" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits idle0000" x="0" y="615" width="535" height="183" frameX="-667" frameY="-507" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits idle0001" x="0" y="615" width="535" height="183" frameX="-667" frameY="-507" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits idle0002" x="0" y="421" width="537" height="194" frameX="-667" frameY="-500" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="credits idle0003" x="0" y="421" width="537" height="194" frameX="-667" frameY="-500" frameWidth="1280" frameHeight="720"/>
 </TextureAtlas>

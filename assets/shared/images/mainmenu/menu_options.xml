@@ -2,17 +2,16 @@
 <TextureAtlas imagePath="menu_options.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="options idle0000" x="560" y="311" width="494" height="153" frameX="-711" frameY="-531" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options idle0001" x="560" y="311" width="494" height="153" frameX="-711" frameY="-531" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options idle0002" x="560" y="311" width="494" height="153" frameX="-711" frameY="-531" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options idle0003" x="560" y="311" width="494" height="153" frameX="-711" frameY="-531" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options idle0004" x="560" y="157" width="495" height="154" frameX="-715" frameY="-509" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options idle0005" x="560" y="157" width="495" height="154" frameX="-715" frameY="-509" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options idle0006" x="560" y="157" width="495" height="154" frameX="-715" frameY="-509" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options idle0007" x="560" y="157" width="495" height="154" frameX="-715" frameY="-509" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options selected0000" x="0" y="0" width="560" height="165" frameX="-681" frameY="-513" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options selected0001" x="0" y="165" width="556" height="165" frameX="-683" frameY="-513" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options selected0002" x="0" y="330" width="536" height="159" frameX="-693" frameY="-516" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options selected0003" x="560" y="0" width="530" height="157" frameX="-696" frameY="-517" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="options selected0004" x="560" y="0" width="530" height="157" frameX="-696" frameY="-517" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0000" x="563" y="260" width="557" height="192" frameX="-657" frameY="-503" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0001" x="559" y="509" width="545" height="169" frameX="-666" frameY="-517" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0002" x="559" y="0" width="579" height="248" frameX="-649" frameY="-462" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0003" x="0" y="260" width="563" height="249" frameX="-657" frameY="-460" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0004" x="0" y="0" width="559" height="260" frameX="-659" frameY="-455" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0005" x="0" y="509" width="559" height="173" frameX="-659" frameY="-515" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0006" x="0" y="509" width="559" height="173" frameX="-659" frameY="-515" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options selected0007" x="0" y="509" width="559" height="173" frameX="-659" frameY="-515" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options idle0000" x="0" y="682" width="534" height="170" frameX="-672" frameY="-513" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options idle0001" x="0" y="682" width="534" height="170" frameX="-672" frameY="-513" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options idle0002" x="534" y="682" width="533" height="166" frameX="-672" frameY="-520" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="options idle0003" x="534" y="682" width="533" height="166" frameX="-672" frameY="-520" frameWidth="1280" frameHeight="720"/>
 </TextureAtlas>

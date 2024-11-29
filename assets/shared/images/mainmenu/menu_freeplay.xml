@@ -2,19 +2,15 @@
 <TextureAtlas imagePath="menu_freeplay.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="freeplay idle0000" x="0" y="466" width="499" height="235" frameX="-752" frameY="-245" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay idle0001" x="0" y="466" width="499" height="235" frameX="-752" frameY="-245" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay idle0002" x="0" y="466" width="499" height="235" frameX="-752" frameY="-245" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay idle0003" x="0" y="466" width="499" height="235" frameX="-752" frameY="-245" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay idle0004" x="499" y="466" width="506" height="192" frameX="-741" frameY="-273" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay idle0005" x="499" y="466" width="506" height="192" frameX="-741" frameY="-273" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay idle0006" x="499" y="466" width="506" height="192" frameX="-741" frameY="-273" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay idle0007" x="499" y="466" width="506" height="192" frameX="-741" frameY="-273" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay selected0000" x="0" y="0" width="576" height="236" frameX="-706" frameY="-247" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay selected0001" x="0" y="236" width="570" height="230" frameX="-712" frameY="-250" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay selected0002" x="576" y="0" width="558" height="226" frameX="-718" frameY="-252" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay selected0003" x="576" y="226" width="554" height="224" frameX="-720" frameY="-253" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay selected0004" x="576" y="226" width="554" height="224" frameX="-720" frameY="-253" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay selected0005" x="576" y="226" width="554" height="224" frameX="-720" frameY="-253" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="freeplay selected0006" x="576" y="226" width="554" height="224" frameX="-720" frameY="-253" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay selected0000" x="606" y="396" width="572" height="192" frameX="-688" frameY="-287" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay selected0001" x="0" y="0" width="606" height="204" frameX="-671" frameY="-281" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay selected0002" x="0" y="204" width="596" height="199" frameX="-676" frameY="-284" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay selected0003" x="0" y="403" width="586" height="198" frameX="-681" frameY="-283" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay selected0004" x="606" y="0" width="586" height="196" frameX="-681" frameY="-285" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay selected0005" x="606" y="0" width="586" height="196" frameX="-681" frameY="-285" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay selected0006" x="606" y="0" width="586" height="196" frameX="-681" frameY="-285" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay idle0000" x="0" y="601" width="562" height="190" frameX="-694" frameY="-290" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay idle0001" x="0" y="601" width="562" height="190" frameX="-694" frameY="-290" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay idle0002" x="606" y="196" width="564" height="200" frameX="-694" frameY="-287" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="freeplay idle0003" x="606" y="196" width="564" height="200" frameX="-694" frameY="-287" frameWidth="1280" frameHeight="720"/>
 </TextureAtlas>
