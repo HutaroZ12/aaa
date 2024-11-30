@@ -95,7 +95,7 @@ class MainMenuState extends MusicBeatState
 
 		rairum = new FlxSprite();
 		rairum.frames = Paths.getSparrowAtlas('mainmenu/Menu_rairum');
-		rairum.antialiasing = ClientPrefs.globalAntialiasing;
+		rairum.antialiasing = ClientPrefs.data.antialiasing;
 		rairum.animation.addByPrefix('vem',"Rairum vem",24);	
 		rairum.animation.addByPrefix('idle',"Rairum idle",24);
 		rairum.animation.addByPrefix('hey',"Rairum Hey",24);			
