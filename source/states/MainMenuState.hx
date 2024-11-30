@@ -267,6 +267,8 @@ class MainMenuState extends MusicBeatState
 
 					selectedSomethin = true;
 
+					function changeItem(change:Int = 0)
+					{
 					rairum.animation.play('hey', true);
 					
 					for (i in 0...menuItems.members.length)
