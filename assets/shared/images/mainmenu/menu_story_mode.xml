@@ -2,15 +2,15 @@
 <TextureAtlas imagePath="menu_story_mode.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="story_mode selected0000" x="0" y="790" width="473" height="230" frameX="-743" frameY="-19" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode selected0001" x="0" y="0" width="562" height="276" frameX="-694" frameY="2" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode selected0002" x="0" y="276" width="562" height="267" frameX="-683" frameY="-5" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode selected0003" x="562" y="0" width="513" height="263" frameX="-727" frameY="-7" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode selected0004" x="562" y="263" width="513" height="254" frameX="-727" frameY="-7" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode selected0005" x="562" y="263" width="513" height="254" frameX="-727" frameY="-7" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode selected0006" x="562" y="263" width="513" height="254" frameX="-727" frameY="-7" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode idle0000" x="500" y="543" width="492" height="244" frameX="-736" frameY="-16" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode idle0001" x="500" y="543" width="492" height="244" frameX="-736" frameY="-16" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode idle0002" x="0" y="543" width="500" height="247" frameX="-734" frameY="-10" frameWidth="1280" frameHeight="720"/>
-	<SubTexture name="story_mode idle0003" x="0" y="543" width="500" height="247" frameX="-734" frameY="-10" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode selected0000" x="651" y="258" width="501" height="248" frameX="-733" frameY="-10" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode selected0001" x="0" y="508" width="612" height="262" frameX="-636" frameY="-3" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode selected0002" x="651" y="0" width="625" height="258" frameX="-628" frameY="-5" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode selected0003" x="0" y="254" width="642" height="254" frameX="-617" frameY="-7" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode selected0004" x="0" y="0" width="651" height="254" frameX="-612" frameY="-7" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode selected0005" x="612" y="508" width="513" height="254" frameX="-727" frameY="-7" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode selected0006" x="612" y="508" width="513" height="254" frameX="-727" frameY="-7" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode idle0000" x="500" y="770" width="496" height="246" frameX="-734" frameY="-15" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode idle0001" x="500" y="770" width="496" height="246" frameX="-734" frameY="-15" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode idle0002" x="0" y="770" width="500" height="247" frameX="-734" frameY="-10" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="story_mode idle0003" x="0" y="770" width="500" height="247" frameX="-734" frameY="-10" frameWidth="1280" frameHeight="720"/>
 </TextureAtlas>
