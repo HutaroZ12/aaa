@@ -28,6 +28,21 @@ class MainMenuState extends MusicBeatState
 	var side:FlxSprite;
 	var camFollow:FlxObject;
 
+	var ColorArray:Array<Int> = [
+		0xFF9400D3,
+		0xFF4B0082,
+		0xFF0000FF,
+		0xFF00FF00,
+		0xFFFFFF00,
+		0xFFFF7F00,
+		0xFFFF0000
+	                                
+	    ];
+	public static var currentColor:Int = 1;    
+	public static var currentColorAgain:Int = 0;
+			
+	var bgMove:FlxBackdrop;
+
 	override function create()
 	{
 		#if MODS_ALLOWED
@@ -67,6 +82,15 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		add(magenta);
 
+		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
+		bgMove.alpha = 0.1;
+		bgMove.color = ColorArray[currentColor];		
+		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
+		bgMove.antialiasing = ClientPrefs.data.antialiasing;
+		add(bgMove);
+                bgMove.screenCenter(XY);
+		bg.scrollFactor.set(0, 0);
+		
 		side = new FlxSprite(0).loadGraphic(Paths.image('MainSide'));
 		side.scrollFactor.set(0, 0);
 		side.x += 1200;
