@@ -66,6 +66,15 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		add(magenta);
 
+		side = new FlxSprite(0).loadGraphic(Paths.image('mainSide'));
+		side.scrollFactor.set(0, 0);
+		side.x += 1200;
+		side.updateHitbox();
+		side.antialiasing = ClientPrefs.globalAntialiasing;
+		add(side);
+
+		FlxTween.tween(side, {x:0}, 2.2, {ease: FlxEase.expoInOut});
+
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -219,8 +228,11 @@ class MainMenuState extends MusicBeatState
 						if (i == curSelected)
 							continue;
 						FlxTween.tween(menuItems.members[i], {x: -2000}, 2.2, {
+							ease: FlxEase.expoInOut});
+
+						FlxTween.tween(side, {x:-2000}, 2.2, {
 							ease: FlxEase.expoInOut,
-							onComplete: function(twn:FlxTween)
+						        onComplete: function(twn:FlxTween)
 							{
 								menuItems.members[i].kill();
 							}
