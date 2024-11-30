@@ -26,6 +26,7 @@ class MainMenuState extends MusicBeatState
 	];
 
 	var magenta:FlxSprite;
+	var rairum:FlxSprite;
 	var side:FlxSprite;
 	var camFollow:FlxObject;
 
@@ -92,12 +93,12 @@ class MainMenuState extends MusicBeatState
                 bgMove.screenCenter(XY);
 		bg.scrollFactor.set(0, 0);
 
-		var menuItem:FlxSprite = new FlxSprite(0, (i * 140) + offset);
-		menuItem.antialiasing = ClientPrefs.data.antialiasing;
+		var rairum = new FlxSprite();
+		rairum.antialiasing = ClientPrefs.data.antialiasing;
 		rairum.x += 1200;
 		rairum.scale.x = 0.7;
 	        rairum.scale.y = 0.7;
-	        rairum.frames = Paths.getSparrowAtlas('mainmenu/menu_Rairum'));
+	        rairum.frames = Paths.getSparrowAtlas('mainmenu/menu_Rairum');
 		rairum.animation.addByPrefix('vem'," Rairum vem", 12);
 		rairum.animation.addByPrefix('idle'," Rairum idle", 12);
 		rairum.animation.addByPrefix('hey'," Rairum Hey", 12);
