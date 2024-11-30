@@ -225,7 +225,8 @@ class MainMenuState extends MusicBeatState
                                         FlxG.camera.flash(FlxColor.WHITE, 1);
 					//if (ClientPrefs.data.flashing)    
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-				
+
+					rairum.animation.play('hey', true);
 					
 					FlxTween.tween(menuItems.members[curSelected], {x: -4000}, 2.4, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween)
 																	 
@@ -269,8 +270,6 @@ class MainMenuState extends MusicBeatState
 					{
 						if (i == curSelected)
 							continue;
-						rairum.animation.play('hey', true);
-
 						FlxTween.tween(rairum, {x:-4000}, 2.4, {
 							ease: FlxEase.expoInOut});
 						
