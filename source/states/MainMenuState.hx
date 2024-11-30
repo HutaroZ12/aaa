@@ -3,6 +3,7 @@ package states;
 import flixel.FlxObject;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
+import flixel.addons.display.FlxBackdrop;
 import lime.app.Application;
 import states.editors.MasterEditorMenu;
 import options.OptionsState;
@@ -41,7 +42,7 @@ class MainMenuState extends MusicBeatState
 	public static var currentColor:Int = 1;    
 	public static var currentColorAgain:Int = 0;
 			
-	var bgMove:FlxSprite;
+	var bgMove:FlxBackdrop;
 
 	override function create()
 	{
@@ -82,7 +83,7 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		add(magenta);
 
-		bgMove = new FlxSprite(Paths.image('backdrop'), XY, 0, 0);
+		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.alpha = 0.1;
 		bgMove.color = ColorArray[currentColor];		
 		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
