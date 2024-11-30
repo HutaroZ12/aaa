@@ -100,7 +100,6 @@ class MainMenuState extends MusicBeatState
 		rairum.animation.addByPrefix('idle',"Rairum idle",12);
 		rairum.animation.addByPrefix('hey',"Rairum Hey",12);			
 		rairum.animation.play('vem');
-		rairum.x -= 1200;
 		add(rairum);
 
 		rairum.animation.play('idle');
