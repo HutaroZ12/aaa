@@ -248,6 +248,10 @@ class MainMenuState extends MusicBeatState
 						}
 					});
 
+					currentColor++;            
+                                        if (currentColor > 6) currentColor = 1;
+                                        currentColorAgain = currentColor - 1;
+                                        if (currentColorAgain <= 0) currentColorAgain = 6;
 					
 					for (i in 0...menuItems.members.length)
 					{
