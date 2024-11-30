@@ -71,7 +71,7 @@ class MainMenuState extends MusicBeatState
 		side.scrollFactor.set(0, 0);
 		side.x += 1200;
 		side.updateHitbox();
-		side.antialiasing = ClientPrefs.globalAntialiasing;
+		side.antialiasing = ClientPrefs.data.antialiasing;
 		add(side);
 
 		FlxTween.tween(side, {x:0}, 2.2, {ease: FlxEase.expoInOut});
