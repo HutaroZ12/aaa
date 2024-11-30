@@ -269,8 +269,7 @@ class MainMenuState extends MusicBeatState
 					{
 						if (i == curSelected)
 							continue;
-						if(rairum.hasAnimation('hey'))
-						rairum.playAnim('hey', true);
+						rairum.animation.play('hey', true);
 
 						FlxTween.tween(rairum, {x:-4000}, 2.4, {
 							ease: FlxEase.expoInOut});
