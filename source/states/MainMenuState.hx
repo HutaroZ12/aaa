@@ -74,7 +74,7 @@ class MainMenuState extends MusicBeatState
 		side.antialiasing = ClientPrefs.data.antialiasing;
 		add(side);
 
-		FlxTween.tween(side, {x:0}, 2.2, {ease: FlxEase.expoInOut});
+		FlxTween.tween(side, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -102,19 +102,19 @@ class MainMenuState extends MusicBeatState
 			switch (i)
 			{
 			    case 0:
-				FlxTween.tween(menuItem, {x:290}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:350}, 2.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 2;
 
 			    case 1:
-				FlxTween.tween(menuItem, {x:350}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:348}, 2.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 15;
 
 			    case 2:
-				FlxTween.tween(menuItem, {x:348}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:346}, 2.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 35;
 
 			    case 3:
-				FlxTween.tween(menuItem, {x:346}, 2.2, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:344}, 2.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 200;
 			}	
 			
@@ -228,10 +228,10 @@ class MainMenuState extends MusicBeatState
 					{
 						if (i == curSelected)
 							continue;
-						FlxTween.tween(menuItems.members[i], {x: -2000}, 2.2, {
+						FlxTween.tween(menuItems.members[i], {x: -2000}, 2.4, {
 							ease: FlxEase.expoInOut});
 
-						FlxTween.tween(side, {x:-2000}, 2.2, {
+						FlxTween.tween(side, {x:-3000}, 2.4, {
 							ease: FlxEase.expoInOut,
 						        onComplete: function(twn:FlxTween)
 							{
