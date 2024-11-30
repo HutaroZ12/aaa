@@ -94,14 +94,12 @@ class MainMenuState extends MusicBeatState
 		bg.scrollFactor.set(0, 0);
 
 		var rairum = new FlxSprite();
+		rairum.frames = Paths.getSparrowAtlas('mainmenu/Menu_rairum')
 		rairum.antialiasing = ClientPrefs.data.antialiasing;
-		rairum.x += 1200;
-		rairum.scale.x = 0.7;
-	        rairum.scale.y = 0.7;
-	        rairum.frames = Paths.getSparrowAtlas('mainmenu/Menu_rairum');
-		rairum.animation.addByPrefix('vem'," Rairum vem", 12);
-		rairum.animation.addByPrefix('idle'," Rairum idle", 12);
-		rairum.animation.addByPrefix('hey'," Rairum Hey", 12);
+		rairum.x -= 1200;
+		rairum.animation.addByPrefix('vem',"Rairum vem",12);	
+		rairum.animation.addByPrefix('idle',"Rairum idle",12);
+		rairum.animation.addByPrefix('hey',"Rairum Hey",12);		
 		rairum.animation.play('vem');
 		add(rairum);
 
@@ -227,6 +225,7 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
 			
                                         FlxG.camera.flash(FlxColor.WHITE, 1);
+					rairum.animation.play('hey');
 					//if (ClientPrefs.data.flashing)    
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 				
@@ -272,9 +271,7 @@ class MainMenuState extends MusicBeatState
 					for (i in 0...menuItems.members.length)
 					{
 						if (i == curSelected)
-							continue;
-						rairum.animation.play('hey');
-						
+							continue;				
 						FlxTween.tween(side, {x:-4000}, 2.4, {
 							ease: FlxEase.expoInOut});
 							
