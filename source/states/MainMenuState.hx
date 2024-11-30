@@ -102,7 +102,7 @@ class MainMenuState extends MusicBeatState
 			switch (i)
 			{
 			    case 0:
-				FlxTween.tween(menuItem, {x:420}, 2.4, {ease: FlxEase.expoInOut});
+				FlxTween.tween(menuItem, {x:400}, 2.4, {ease: FlxEase.expoInOut});
 				menuItem.y = 2;
 
 			    case 1:
@@ -190,7 +190,7 @@ class MainMenuState extends MusicBeatState
 						//FlxFlicker.flicker(magenta, 1.1, 0.15, false);
 				
 					
-					FlxTween.tween(menuItems.members[curSelected], {x: -4500}, 2.4, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween)
+					FlxTween.tween(menuItems.members[curSelected], {x: -4000}, 2.4, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween)
 																	 
 						switch (optionShit[curSelected])
 						{
@@ -228,10 +228,10 @@ class MainMenuState extends MusicBeatState
 					{
 						if (i == curSelected)
 							continue;
-						FlxTween.tween(menuItems.members[i], {x: -4500}, 2.4, {
-							ease: FlxEase.expoInOut});
-
 						FlxTween.tween(side, {x:-4000}, 2.4, {
+							ease: FlxEase.expoInOut});
+							
+						FlxTween.tween(menuItems.members[i], {x: -4000}, 2.4, {
 							ease: FlxEase.expoInOut,
 						        onComplete: function(twn:FlxTween)
 							{
