@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_rairum.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="Rairum vem0000" x="1924" y="789" width="299" height="281" frameX="2" frameY="-294" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0001" x="1924" y="378" width="470" height="411" frameX="2" frameY="-207" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0002" x="0" y="0" width="488" height="445" frameX="-16" frameY="-177" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0003" x="0" y="892" width="481" height="447" frameX="-30" frameY="-168" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0004" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0005" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0006" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0007" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum vem0008" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum idle0000" x="481" y="892" width="490" height="438" frameX="-34" frameY="-189" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum idle0001" x="971" y="892" width="479" height="435" frameX="-32" frameY="-194" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum idle0002" x="488" y="447" width="481" height="436" frameX="-31" frameY="-191" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum idle0003" x="488" y="0" width="484" height="447" frameX="-29" frameY="-168" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum idle0004" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum idle0005" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum idle0006" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0000" x="0" y="445" width="484" height="447" frameX="-29" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0001" x="972" y="0" width="480" height="448" frameX="-27" frameY="-162" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0002" x="972" y="448" width="476" height="444" frameX="-28" frameY="-195" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0003" x="1452" y="0" width="472" height="443" frameX="-29" frameY="-193" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0004" x="1924" y="0" width="532" height="378" frameX="-33" frameY="-122" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0005" x="552" y="1339" width="549" height="374" frameX="-25" frameY="-158" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0006" x="0" y="1339" width="552" height="376" frameX="-26" frameY="-159" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="Rairum Hey0007" x="0" y="1339" width="552" height="376" frameX="-26" frameY="-159" frameWidth="1280" frameHeight="720"/>
+</TextureAtlas>
