@@ -67,7 +67,7 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		add(magenta);
 
-		side = new FlxSprite(0).loadGraphic(Paths.image('mainSide'));
+		side = new FlxSprite(0).loadGraphic(Paths.image('MainSide'));
 		side.scrollFactor.set(0, 0);
 		side.x += 1200;
 		side.updateHitbox();
