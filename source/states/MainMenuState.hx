@@ -98,7 +98,7 @@ class MainMenuState extends MusicBeatState
 		rairum.x += 1200;
 		rairum.scale.x = 0.7;
 	        rairum.scale.y = 0.7;
-	        rairum.frames = Paths.getSparrowAtlas('mainmenu/menu_Rairum');
+	        rairum.frames = Paths.getSparrowAtlas('mainmenu/Menu_rairum');
 		rairum.animation.addByPrefix('vem'," Rairum vem", 12);
 		rairum.animation.addByPrefix('idle'," Rairum idle", 12);
 		rairum.animation.addByPrefix('hey'," Rairum Hey", 12);
