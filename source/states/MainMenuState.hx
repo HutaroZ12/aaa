@@ -98,7 +98,7 @@ class MainMenuState extends MusicBeatState
 		rairum.antialiasing = ClientPrefs.data.antialiasing;
 		rairum.animation.addByPrefix('vem',"Rairum vem",12);	
 		rairum.animation.addByPrefix('idle',"Rairum idle",12);
-		rairum.animation.addByPrefix('hey',"Rairum Hey", [17, 24], 12, false);			
+		rairum.animation.addByPrefix('hey',"Rairum HeyFrame", [17, 18, 19, 20, 21, 22, 23, 24], 12, false);			
 		rairum.animation.play('vem');
 		add(rairum);
 
