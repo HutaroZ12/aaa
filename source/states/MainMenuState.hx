@@ -98,7 +98,7 @@ class MainMenuState extends MusicBeatState
 		rairum.antialiasing = ClientPrefs.data.antialiasing;
 		rairum.animation.addByPrefix('vem',"Rairum vem",12);	
 		rairum.animation.addByPrefix('idle',"Rairum idle",12);
-		rairum.animation.addByPrefix('hey',"Rairum Hey",12);			
+		rairum.animation.addByPrefix('hey',"Rairum Hey",12, true);			
 		rairum.animation.play('vem');
 		add(rairum);
 		
@@ -265,8 +265,11 @@ class MainMenuState extends MusicBeatState
 
 					selectedSomethin = true;
 
-					rairum.animation.play('hey');			
-					rairum.resetAnim = 0;
+					rairum.animation.play('hey');	
+
+					new FlxTimer().start(0.8, function(tmr:FlxTimer)
+				        {
+					rairum.animation.play('hey', false);	
 						
 					for (i in 0...menuItems.members.length)
 					{
