@@ -61,11 +61,6 @@ class StoryMenuState extends MusicBeatState
 		final accept:String = controls.mobileC ? "A" : "ACCEPT";
 		final reject:String = controls.mobileC ? "B" : "BACK";
 
-		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
-		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
-		bgSprite = new FlxSprite(0, 56);
-		bgSprite.y = 360;
-		
 		if(WeekData.weeksList.length < 1)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
@@ -87,6 +82,11 @@ class StoryMenuState extends MusicBeatState
 
 		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 		add(bgBar);
+
+		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
+		bgSprite = new FlxSprite(0, 56);
+		bgSprite.y = 360;
 		
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
@@ -111,6 +111,7 @@ class StoryMenuState extends MusicBeatState
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
 				weekThing.y += ((weekThing.height + 20) * num);
+				weekThing.x = 400
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
