@@ -94,7 +94,7 @@ class StoryMenuState extends MusicBeatState
 
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.alpha = 0.1;
-		bgMove.color = 0xFFFF7F00];		
+		bgMove.color = 0xFFFF7F00;		
 		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY);
