@@ -77,18 +77,20 @@ class StoryMenuState extends MusicBeatState
 
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 
-		scoreText = new FlxText(10, 10, 0, Language.getPhrase('week_score', 'WEEK SCORE: {1}', [lerpScore]), 36);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32);
+		scoreText = new FlxText(30, 30, 0, Language.getPhrase('week_score', 'WEEK SCORE: {1}', [lerpScore]), 36);
+		scoreText.setFormat(Paths.font("FontLegal.ttf"), 32);
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
 		txtWeekTitle.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 		txtWeekTitle.alpha = 0.7;
 
 		storyside2 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide2'));
-		FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		
+		FlxTween.tween(storyside2, {x:0}, 3.4, {ease: FlxEase.expoInOut});
 		
 		storyside1 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide1'));
-		FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		
+		FlxTween.tween(storyside1, {x:0}, 3.4, {ease: FlxEase.expoInOut});
 		
 		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 
@@ -102,7 +104,7 @@ class StoryMenuState extends MusicBeatState
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
 		bgSprite = new FlxSprite(0, 56);
-		bgSprite.y = 180;
+		bgSprite.y = 170;
 		
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
@@ -132,7 +134,7 @@ class StoryMenuState extends MusicBeatState
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
 				grpWeekText.add(weekThing);
 
-				weekThing.screenCenter(X);
+				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
 
 				// Needs an offset thingie
@@ -199,7 +201,8 @@ class StoryMenuState extends MusicBeatState
 
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
-		tracksSprite.x -= tracksSprite.width/2;
+		tracksSprite.x = 900
+		tracksSprite.y = 200
 		add(tracksSprite);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 60, 0, "", 32);
