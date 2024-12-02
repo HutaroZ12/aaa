@@ -79,8 +79,8 @@ class StoryMenuState extends MusicBeatState
 
 		scoreText = new FlxText(30, 30, 0, Language.getPhrase('week_score', 'WEEK SCORE: {1}', [lerpScore]), 36);
 		scoreText.setFormat(Paths.font("FontLegal.ttf"), 32);
-		scoreText.scale.x = 2:
-		scoreText.scale.y = 2;
+		scoreText.scale.x = 3;
+		scoreText.scale.y = 3;
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
 		txtWeekTitle.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
