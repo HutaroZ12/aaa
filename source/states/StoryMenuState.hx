@@ -28,6 +28,9 @@ class StoryMenuState extends MusicBeatState
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
 	var bgBar:FlxSprite;
+	var storyside1:FlxSprite;
+	var storyside2:FlxSprite;
+	var bgMove:FlxBackdrop;
 
 	private static var curWeek:Int = 0;
 
@@ -44,15 +47,6 @@ class StoryMenuState extends MusicBeatState
 	var rightArrow:FlxSprite;
 
 	var loadedWeeks:Array<WeekData> = [];
-
-	var ColorArray:Array<Int> = [
-		0xFFFF7F00
-	                                
-	    ];
-	public static var currentColor:Int = 1;    
-	public static var currentColorAgain:Int = 0;
-			
-	var bgMove:FlxBackdrop;
 
 	override function create()
 	{
@@ -90,14 +84,19 @@ class StoryMenuState extends MusicBeatState
 		txtWeekTitle.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 		txtWeekTitle.alpha = 0.7;
 
+		storyside2 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide2'));
+		FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		
+		storyside1 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide1'));
+		FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		
 		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.alpha = 0.1;
-		bgMove.color = ColorArray[currentColor];		
+		bgMove.color = 0xFFFF7F00];		
 		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
-		add(bgMove);
                 bgMove.screenCenter(XY);
 
 		currentColor++;            
@@ -199,6 +198,8 @@ class StoryMenuState extends MusicBeatState
 		add(bgSprite);
 		add(bgBar);
 		add(bgMove);
+		add(storyside1);
+		add(storyside2);
 		add(grpWeekCharacters);
 
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
