@@ -95,6 +95,7 @@ class MainMenuState extends MusicBeatState
 
 		rairum = new FlxSprite();
 		rairum.frames = Paths.getSparrowAtlas('mainmenu/Menu_rairum');
+		rairum.x = -1200;
 		rairum.antialiasing = ClientPrefs.data.antialiasing;
 		rairum.animation.addByPrefix('vem',"Rairum vem",12);	
 		rairum.animation.addByPrefix('idle',"Rairum idle",12);
@@ -102,17 +103,18 @@ class MainMenuState extends MusicBeatState
 		rairum.animation.play('vem');
 		add(rairum);
 
-		
+		FlxTween.tween(rairum, {x:0}, 2.4 + 0.1 * Math.abs(curSelected - i ), {ease: FlxEase.backInOut});
+		rairum.animation.play('vem');
+			
 		side = new FlxSprite(0).loadGraphic(Paths.image('MainSide'));
 		side.scrollFactor.set(0, 0);
 		side.x += 1200;
-		side.updateHitbox();
+		side.updateHitbox()side.updateHitbox();
 		side.antialiasing = ClientPrefs.data.antialiasing;
 		add(side);
 
 		FlxTween.tween(side, {x:-4}, 2.4, {ease: FlxEase.expoInOut});
 
-		rairum.animation.play('idle');
 		
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -133,7 +135,7 @@ class MainMenuState extends MusicBeatState
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if (optionShit.length < 6)
 				scr = 0;
-			menuItem.scrollFactor.set(0, scr);
+			//menuItem.scrollFactor.set(0, scr);
 			menuItem.updateHitbox();
 			//menuItem.screenCenter(X);
 
