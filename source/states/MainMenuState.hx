@@ -101,6 +101,10 @@ class MainMenuState extends MusicBeatState
 		rairum.animation.addByPrefix('hey',"Rairum Hey",12);			
 		rairum.animation.play('vem');
 		add(rairum);
+
+		rairum.animation.play('vem');
+
+		rairum.animation.play('idle');
 		
 		side = new FlxSprite(0).loadGraphic(Paths.image('MainSide'));
 		side.scrollFactor.set(0, 0);
