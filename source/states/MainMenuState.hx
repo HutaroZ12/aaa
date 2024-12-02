@@ -102,9 +102,6 @@ class MainMenuState extends MusicBeatState
 		rairum.animation.play('vem');
 		add(rairum);
 
-		rairum.animation.play('vem');
-
-		rairum.animation.play('idle');
 		
 		side = new FlxSprite(0).loadGraphic(Paths.image('MainSide'));
 		side.scrollFactor.set(0, 0);
@@ -115,6 +112,8 @@ class MainMenuState extends MusicBeatState
 
 		FlxTween.tween(side, {x:-4}, 2.4, {ease: FlxEase.expoInOut});
 
+		rairum.animation.play('idle');
+		
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
