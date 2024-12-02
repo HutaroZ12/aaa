@@ -107,9 +107,7 @@ class MainMenuState extends MusicBeatState
 		rairum.animation.play('vem');
 			
 		side = new FlxSprite(0).loadGraphic(Paths.image('MainSide'));
-		side.scrollFactor.set(0, 0);
 		side.x += 1200;
-		side.updateHitbox()side.updateHitbox();
 		side.antialiasing = ClientPrefs.data.antialiasing;
 		add(side);
 
