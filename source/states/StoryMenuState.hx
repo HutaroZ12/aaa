@@ -99,7 +99,6 @@ class StoryMenuState extends MusicBeatState
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
 		add(bgMove);
                 bgMove.screenCenter(XY);
-		bg.scrollFactor.set(0, 0);
 
 		
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
