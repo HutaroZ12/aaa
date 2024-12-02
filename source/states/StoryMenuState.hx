@@ -98,11 +98,6 @@ class StoryMenuState extends MusicBeatState
 		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY);
-
-		currentColor++;            
-                if (currentColor > 1) currentColor = 1;
-                currentColorAgain = currentColor - 1;
-                if (currentColorAgain <= 0) currentColorAgain = 1;
 		
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
