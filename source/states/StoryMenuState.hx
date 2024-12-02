@@ -87,12 +87,8 @@ class StoryMenuState extends MusicBeatState
 		storyside2 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide2'));
 		storyside2.x = -4000
 		
-		FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
-		
 		storyside1 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide1'));
 		storyside1.x = -4000
-			
-		FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		
 		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 
@@ -201,6 +197,9 @@ class StoryMenuState extends MusicBeatState
 		add(storyside2);
 		add(grpWeekCharacters);
 
+		FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
 		tracksSprite.x = 850;
@@ -208,8 +207,8 @@ class StoryMenuState extends MusicBeatState
 		add(tracksSprite);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 60, 0, "", 32);
-		tracksSprite.x = 850;
-		tracksSprite.y = 90;
+		txttrackList.x = 850;
+		txttrackList.y = 90;
 		txtTracklist.font = Paths.font("vcr.ttf");
 		txtTracklist.color = 0xFFe55777;
 		add(txtTracklist);
