@@ -25,6 +25,7 @@ class StoryMenuState extends MusicBeatState
 	var curDifficulty:Int = 1;
 
 	var txtWeekTitle:FlxText;
+	var bgBar:FlxSprite;
 	var bgSprite:FlxSprite;
 
 	private static var curWeek:Int = 0;
@@ -59,7 +60,7 @@ class StoryMenuState extends MusicBeatState
 
 		final accept:String = controls.mobileC ? "A" : "ACCEPT";
 		final reject:String = controls.mobileC ? "B" : "BACK";
-
+		
 		if(WeekData.weeksList.length < 1)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
@@ -82,13 +83,16 @@ class StoryMenuState extends MusicBeatState
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
 		bgSprite = new FlxSprite(0, 56);
-		bgSprite.y = 360;
+		bgSprite.y = 180;
 
+		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
+		add(bgBar);
+		
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
 
-		var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
-		add(blackBarThingie);
+		//var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
+                //add(blackBarThingie);
 
 		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
 
