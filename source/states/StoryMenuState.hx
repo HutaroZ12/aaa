@@ -85,12 +85,14 @@ class StoryMenuState extends MusicBeatState
 		txtWeekTitle.alpha = 0.7;
 
 		storyside2 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide2'));
+		storyside2.x = -4000
 		
-		FlxTween.tween(storyside2, {x:0}, 3.4, {ease: FlxEase.expoInOut});
+		FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		
 		storyside1 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide1'));
-		
-		FlxTween.tween(storyside1, {x:0}, 3.4, {ease: FlxEase.expoInOut});
+		storyside1.x = -4000
+			
+		FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		
 		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 
