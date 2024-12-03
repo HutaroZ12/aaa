@@ -204,14 +204,14 @@ class StoryMenuState extends MusicBeatState
 		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
-		tracksSprite.x = 820;
-		tracksSprite.y = 520;
+		tracksSprite.x = 980;
+		tracksSprite.y = 480;
 		add(tracksSprite);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 10, 0, "", 32);
 		txtTracklist.font = Paths.font("vcr.ttf");
 		txtTracklist.color = 0xFFe55777;
-		txtTracklist.y = 1000;
+		txtTracklist.y = 500;
 		add(txtTracklist);
 		add(scoreText);
 		add(txtWeekTitle);
