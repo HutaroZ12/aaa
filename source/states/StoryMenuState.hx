@@ -28,8 +28,8 @@ class StoryMenuState extends MusicBeatState
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
 	var bgBar:FlxSprite;
-	var storyside1:FlxSprite;
-	var storyside2:FlxSprite;
+	//var storyside1:FlxSprite;
+	//var storyside2:FlxSprite;
 	var bgMove:FlxBackdrop;
 
 	private static var curWeek:Int = 0;
@@ -128,7 +128,7 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
-				weekThing.y = 360
+				weekThing.y = 360;
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
