@@ -85,13 +85,13 @@ class StoryMenuState extends MusicBeatState
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
 		txtWeekTitle.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 		txtWeekTitle.alpha = 0.7;
-
+/*
 		storyside2 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide2'));
 		storyside2.x = -4000;
 		
 		storyside1 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide1'));
 		storyside1.x = -4000;
-
+*/
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.alpha = 0.1;
 		bgMove.color = 0x9A138B;		
@@ -128,7 +128,7 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
-				weekThing.y += ((weekThing.height + 20) * num);
+				weekThing.y = 360
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
@@ -195,17 +195,17 @@ class StoryMenuState extends MusicBeatState
 		add(bgSprite);
 		add(bgMove);
 		add(bgBar);
-		add(storyside1);
-		add(storyside2);
+		//add(storyside1);
+		//add(storyside2);
 		add(grpWeekCharacters);
 
-		FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
-		FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		//FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		//FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
-		tracksSprite.x = 1000;
-		tracksSprite.y = 500;
+		tracksSprite.x = 1050;
+		tracksSprite.y = 520;
 		add(tracksSprite);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 10, 0, "", 32);
@@ -516,7 +516,7 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 
 		//txtTracklist.screenCenter(X);
-		txtTracklist.x = 1100;
+		txtTracklist.x = 1000;
 
 		#if !switch
 		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
