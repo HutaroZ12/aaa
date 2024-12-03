@@ -211,6 +211,7 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 10, 0, "", 32);
 		txtTracklist.font = Paths.font("vcr.ttf");
 		txtTracklist.color = 0xFFe55777;
+		txtTracklist.y = 20;
 		add(txtTracklist);
 		add(scoreText);
 		add(txtWeekTitle);
@@ -515,7 +516,7 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 
 		//txtTracklist.screenCenter(X);
-		txtTracklist.x = 360;
+		txtTracklist.x = 1200;
 
 		#if !switch
 		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
