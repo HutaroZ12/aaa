@@ -192,9 +192,9 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors.add(rightArrow);
 
 		add(bgYellow);
+		add(bgBar);
 		add(bgSprite);
 		add(bgMove);
-		add(bgBar);
 		//add(storyside1);
 		//add(storyside2);
 		add(grpWeekCharacters);
