@@ -96,7 +96,7 @@ class StoryMenuState extends MusicBeatState
 
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.alpha = 0.1;
-		bgMove.color = 0xFFFF7F00;		
+		bgMove.color = 0x9A138B;		
 		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY);
@@ -210,7 +210,7 @@ class StoryMenuState extends MusicBeatState
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 10, 0, "", 32);
 		txtTracklist.font = Paths.font("vcr.ttf");
-		txtTracklist.color = 0xFFe55777;
+		txtTracklist.color = 0xFF014B;
 		txtTracklist.y = 390;
 		add(txtTracklist);
 		add(scoreText);
