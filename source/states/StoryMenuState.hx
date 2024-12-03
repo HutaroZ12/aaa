@@ -78,7 +78,7 @@ class StoryMenuState extends MusicBeatState
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 
 		scoreText = new FlxText(30, 30, 0, Language.getPhrase('week_score', 'WEEK SCORE: {1}', [lerpScore]), 36);
-		scoreText.setFormat(Paths.font("FontLegal.ttf"), 32);
+		scoreText.setFormat(Paths.font("vcr.ttf"), 32);
 		scoreText.scale.x = 2;
 		scoreText.scale.y = 2;
 
@@ -192,9 +192,9 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors.add(rightArrow);
 
 		add(bgYellow);
-		add(bgSprite);
-		add(bgBar);
+		add(bgSprite)!
 		add(bgMove);
+		add(bgBar);
 		add(storyside1);
 		add(storyside2);
 		add(grpWeekCharacters);
