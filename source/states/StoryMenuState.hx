@@ -204,11 +204,11 @@ class StoryMenuState extends MusicBeatState
 		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
-		tracksSprite.x = 850;
-		tracksSprite.y = 500;
+		tracksSprite.x = 820;
+		tracksSprite.y = 520;
 		add(tracksSprite);
 
-		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 2, 0, "", 32);
+		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 10, 0, "", 32);
 		txtTracklist.font = Paths.font("vcr.ttf");
 		txtTracklist.color = 0xFFe55777;
 		add(txtTracklist);
@@ -514,8 +514,8 @@ class StoryMenuState extends MusicBeatState
 
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 
-		txtTracklist.screenCenter(X);
-		txtTracklist.x -= FlxG.width * 0.35;
+		//txtTracklist.screenCenter(X);
+		txtTracklist.x = -500;
 
 		#if !switch
 		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
