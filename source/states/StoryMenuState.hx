@@ -209,7 +209,7 @@ class StoryMenuState extends MusicBeatState
 		tracksSprite.y = 530;
 		add(tracksSprite);
 
-		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 10, 0, "", 32);
+		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + -700, 0, "", 32);
 		txtTracklist.font = Paths.font("vcr.ttf");
 		txtTracklist.color = 0xFF014B;
 		txtTracklist.y = 600;
