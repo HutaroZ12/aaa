@@ -27,7 +27,7 @@ class StoryMenuState extends MusicBeatState
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
-	//var bgBar:FlxSprite;
+	var bgBar:FlxSprite;
 	//var storyside1:FlxSprite;
 	//var storyside2:FlxSprite;
 	var bgMove:FlxBackdrop;
@@ -99,12 +99,19 @@ class StoryMenuState extends MusicBeatState
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY);
 		
-		//bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
+		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 		
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
 		bgSprite = new FlxSprite(0, 56);
 		bgSprite.y = 170;
+
+		add(bgYellow);
+		add(bgBar);
+		add(bgSprite);
+		add(storyside1);
+		add(storyside2);
+		add(grpWeekCharacters);
 		
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
@@ -117,13 +124,7 @@ class StoryMenuState extends MusicBeatState
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
 
-		add(bgYellow);
-		//add(bgBar);
-		add(bgSprite);
 		add(bgMove);
-		//add(storyside1);
-		//add(storyside2);
-		add(grpWeekCharacters);
 		
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
@@ -136,8 +137,8 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
-				weekThing.y = 200;
-				weekThing.ID = num;
+				weekThing.y = -360;
+				WeekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
 				grpWeekText.add(weekThing);
@@ -204,8 +205,8 @@ class StoryMenuState extends MusicBeatState
 		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
-		tracksSprite.x = 1050;
-		tracksSprite.y = 520;
+		tracksSprite.x = 1020;
+		tracksSprite.y = 530;
 		add(tracksSprite);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 10, 0, "", 32);
@@ -516,7 +517,7 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 
 		//txtTracklist.screenCenter(X);
-		txtTracklist.x = 1000;
+		txtTracklist.x = 1020;
 
 		#if !switch
 		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
