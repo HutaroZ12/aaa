@@ -107,7 +107,6 @@ class StoryMenuState extends MusicBeatState
 		bgSprite.y = 170;
 
 		add(bgYellow);
-		add(bgBar);
 		add(bgSprite);
 		//add(storyside1);
 		//add(storyside2);
@@ -124,6 +123,7 @@ class StoryMenuState extends MusicBeatState
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
 
+		add(bgBar);
 		add(bgMove);
 		
 		var num:Int = 0;
@@ -131,13 +131,13 @@ class StoryMenuState extends MusicBeatState
 		for (i in 0...WeekData.weeksList.length)
 		{
 			var weekFile:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
-			var isLocked:Bool = weekIsLocked(WeekData.weeksList[i]);
+			var islocked:Bool = weekIsLocked(WeekData.weeksList[i]);
 			if(!isLocked || !weekFile.hiddenUntilUnlocked)
 			{
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
-				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
-				weekThing.y = -360;
+				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + -360, WeekData.weeksList[i]);
+				//weekThing.y = -360;
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
