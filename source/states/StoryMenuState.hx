@@ -109,8 +109,8 @@ class StoryMenuState extends MusicBeatState
 		add(bgYellow);
 		add(bgBar);
 		add(bgSprite);
-		add(storyside1);
-		add(storyside2);
+		//add(storyside1);
+		//add(storyside2);
 		add(grpWeekCharacters);
 		
 		grpWeekText = new FlxTypedGroup<MenuItem>();
@@ -138,7 +138,7 @@ class StoryMenuState extends MusicBeatState
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
 				weekThing.y = -360;
-				WeekThing.ID = num;
+				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
 				grpWeekText.add(weekThing);
