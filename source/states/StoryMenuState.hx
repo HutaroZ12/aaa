@@ -136,11 +136,11 @@ class StoryMenuState extends MusicBeatState
 			{
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
-				var weekThing:MenuItem = new MenuItem(0, WeekData.weeksList[i]);
+				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 10, WeekData.weeksList[i]);
 				weekThing.y = -600;
 				weekThing.ID = num;
-				weekThing.targetY = itemTargetY;
-				itemTargetY += Math.max(weekThing.height, 110) + 10;
+				//weekThing.targetY = itemTargetY;
+		                //itemTargetY += Math.max(weekThing.height, 110) + 10;
 				grpWeekText.add(weekThing);
 
 				//weekThing.screenCenter(X);
