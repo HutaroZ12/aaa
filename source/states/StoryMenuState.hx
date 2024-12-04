@@ -27,7 +27,7 @@ class StoryMenuState extends MusicBeatState
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
-	var bgBar:FlxSprite;
+	//var bgBar:FlxSprite;
 	//var storyside1:FlxSprite;
 	//var storyside2:FlxSprite;
 	var bgMove:FlxBackdrop;
@@ -99,7 +99,7 @@ class StoryMenuState extends MusicBeatState
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY);
 		
-		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
+		//bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 		
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
@@ -128,7 +128,7 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
-				weekThing.y = 360;
+				weekThing.y = 200;
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 				itemTargetY += Math.max(weekThing.height, 110) + 10;
@@ -192,7 +192,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors.add(rightArrow);
 
 		add(bgYellow);
-		add(bgBar);
+		//add(bgBar);
 		add(bgSprite);
 		add(bgMove);
 		//add(storyside1);
