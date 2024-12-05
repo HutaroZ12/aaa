@@ -124,12 +124,13 @@ class StoryMenuState extends MusicBeatState
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
 
-		add(bgBar);
-
+		add(bgMove);
+		
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
 		
-		add(bgMove);
+		add(bgBar);
+		
 
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
@@ -150,8 +151,6 @@ class StoryMenuState extends MusicBeatState
 
 				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
-
-				//FlxTween.tween(weekFile, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 				// Needs an offset thingie
 				if (isLocked)
@@ -206,13 +205,14 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
-		
+
+		FlxTween.tween(grpWeekText, {x:0}, 1.4, {ease: FlxEase.expoInOut});
 		//FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		//FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
-		tracksSprite.x = 991;
+		tracksSprite.x = 990;
 		tracksSprite.y = 540;
 		add(tracksSprite);
 
@@ -430,7 +430,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			sprDifficulty.loadGraphic(newImage);
 			sprDifficulty.x = leftArrow.x + 60;
-			sprDifficulty.x += (-2500 - sprDifficulty.width) / 3;
+			sprDifficulty.x += (-2100 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
