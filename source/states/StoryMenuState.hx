@@ -136,7 +136,7 @@ class StoryMenuState extends MusicBeatState
 			{
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
-				var weekThing:MenuItem = new MenuItem(0, bgSprite.y - 600, WeekData.weeksList[i]);
+				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 600, WeekData.weeksList[i]);
 				weekThing.y = -600;
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
@@ -327,7 +327,7 @@ class StoryMenuState extends MusicBeatState
 		
 		var offY:Float = grpWeekText.members[curWeek].targetY;
 		for (num => item in grpWeekText.members)
-			item.y = FlxMath.lerp(item.targetY - offY + -360, item.y, Math.exp(-elapsed * 10.2));
+			item.y = FlxMath.lerp(item.targetY - offY + 360, item.y, Math.exp(-elapsed * 10.2));
 
 		for (num => lock in grpLocks.members)
 			lock.y = grpWeekText.members[lock.ID].y + grpWeekText.members[lock.ID].height/2 - lock.height/2;
