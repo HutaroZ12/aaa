@@ -147,7 +147,7 @@ class StoryMenuState extends MusicBeatState
 		                itemTargetY = 220;
 				grpWeekText.add(weekThing);
 
-				FlxTween.tween(weekThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+				FlxTween.tween(weekFile, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
