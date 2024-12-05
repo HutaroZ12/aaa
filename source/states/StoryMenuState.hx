@@ -129,7 +129,6 @@ class StoryMenuState extends MusicBeatState
 
 		add(bgBar);
 		add(bgMove);
-		grpWeekText.add(weekThing);
 		
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
@@ -146,7 +145,7 @@ class StoryMenuState extends MusicBeatState
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 		                itemTargetY = 220;
-				//grpWeekText.add(weekThing);
+				grpWeekText.add(weekThing);
 
 				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
