@@ -116,9 +116,6 @@ class StoryMenuState extends MusicBeatState
 		//add(storyside2);
 		add(grpWeekCharacters);
 		
-		grpWeekText = new FlxTypedGroup<MenuItem>();
-		add(grpWeekText);
-
 		//var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
                 //add(blackBarThingie);
 
@@ -128,8 +125,12 @@ class StoryMenuState extends MusicBeatState
 		add(grpLocks);
 
 		add(bgBar);
-		add(bgMove);
+
+		grpWeekText = new FlxTypedGroup<MenuItem>();
+		add(grpWeekText);
 		
+		add(bgMove);
+
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
 		for (i in 0...WeekData.weeksList.length)
@@ -205,7 +206,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
 
-		FlxTween.tween(weekThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		FlxTween.tween(WeekData.weeksList[i], {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		
 		//FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		//FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
