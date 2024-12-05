@@ -77,14 +77,18 @@ class StoryMenuState extends MusicBeatState
 
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 
-		scoreText = new FlxText(30, 30, 0, Language.getPhrase('week_score', 'WEEK SCORE: {1}', [lerpScore]), 36);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32);
-		scoreText.scale.x = 2;
-		scoreText.scale.y = 2;
-
-		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
-		txtWeekTitle.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
-		txtWeekTitle.alpha = 0.7;
+		scoreText = new FlxText(FlxG.width * 0.5, 5, 1280, "SCORE: 49324858", 36);
+		scoreText.setFormat(Assets.getFont("montserrat.ttf").fontName, 32);
+		scoreText.alignment = CENTER;
+                scoreText.screenCenter(X);
+                scoreText.antialiasing = ClientPrefs.data.antialiasing;
+        
+		txtWeekTitle = new FlxText(FlxG.width * 0.5, 50, 1280, "", 32);
+		txtWeekTitle.setFormat(Assets.getFont("montserrat.ttf").fontName, 20);
+		txtWeekTitle.alignment = CENTER;
+		txtWeekTitle.screenCenter(X);
+		txtWeekTitle.antialiasing = ClientPrefs.data.antialiasing;
+		// txtWeekTitle.alpha = 0.7;
 /*
 		storyside2 = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/storyMainSide2'));
 		storyside2.x = -4000;
