@@ -137,10 +137,10 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 600, WeekData.weeksList[i]);
-				weekThing.y = 260;
+				weekThing.y = 230;
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
-		                itemTargetY = 260;
+		                itemTargetY = 230;
 				grpWeekText.add(weekThing);
 
 				//weekThing.screenCenter(X);
@@ -205,7 +205,7 @@ class StoryMenuState extends MusicBeatState
 		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
-		tracksSprite.x = 1000;
+		tracksSprite.x = 995;
 		tracksSprite.y = 540;
 		add(tracksSprite);
 
@@ -327,7 +327,7 @@ class StoryMenuState extends MusicBeatState
 		
 		var offY:Float = grpWeekText.members[curWeek].targetY;
 		for (num => item in grpWeekText.members)
-			item.y = FlxMath.lerp(item.targetY - offY + 260, item.y, Math.exp(-elapsed * 10.2));
+			item.y = FlxMath.lerp(item.targetY - offY + 230, item.y, Math.exp(-elapsed * 10.2));
 
 		for (num => lock in grpLocks.members)
 			lock.y = grpWeekText.members[lock.ID].y + grpWeekText.members[lock.ID].height/2 - lock.height/2;
