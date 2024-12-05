@@ -151,7 +151,7 @@ class StoryMenuState extends MusicBeatState
 				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
 
-				FlxTween.tween(WeekThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+				FlxTween.tween(weekFile, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 				// Needs an offset thingie
 				if (isLocked)
