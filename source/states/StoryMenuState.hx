@@ -151,7 +151,7 @@ class StoryMenuState extends MusicBeatState
 				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
 
-				FlxTween.tween(weekFile, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+				//FlxTween.tween(weekFile, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 				// Needs an offset thingie
 				if (isLocked)
@@ -430,7 +430,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			sprDifficulty.loadGraphic(newImage);
 			sprDifficulty.x = leftArrow.x + 60;
-			sprDifficulty.x += (-1900 - sprDifficulty.width) / 3;
+			sprDifficulty.x += (-2500 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
