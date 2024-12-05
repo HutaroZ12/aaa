@@ -129,6 +129,7 @@ class StoryMenuState extends MusicBeatState
 
 		add(bgBar);
 		add(bgMove);
+		grpWeekText.add(weekThing);
 		
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
@@ -145,7 +146,7 @@ class StoryMenuState extends MusicBeatState
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 		                itemTargetY = 220;
-				grpWeekText.add(weekThing);
+				//grpWeekText.add(weekThing);
 
 				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
@@ -427,7 +428,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			sprDifficulty.loadGraphic(newImage);
 			sprDifficulty.x = leftArrow.x + 60;
-			sprDifficulty.x += (-800 - sprDifficulty.width) / 3;
+			sprDifficulty.x += (-1200 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
