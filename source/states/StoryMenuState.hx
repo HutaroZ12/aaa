@@ -148,9 +148,10 @@ class StoryMenuState extends MusicBeatState
 		                itemTargetY = 220;
 				grpWeekText.add(weekThing);
 
-
 				//weekThing.screenCenter(X);
 				// weekThing.updateHitbox();
+
+				FlxTween.tween(WeekThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 				// Needs an offset thingie
 				if (isLocked)
@@ -205,8 +206,6 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
-
-		FlxTween.tween(WeekData.weeksList[i], {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		
 		//FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 		//FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
