@@ -78,13 +78,13 @@ class StoryMenuState extends MusicBeatState
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 
 		scoreText = new FlxText(FlxG.width * 0.5, 5, 1280, "SCORE: 49324858", 36);
-		scoreText.setFormat(Assets.getFont("montserrat.ttf").fontName, 32);
+		scoreText.setFormat(Paths.font("montserrat.ttf").fontName, 32);
 		scoreText.alignment = CENTER;
                 scoreText.screenCenter(X);
                 scoreText.antialiasing = ClientPrefs.data.antialiasing;
         
 		txtWeekTitle = new FlxText(FlxG.width * 0.5, 50, 1280, "", 32);
-		txtWeekTitle.setFormat(Assets.getFont("montserrat.ttf").fontName, 20);
+		txtWeekTitle.setFormat(Paths.font("montserrat.ttf").fontName, 20);
 		txtWeekTitle.alignment = CENTER;
 		txtWeekTitle.screenCenter(X);
 		txtWeekTitle.antialiasing = ClientPrefs.data.antialiasing;
