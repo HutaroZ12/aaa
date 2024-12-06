@@ -131,6 +131,7 @@ class StoryMenuState extends MusicBeatState
 		
 
 		add(bgBar);
+		difficultySelectors.add(sprDifficulty);
 		
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
@@ -195,7 +196,6 @@ class StoryMenuState extends MusicBeatState
 		
 		sprDifficulty = new FlxSprite(0, leftArrow.y);
 		sprDifficulty.antialiasing = ClientPrefs.data.antialiasing;
-		difficultySelectors.add(sprDifficulty);
 
 		rightArrow = new FlxSprite(leftArrow.x + 376, leftArrow.y);
 		rightArrow.antialiasing = ClientPrefs.data.antialiasing;
