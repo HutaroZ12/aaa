@@ -179,7 +179,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
-		leftArrow = new FlxSprite(-0, grpWeekText.members[0].y + 340);
+		leftArrow = new FlxSprite(-0, grpWeekText.members[0].y + 350);
 		leftArrow.antialiasing = ClientPrefs.data.antialiasing;
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
