@@ -179,7 +179,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
-		leftArrow = new FlxSprite(850, grpWeekText.members[0].y + 360);
+		leftArrow = new FlxSprite(-2100, grpWeekText.members[0].y + 360);
 		leftArrow.antialiasing = ClientPrefs.data.antialiasing;
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
@@ -428,7 +428,7 @@ class StoryMenuState extends MusicBeatState
 		if(sprDifficulty.graphic != newImage)
 		{
 			sprDifficulty.loadGraphic(newImage);
-			sprDifficulty.x = leftArrow.x + -2100;
+			sprDifficulty.x = leftArrow.x + 60;
 			sprDifficulty.x += (308 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
