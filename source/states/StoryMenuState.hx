@@ -27,7 +27,7 @@ class StoryMenuState extends MusicBeatState
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
-	var bgBar:FlxSprite;
+	//var bgBar:FlxSprite;
 	//var storyside1:FlxSprite;
 	//var storyside2:FlxSprite;
 	var bgMove:FlxBackdrop;
@@ -103,7 +103,7 @@ class StoryMenuState extends MusicBeatState
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY);
 		
-		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
+	//	bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 		
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
@@ -130,8 +130,7 @@ class StoryMenuState extends MusicBeatState
 		add(grpWeekText);
 		
 
-		add(bgBar);
-		difficultySelectors.add(sprDifficulty);
+		//add(bgBar);
 		
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
@@ -196,7 +195,8 @@ class StoryMenuState extends MusicBeatState
 		
 		sprDifficulty = new FlxSprite(0, leftArrow.y);
 		sprDifficulty.antialiasing = ClientPrefs.data.antialiasing;
-
+		difficultySelectors.add(sprDifficulty);
+		
 		rightArrow = new FlxSprite(leftArrow.x + 376, leftArrow.y);
 		rightArrow.antialiasing = ClientPrefs.data.antialiasing;
 		rightArrow.frames = ui_tex;
