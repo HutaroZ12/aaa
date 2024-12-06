@@ -143,7 +143,7 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 600, WeekData.weeksList[i]);
-				weekThing.y = 220;
+				weekThing.y = 10;
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 		                itemTargetY = 220;
@@ -193,7 +193,7 @@ class StoryMenuState extends MusicBeatState
 		}
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
 		
-		sprDifficulty = new FlxSprite(0, leftArrow.y);
+		sprDifficulty = new FlxSprite(0, 0);
 		sprDifficulty.antialiasing = ClientPrefs.data.antialiasing;
 		difficultySelectors.add(sprDifficulty);
 		
