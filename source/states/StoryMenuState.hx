@@ -194,7 +194,6 @@ class StoryMenuState extends MusicBeatState
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
 		
 		sprDifficulty = new FlxSprite(0, leftArrow.y);
-		sprDifficulty.y = 10;
 		sprDifficulty.antialiasing = ClientPrefs.data.antialiasing;
 		difficultySelectors.add(sprDifficulty);
 
@@ -431,7 +430,7 @@ class StoryMenuState extends MusicBeatState
 			sprDifficulty.x = leftArrow.x + -2100;
 			sprDifficulty.x += (-2100 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
-		        sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
+		        sprDifficulty.y = 10 - sprDifficulty.height + 50;
 
 			FlxTween.cancelTweensOf(sprDifficulty);
 			FlxTween.tween(sprDifficulty, {y: sprDifficulty.y + 30, alpha: 1}, 0.07);
