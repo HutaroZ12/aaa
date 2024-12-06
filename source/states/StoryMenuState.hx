@@ -130,7 +130,9 @@ class StoryMenuState extends MusicBeatState
 		add(grpWeekText);
 		
 		add(bgBar);
-		
+
+		difficultySelectors = new FlxGroup();
+		add(difficultySelectors)
 
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
@@ -175,9 +177,6 @@ class StoryMenuState extends MusicBeatState
 			weekCharacterThing.y += 70;
 			grpWeekCharacters.add(weekCharacterThing);
 		}
-
-		difficultySelectors = new FlxGroup();
-		add(difficultySelectors);
 
 		leftArrow = new FlxSprite(850, grpWeekText.members[0].y + 10);
 		leftArrow.antialiasing = ClientPrefs.data.antialiasing;
