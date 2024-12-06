@@ -432,7 +432,7 @@ class StoryMenuState extends MusicBeatState
 			sprDifficulty.x += (-2100 - sprDifficulty.width) / 3;
 			sprDifficulty.y += 200;
 			sprDifficulty.alpha = 0;
-			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
+		        //sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
 			FlxTween.cancelTweensOf(sprDifficulty);
 			FlxTween.tween(sprDifficulty, {y: sprDifficulty.y + 30, alpha: 1}, 0.07);
