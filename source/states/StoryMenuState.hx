@@ -129,11 +129,9 @@ class StoryMenuState extends MusicBeatState
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
 		
+
 		add(bgBar);
-
-		difficultySelectors = new FlxGroup();
-		add(difficultySelectors)
-
+		
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
 		for (i in 0...WeekData.weeksList.length)
@@ -177,7 +175,9 @@ class StoryMenuState extends MusicBeatState
 			weekCharacterThing.y += 70;
 			grpWeekCharacters.add(weekCharacterThing);
 		}
-
+		difficultySelectors = new FlxGroup();
+		add(difficultySelectors)
+			
 		leftArrow = new FlxSprite(850, grpWeekText.members[0].y + 10);
 		leftArrow.antialiasing = ClientPrefs.data.antialiasing;
 		leftArrow.frames = ui_tex;
@@ -429,7 +429,7 @@ class StoryMenuState extends MusicBeatState
 			sprDifficulty.loadGraphic(newImage);
 			sprDifficulty.x = leftArrow.x + -2100;
 			sprDifficulty.x += (-2100 - sprDifficulty.width) / 3;
-			sprDifficulty.y += 200;
+			sprDifficulty.y += 10;
 			sprDifficulty.alpha = 0;
 		        //sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
