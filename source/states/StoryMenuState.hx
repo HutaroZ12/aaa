@@ -27,7 +27,7 @@ class StoryMenuState extends MusicBeatState
 
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
-	//var bgBar:FlxSprite;
+	var bgBar:FlxSprite;
 	//var storyside1:FlxSprite;
 	//var storyside2:FlxSprite;
 	var bgMove:FlxBackdrop;
@@ -103,7 +103,7 @@ class StoryMenuState extends MusicBeatState
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY);
 		
-	//	bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
+		bgBar = new FlxSprite(0).loadGraphic(Paths.image('STORYMODESHIT/BackgroundBar'));
 		
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
@@ -129,9 +129,9 @@ class StoryMenuState extends MusicBeatState
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
 		
-
-		//add(bgBar);
+		add(bgBar);
 		
+
 		var num:Int = 0;
 		var itemTargetY:Float = 0;
 		for (i in 0...WeekData.weeksList.length)
@@ -143,7 +143,7 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				WeekData.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 600, WeekData.weeksList[i]);
-				weekThing.y = 10;
+				weekThing.y = 220;
 				weekThing.ID = num;
 				weekThing.targetY = itemTargetY;
 		                itemTargetY = 220;
@@ -175,10 +175,11 @@ class StoryMenuState extends MusicBeatState
 			weekCharacterThing.y += 70;
 			grpWeekCharacters.add(weekCharacterThing);
 		}
+
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
-		
-		leftArrow = new FlxSprite(850, grpWeekText.members[0].y + 10);
+
+		leftArrow = new FlxSprite(850, grpWeekText.members[0].y + 200);
 		leftArrow.antialiasing = ClientPrefs.data.antialiasing;
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
@@ -193,10 +194,10 @@ class StoryMenuState extends MusicBeatState
 		}
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
 		
-		sprDifficulty = new FlxSprite(0, 0);
+		sprDifficulty = new FlxSprite(0, leftArrow.y);
 		sprDifficulty.antialiasing = ClientPrefs.data.antialiasing;
 		difficultySelectors.add(sprDifficulty);
-		
+
 		rightArrow = new FlxSprite(leftArrow.x + 376, leftArrow.y);
 		rightArrow.antialiasing = ClientPrefs.data.antialiasing;
 		rightArrow.frames = ui_tex;
@@ -427,13 +428,13 @@ class StoryMenuState extends MusicBeatState
 		if(sprDifficulty.graphic != newImage)
 		{
 			sprDifficulty.loadGraphic(newImage);
-			sprDifficulty.x = leftArrow.x + -2100;
+			sprDifficulty.x = leftArrow.x + 60;
 			sprDifficulty.x += (-2100 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
-		        sprDifficulty.y = 10;
+			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
 			FlxTween.cancelTweensOf(sprDifficulty);
-			//FlxTween.tween(sprDifficulty, {y: sprDifficulty.y + 30, alpha: 1}, 0.07);
+			FlxTween.tween(sprDifficulty, {y: sprDifficulty.y + 30, alpha: 1}, 0.07);
 		}
 		lastDifficultyName = diff;
 
