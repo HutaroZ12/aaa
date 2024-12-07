@@ -16,17 +16,17 @@ class MenuCharacterEditorState extends MusicBeatState implements PsychUIEventHan
 	var grpWeekCharacters:FlxTypedGroup<MenuCharacter>;
 	var characterFile:MenuCharacterFile = null;
 	var txtOffsets:FlxText;
-	var defaultCharacters:Array<String> = ['eyz', 'bf', 'gf'];
+	var defaultCharacters:Array<String> = ['dad', 'bf', 'gf'];
 	var unsavedProgress:Bool = false;
 
 	override function create() {
 		characterFile =
 		{
-			image: 'Menu_EYZ',
+			image: 'Menu_Dad',
 			scale: 1,
 			position: [0, 0],
-			idle_anim: 'M EYZ Idle',
-			confirm_anim: 'M EYZ Idle',
+			idle_anim: 'M Dad Idle',
+			confirm_anim: 'M Dad Idle',
 			flipX: false,
 			antialiasing: true
 		};
