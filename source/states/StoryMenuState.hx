@@ -109,11 +109,6 @@ class StoryMenuState extends MusicBeatState
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
 		bgSprite = new FlxSprite(0, 56);
 		bgSprite.y = 170;
-
-		add(bgYellow);
-		add(bgSprite);
-		//add(storyside1);
-		//add(storyside2);
 		
 		//var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
                 //add(blackBarThingie);
@@ -129,8 +124,6 @@ class StoryMenuState extends MusicBeatState
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
-		
-		add(bgBar);
 		
 
 		var num:Int = 0;
@@ -173,7 +166,7 @@ class StoryMenuState extends MusicBeatState
 		for (char in 0...3)
 		{	
 			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, charArray[char]);
-			weekCharacterThing.y += 70;
+			weekCharacterThing.y = 70;
 			grpWeekCharacters.add(weekCharacterThing);
 		}
 
@@ -209,12 +202,11 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
 
-
-		//FlxTween.tween(weekCharacterThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
-
-		//FlxTween.tween(grpWeekCharacters.members, {x:0}, 2.4, {ease: FlxEase.expoInOut});
-		//FlxTween.tween(storyside1, {x:0}, 2.4, {ease: FlxEase.expoInOut});
-		//FlxTween.tween(storyside2, {x:0}, 2.4, {ease: FlxEase.expoInOut});
+		add(bgYellow);
+		add(bgSprite);
+		add(bgMove);
+		add(grpWeekCharacters);
+		add(bgBar);
 		
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
@@ -387,6 +379,12 @@ class StoryMenuState extends MusicBeatState
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 				FlxG.camera.flash(FlxColor.WHITE, 1);
+
+				FlxG.camera.zoom = 1 + 0.015;			
+			        FlxTween.tween(FlxG.camera, {zoom: 0.6}, 0.6, {ease: FlxEase.cubeOut});
+				
+				FlxTween.tween(FlxG.camera, {x:-3000}, 1.4, {ease: FlxEase.expoIn});
+				stopspamming = true;
 				
 				grpWeekText.members[curWeek].isFlashing = true;
 				for (char in grpWeekCharacters.members)
@@ -396,11 +394,6 @@ class StoryMenuState extends MusicBeatState
 						char.animation.play('confirm');
 					}
 				}
-				FlxG.camera.zoom = 1 + 0.015;			
-			        FlxTween.tween(FlxG.camera, {zoom: 0.6}, 0.6, {ease: FlxEase.cubeOut});
-				
-				FlxTween.tween(FlxG.camera, {x:-3000}, 1.4, {ease: FlxEase.expoIn});
-				stopspamming = true;
 			}
 
 			var directory = StageData.forceNextDirectory;
@@ -441,8 +434,8 @@ class StoryMenuState extends MusicBeatState
 		{
 			sprDifficulty.loadGraphic(newImage);
 			sprDifficulty.x = leftArrow.x + 80;
-			sprDifficulty.x += (260 - sprDifficulty.width) / 3;
-			sprDifficulty.y = 60;
+			sprDifficulty.x += (230 - sprDifficulty.width) / 3;
+			sprDifficulty.y = 90;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
