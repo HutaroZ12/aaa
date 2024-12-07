@@ -1,12 +1,11 @@
 {
-	
-	"image": "Menu_EYZ",
+	"idle_anim": "M eyz",
+	"image": "eyz",
 	"position": [
-		15,
-		-40
+		0,
+		20
 	],
+	"flipX": false,
 	"scale": 1,
-	"idle_anim": "M EYZ idle",
-	"confirm_anim": "M EYZ idle",
-	"antialiasing": true
+	"confirm_anim": "M eyz"
 }
