@@ -171,13 +171,10 @@ class StoryMenuState extends MusicBeatState
 		WeekData.setDirectoryFromWeek(loadedWeeks[0]);
 		var charArray:Array<String> = loadedWeeks[0].weekCharacters;
 		for (char in 0...3)
-		{
-			
+		{	
 			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, charArray[char]);
 			weekCharacterThing.y += 70;
-			//weekCharacterThing.x += 0;
 			grpWeekCharacters.add(weekCharacterThing);
-			//FlxTween.tween(weekCharacterThing, {x:10}, 2.4, {ease: FlxEase.expoInOut});
 		}
 
 		difficultySelectors = new FlxGroup();
@@ -212,9 +209,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
 
-		FlxG.camera.x += -2000;
 
-		FlxTween.tween(FlxG.camera, {x:0}, 2.4, {ease: FlxEase.expoIn});
 		//FlxTween.tween(weekCharacterThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 		//FlxTween.tween(grpWeekCharacters.members, {x:0}, 2.4, {ease: FlxEase.expoInOut});
@@ -391,7 +386,8 @@ class StoryMenuState extends MusicBeatState
 			if (stopspamming == false)
 			{
 				FlxG.sound.play(Paths.sound('confirmMenu'));
-
+				FlxG.camera.flash(FlxColor.WHITE, 1);
+				
 				grpWeekText.members[curWeek].isFlashing = true;
 				for (char in grpWeekCharacters.members)
 				{
@@ -400,6 +396,10 @@ class StoryMenuState extends MusicBeatState
 						char.animation.play('confirm');
 					}
 				}
+				camGame.zoom = 1 + 0.015;			
+			        cameraTween[0] = FlxTween.tween(camGame, {zoom: 1}, 0.6, {ease: FlxEase.cubeOut});
+				
+				FlxTween.tween(FlxG.camera, {x:-3000}, 1.4, {ease: FlxEase.expoIn});
 				stopspamming = true;
 			}
 
@@ -441,7 +441,8 @@ class StoryMenuState extends MusicBeatState
 		{
 			sprDifficulty.loadGraphic(newImage);
 			sprDifficulty.x = leftArrow.x + 80;
-			sprDifficulty.x += (299 - sprDifficulty.width) / 3;
+			sprDifficulty.x += (260 - sprDifficulty.width) / 3;
+			sprDifficulty.y = 60;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
