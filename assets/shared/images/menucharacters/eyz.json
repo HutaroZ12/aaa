@@ -1,5 +1,5 @@
 {
-	"idle_anim": "menj eyz",
+	"idle_anim": "menu eyz",
 	"image": "Menu_eyz",
 	"position": [
 		0,
@@ -7,5 +7,5 @@
 	],
 	"flipX": false,
 	"scale": 1,
-	"confirm_anim": "menj eyz"
+	"confirm_anim": "menu eyz"
 }
