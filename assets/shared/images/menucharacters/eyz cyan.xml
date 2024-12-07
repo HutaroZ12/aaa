@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="eyz cyan.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="M eyz cyan0000" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz cyan0001" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz cyan0002" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz cyan0003" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz cyan0004" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz cyan0005" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz cyan0006" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz cyan0007" x="0" y="811" width="693" height="807" frameX="-475" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+</TextureAtlas>

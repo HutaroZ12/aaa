@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="eyz pink.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="M eyz pink0000" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz pink0001" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz pink0002" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz pink0003" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz pink0004" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz pink0005" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz pink0006" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="M eyz pink0007" x="1410" y="810" width="693" height="807" frameX="-454" frameY="-13" frameWidth="1920" frameHeight="1080"/>
+</TextureAtlas>
