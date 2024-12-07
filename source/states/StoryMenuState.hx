@@ -169,7 +169,7 @@ class StoryMenuState extends MusicBeatState
 			weekCharacterThing.x = 1200;
 			grpWeekCharacters.add(weekCharacterThing);
 
-			FlxTween.tween(char.bf, {x:20}, 2.5, {ease: FlxEase.expoInOut});
+			FlxTween.tween(weekCharacterThing, {x:20}, 2.5, {ease: FlxEase.expoInOut});
 		}
 
 		difficultySelectors = new FlxGroup();
