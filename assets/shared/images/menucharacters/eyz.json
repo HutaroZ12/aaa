@@ -2,10 +2,10 @@
 	"idle_anim": "M eyz",
 	"image": "eyz",
 	"position": [
-		0,
-		20
+		574,
+		37
 	],
 	"flipX": false,
-	"scale": 1,
+	"scale": 1.1,
 	"confirm_anim": "M eyz"
 }
