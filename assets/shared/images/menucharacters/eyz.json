@@ -3,9 +3,9 @@
 	"image": "eyz",
 	"position": [
 		-204,
-		37
+		47
 	],
 	"flipX": false,
-	"scale": 1.1,
+	"scale": 1.2,
 	"confirm_anim": "M eyz"
 }
