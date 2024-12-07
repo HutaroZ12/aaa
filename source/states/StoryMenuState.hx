@@ -122,7 +122,6 @@ class StoryMenuState extends MusicBeatState
 		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
-		add(grpWeekText);
 		
 
 		var num:Int = 0;
@@ -167,6 +166,7 @@ class StoryMenuState extends MusicBeatState
 			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, charArray[char]);
 			weekCharacterThing.y = 70;
 			weekCharacterThing.x = 1200;
+			weekCharacterThing.scrollFactor.set(1.7, 1.7);
 			grpWeekCharacters.add(weekCharacterThing);
 
 			FlxTween.tween(weekCharacterThing, {x:20}, 2.5, {ease: FlxEase.expoInOut});
@@ -207,9 +207,9 @@ class StoryMenuState extends MusicBeatState
 		add(bgSprite);
 		add(bgMove);
 		add(grpWeekCharacters);
+		add(grpWeekText);
 		add(bgBar);
 		add(difficultySelectors);
-		add(grpWeekText);
 
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07 + 100, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.data.antialiasing;
