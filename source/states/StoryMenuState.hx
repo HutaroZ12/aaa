@@ -171,9 +171,9 @@ class StoryMenuState extends MusicBeatState
 		var charArray:Array<String> = loadedWeeks[0].weekCharacters;
 		for (char in 0...3)
 		{
-			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, charArray[char]);
+			var weekCharacterThing:MenuCharacter = new MenuCharacter(weekCharacterThing.width + 10 + weekThing.x);
 			weekCharacterThing.y += 70;
-			char.x += 1200;
+			weekCharacterThing.x += 1200;
 			grpWeekCharacters.add(weekCharacterThing);
 		}
 
