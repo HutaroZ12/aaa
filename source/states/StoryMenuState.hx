@@ -65,6 +65,8 @@ class StoryMenuState extends MusicBeatState
 		final accept:String = controls.mobileC ? "A" : "ACCEPT";
 		final reject:String = controls.mobileC ? "B" : "BACK";
 
+		FlxG.camera.x += -2000;
+		
 		if(WeekData.weeksList.length < 1)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
@@ -175,9 +177,9 @@ class StoryMenuState extends MusicBeatState
 			
 			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, charArray[char]);
 			weekCharacterThing.y += 70;
-			weekCharacterThing.x += 0;
+			//weekCharacterThing.x += 0;
 			grpWeekCharacters.add(weekCharacterThing);
-			FlxTween.tween(weekCharacterThing, {x:10}, 2.4, {ease: FlxEase.expoInOut});
+			//FlxTween.tween(weekCharacterThing, {x:10}, 2.4, {ease: FlxEase.expoInOut});
 		}
 
 		difficultySelectors = new FlxGroup();
@@ -212,6 +214,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
 
+		FlxTween.tween(FlxG.camera, {x:0}, 2.4, {ease: FlxEase.expoIn});
 		//FlxTween.tween(weekCharacterThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
 
 		//FlxTween.tween(grpWeekCharacters.members, {x:0}, 2.4, {ease: FlxEase.expoInOut});
