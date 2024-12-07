@@ -396,8 +396,8 @@ class StoryMenuState extends MusicBeatState
 						char.animation.play('confirm');
 					}
 				}
-				camGame.zoom = 1 + 0.015;			
-			        cameraTween[0] = FlxTween.tween(camGame, {zoom: 1}, 0.6, {ease: FlxEase.cubeOut});
+				FlxG.camera.zoom = 1 + 0.015;			
+			        FlxTween.tween(FlxG.camera, {zoom: 0.6}, 0.6, {ease: FlxEase.cubeOut});
 				
 				FlxTween.tween(FlxG.camera, {x:-3000}, 1.4, {ease: FlxEase.expoIn});
 				stopspamming = true;
