@@ -1,0 +1,11 @@
+{
+	"idle_anim": "menj eyz",
+	"image": "Menu_eyz",
+	"position": [
+		0,
+		59
+	],
+	"flipX": false,
+	"scale": 1,
+	"confirm_anim": "menj eyz"
+}
