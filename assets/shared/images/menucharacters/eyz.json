@@ -1,0 +1,12 @@
+{
+	
+	"image": "Menu_EYZ",
+	"position": [
+		15,
+		-40
+	],
+	"scale": 1,
+	"idle_anim": "M EYZ idle",
+	"confirm_anim": "M EYZ idle",
+	"antialiasing": true
+}
