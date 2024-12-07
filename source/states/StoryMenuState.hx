@@ -64,8 +64,6 @@ class StoryMenuState extends MusicBeatState
 
 		final accept:String = controls.mobileC ? "A" : "ACCEPT";
 		final reject:String = controls.mobileC ? "B" : "BACK";
-
-		FlxG.camera.x += -2000;
 		
 		if(WeekData.weeksList.length < 1)
 		{
@@ -116,7 +114,6 @@ class StoryMenuState extends MusicBeatState
 		add(bgSprite);
 		//add(storyside1);
 		//add(storyside2);
-		add(grpWeekCharacters);
 		
 		//var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
                 //add(blackBarThingie);
@@ -126,7 +123,8 @@ class StoryMenuState extends MusicBeatState
 		add(grpLocks);
 
 		add(bgMove);
-
+		add(grpWeekCharacters);
+		
 		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
@@ -213,6 +211,8 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
+
+		FlxG.camera.x += -2000;
 
 		FlxTween.tween(FlxG.camera, {x:0}, 2.4, {ease: FlxEase.expoIn});
 		//FlxTween.tween(weekCharacterThing, {x:0}, 2.4, {ease: FlxEase.expoInOut});
@@ -440,8 +440,8 @@ class StoryMenuState extends MusicBeatState
 		if(sprDifficulty.graphic != newImage)
 		{
 			sprDifficulty.loadGraphic(newImage);
-			sprDifficulty.x = leftArrow.x + 60;
-			sprDifficulty.x += (308 - sprDifficulty.width) / 3;
+			sprDifficulty.x = leftArrow.x + 80;
+			sprDifficulty.x += (299 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 50;
 
