@@ -119,14 +119,14 @@ class StoryMenuState extends MusicBeatState
 		//var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
                 //add(blackBarThingie);
 
-		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
-
 		
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
 
 		add(bgMove);
-		
+
+		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
+
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
 		
@@ -175,10 +175,10 @@ class StoryMenuState extends MusicBeatState
 			
 			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, charArray[char]);
 			weekCharacterThing.y += 70;
-			weekCharacterThing.x += 0;
+			//weekCharacterThing.x += 0;
 			grpWeekCharacters.add(weekCharacterThing);
 
-			FlxTween.tween(weekCharacterThing, {x:10}, 2.4, {ease: FlxEase.expoInOut});
+			//FlxTween.tween(weekCharacterThing, {x:}, 2.4, {ease: FlxEase.expoInOut});
 
 		}
 
@@ -201,6 +201,8 @@ class StoryMenuState extends MusicBeatState
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
 		
 		sprDifficulty = new FlxSprite(0, leftArrow.y);
+		sprDifficulty.scale.x = 0.7
+		sprDifficulty.scale.y = 0.7
 		sprDifficulty.antialiasing = ClientPrefs.data.antialiasing;
 		difficultySelectors.add(sprDifficulty);
 
