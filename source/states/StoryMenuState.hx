@@ -166,10 +166,9 @@ class StoryMenuState extends MusicBeatState
 			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, charArray[char]);
 			weekCharacterThing.y = 70;
 			weekCharacterThing.x = 1200;
-			weekCharacterThing.scrollFactor.set(1.7, 1.7);
 			grpWeekCharacters.add(weekCharacterThing);
 
-			FlxTween.tween(weekCharacterThing, {x:20}, 2.5, {ease: FlxEase.expoInOut});
+			FlxTween.tween(char.bf, {x:20}, 2.5, {ease: FlxEase.expoInOut});
 		}
 
 		difficultySelectors = new FlxGroup();
