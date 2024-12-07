@@ -9,6 +9,7 @@ import flixel.graphics.FlxGraphic;
 import flixel.addons.display.FlxBackdrop;
 
 import objects.MenuItem;
+import haxe.Json;
 import objects.MenuCharacter;
 
 import options.GameplayChangersSubstate;
