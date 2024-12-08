@@ -74,12 +74,12 @@
 		-560,
 		-170
 	],
-	"healthicon": "bf",
+	"healthicon": "eyz",
 	"flip_x": false,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		255,
+		255,
+		255
 	],
 	"camera_position": [
 		-10,
