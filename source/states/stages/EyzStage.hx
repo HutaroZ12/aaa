@@ -34,7 +34,8 @@ class EyzStage extends BaseStage
 			add(stageCurtains);
 		}
 	}
-	override function stepHit()
+	
+	override function startSong()
 	{
 	if (curSong == 'RayQuest') 
 	{
