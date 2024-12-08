@@ -4,13 +4,13 @@ class EyzStage extends BaseStage
 {
 	var fundopapel:BGSprite 
 	   
-	override function create()
+	override function create();
 	{
 	    var bg:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
 		add(bg);
 	}
 	
-	/*override function createPost()
+	override function createPost()
 	{
 		// Use this function to layer things above characters!
 	}
@@ -25,7 +25,7 @@ class EyzStage extends BaseStage
 		// Code here
 	}
 
-	*/
+	
 	override function countdownTick(count:Countdown, num:Int)
 	{
 		switch(count)
