@@ -34,6 +34,48 @@ class EyzStage extends BaseStage
 			add(stageCurtains);
 		}
 	}
+	if (curSong == 'RayQuest') 
+	{
+		if (curStep == 64)
+		{
+		FlxG.camera.flash(FlxColor.WHITE, 1.5);
+		defaultCamZoom = 1.1;
+	}
+	    if (curStep == 128)
+		{
+		defaultCamZoom = 1;
+	}
+	     if (curStep == 144)
+		{
+		defaultCamZoom = 1.1;
+	}
+	if (curStep == 160)
+		{
+		defaultCamZoom = 1;
+	}
+	if (curStep == 208)
+		{
+		defaultCamZoom = 1.1;
+	}
+	if (curStep == 250)
+		{
+		defaultCamZoom = 1.5;
+	}
+	if (curStep == 250)
+		{
+		defaultCamZoom = 1.5;
+	}
+	if (curStep == 254)
+		{
+		FlxTween.tween(FlxG.camera, {zoom: 1.8}, 2, {ease: FlxEase.cubeOut});
+	}
+	if (curStep == 256)
+		{
+		FlxG.camera.flash(FlxColor.WHITE, 1.5);
+		defaultCamZoom = 1;
+		}
+	
+	}
 	override function eventPushed(event:objects.Note.EventNote)
 	{
 		switch(event.event)
