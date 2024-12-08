@@ -1,186 +1,97 @@
 package states.stages;
 
 import states.stages.objects.*;
+import objects.Character;
 
-class Template extends BaseStage
+class StageWeek1 extends BaseStage
 {
-	// If you're moving your stage from PlayState to a stage file,
-	// you might have to rename some variables if they're missing, for example: camZooming -> game.camZooming
-
+	var dadbattleBlack:BGSprite;
+	var dadbattleLight:BGSprite;
+	var dadbattleFog:DadBattleFog;
 	override function create()
 	{
-		// Spawn your stage sprites here.
-		// Characters are not ready yet on this function, so you can't add things above them yet.
-		// Use createPost() if that's what you want to do.
-	}
-	
-	override function createPost()
-	{
-		// Use this function to layer things above characters!
-	}
+		var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
+		add(bg);
 
-	override function update(elapsed:Float)
-	{
-		// Code here
-	}
+		var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
+		stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+		stageFront.updateHitbox();
+		add(stageFront);
+		if(!ClientPrefs.data.lowQuality) {
+			var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
+			stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+			stageLight.updateHitbox();
+			add(stageLight);
+			var stageLight:BGSprite = new BGSprite('stage_light', 1225, -100, 0.9, 0.9);
+			stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
+			stageLight.updateHitbox();
+			stageLight.flipX = true;
+			add(stageLight);
 
-	override function destroy()
-	{
-		// Code here
-	}
-
-	override function countdownTick(count:Countdown, num:Int)
-	{
-		switch(count)
-		{
-			case THREE: //num 0
-			case TWO: //num 1
-			case ONE: //num 2
-			case GO: //num 3
-			case START: //num 4
-		}
-	}
-
-	override function startSong()
-	{
-	if (curSong == 'RayQuest') 
-	{
-	if (curStep == 64)
-		{
-		FlxG.camera.flash(FlxColor.WHITE, 1.5);
-		defaultCamZoom = 1.1;
-	}
-	    if (curStep == 128)
-		{
-		defaultCamZoom = 1;
-	}
-	     if (curStep == 144)
-		{
-		defaultCamZoom = 1.1;
-	}
-	if (curStep == 160)
-		{
-		defaultCamZoom = 1;
-	}
-	if (curStep == 208)
-		{
-		defaultCamZoom = 1.1;
-	}
-	if (curStep == 250)
-		{
-		defaultCamZoom = 1.5;
-	}
-	if (curStep == 250)
-		{
-		defaultCamZoom = 1.5;
-	}
-	if (curStep == 254)
-		{
-		FlxTween.tween(FlxG.camera, {zoom: 1.8}, 2, {ease: FlxEase.cubeOut});
-	}
-	if (curStep == 256)
-		{
-		FlxG.camera.flash(FlxColor.WHITE, 1.5);
-		defaultCamZoom = 1;
-		}
-	override function stepHit()
-	{
-	       //code here
-	}
-	override function beatHit()
-	{
-		// Code here
-	}
-	override function sectionHit()
-	{
-		// Code here
-	}
-
-	// Substates for pausing/resuming tweens and timers
-	override function closeSubState()
-	{
-		if(paused)
-		{
-			//timer.active = true;
-			//tween.active = true;
-		}
-	}
-
-	override function openSubState(SubState:flixel.FlxSubState)
-	{
-		if(paused)
-		{
-			//timer.active = false;
-			//tween.active = false;
-		}
-	}
-
-	// For events
-	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
-	{
-		switch(eventName)
-		{
-			case "My Event":
+			var stageCurtains:BGSprite = new BGSprite('stagecurtains', -500, -300, 1.3, 1.3);
+			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+			stageCurtains.updateHitbox();
+			add(stageCurtains);
 		}
 	}
 	override function eventPushed(event:objects.Note.EventNote)
 	{
-		// used for preloading assets used on events that doesn't need different assets based on its values
 		switch(event.event)
 		{
-			case "My Event":
-				//precacheImage('myImage') //preloads images/myImage.png
-				//precacheSound('mySound') //preloads sounds/mySound.ogg
-				//precacheMusic('myMusic') //preloads music/myMusic.ogg
+			case "Dadbattle Spotlight":
+				dadbattleBlack = new BGSprite(null, -800, -400, 0, 0);
+				dadbattleBlack.makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+				dadbattleBlack.alpha = 0.25;
+				dadbattleBlack.visible = false;
+				add(dadbattleBlack);
+
+				dadbattleLight = new BGSprite('spotlight', 400, -400);
+				dadbattleLight.alpha = 0.375;
+				dadbattleLight.blend = ADD;
+				dadbattleLight.visible = false;
+				add(dadbattleLight);
+
+				dadbattleFog = new DadBattleFog();
+				dadbattleFog.visible = false;
+				add(dadbattleFog);
 		}
 	}
-	override function eventPushedUnique(event:objects.Note.EventNote)
-	{
-		// used for preloading assets used on events where its values affect what assets should be preloaded
-		switch(event.event)
-		{
-			case "My Event":
-				switch(event.value1)
-				{
-					// If value 1 is "blah blah", it will preload these assets:
-					case 'blah blah':
-						//precacheImage('myImageOne') //preloads images/myImageOne.png
-						//precacheSound('mySoundOne') //preloads sounds/mySoundOne.ogg
-						//precacheMusic('myMusicOne') //preloads music/myMusicOne.ogg
 
-					// If value 1 is "coolswag", it will preload these assets:
-					case 'coolswag':
-						//precacheImage('myImageTwo') //preloads images/myImageTwo.png
-						//precacheSound('mySoundTwo') //preloads sounds/mySoundTwo.ogg
-						//precacheMusic('myMusicTwo') //preloads music/myMusicTwo.ogg
-					
-					// If value 1 is not "blah blah" or "coolswag", it will preload these assets:
+	override function eventCalled(eventName:String, value1:String, value2:String, flValue1:Null<Float>, flValue2:Null<Float>, strumTime:Float)
+	{
+		switch(eventName)
+		{
+			case "Dadbattle Spotlight":
+				if(flValue1 == null) flValue1 = 0;
+				var val:Int = Math.round(flValue1);
+
+				switch(val)
+				{
+					case 1, 2, 3: //enable and target dad
+						if(val == 1) //enable
+						{
+							dadbattleBlack.visible = true;
+							dadbattleLight.visible = true;
+							dadbattleFog.visible = true;
+							defaultCamZoom += 0.12;
+						}
+
+						var who:Character = dad;
+						if(val > 2) who = boyfriend;
+						//2 only targets dad
+						dadbattleLight.alpha = 0;
+						new FlxTimer().start(0.12, function(tmr:FlxTimer) {
+							dadbattleLight.alpha = 0.375;
+						});
+						dadbattleLight.setPosition(who.getGraphicMidpoint().x - dadbattleLight.width / 2, who.y + who.height - dadbattleLight.height + 50);
+						FlxTween.tween(dadbattleFog, {alpha: 0.7}, 1.5, {ease: FlxEase.quadInOut});
+
 					default:
-						//precacheImage('myImageThree') //preloads images/myImageThree.png
-						//precacheSound('mySoundThree') //preloads sounds/mySoundThree.ogg
-						//precacheMusic('myMusicThree') //preloads music/myMusicThree.ogg
+						dadbattleBlack.visible = false;
+						dadbattleLight.visible = false;
+						defaultCamZoom -= 0.12;
+						FlxTween.tween(dadbattleFog, {alpha: 0}, 0.7, {onComplete: function(twn:FlxTween) dadbattleFog.visible = false});
 				}
 		}
 	}
-
-	// Note Hit/Miss
-	override function goodNoteHit(note:Note)
-	{
-		// Code here
-	}
-
-	override function opponentNoteHit(note:Note)
-	{
-		// Code here
-	}
-
-	override function noteMiss(note:Note)
-	{
-		// Code here
-	}
-
-	override function noteMissPress(direction:Int)
-	{
-		// Code here
-	}
-	}
+}
