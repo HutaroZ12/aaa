@@ -8,7 +8,7 @@ class eyzStage extends BaseStage
 	override function create()
 	{
 	    var fundopapel:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
-		add(bg);
+		add(fundopapel);
 	}
 	
 	override function createPost()
@@ -35,11 +35,18 @@ class eyzStage extends BaseStage
 			case TWO: //num 1
 			case ONE: //num 2
 			case GO: //num 3
+			bf.playAnim('hey', true);
+			dad.playAnim('hey', true);
 			case START: //num 4
 		}
 	}
-
-	if (curSong == 'RayQuest') 
+	// Steps, Beats and Sections:
+	//    curStep, curDecStep
+	//    curBeat, curDecBeat
+	//    curSection
+	override function stepHit()
+	{
+		if (curSong == 'RayQuest') 
 	{
 		if (curStep == 64)
 		{
@@ -81,15 +88,6 @@ class eyzStage extends BaseStage
 		}
 	
 	}
-
-/*	// Steps, Beats and Sections:
-	//    curStep, curDecStep
-	//    curBeat, curDecBeat
-	//    curSection
-	override function stepHit()
-	{
-		// Code here
-	}
 	override function beatHit()
 	{
 		// Code here
@@ -98,7 +96,7 @@ class eyzStage extends BaseStage
 	{
 		// Code here
 	}
-*/
+
 	// Substates for pausing/resuming tweens and timers
 	override function closeSubState()
 	{
