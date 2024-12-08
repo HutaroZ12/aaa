@@ -44,7 +44,7 @@ class Template extends BaseStage
 	override function startSong()
 	{
 	if (curSong == 'RayQuest') 
-	}
+	{
 	if (curStep == 64)
 		{
 		FlxG.camera.flash(FlxColor.WHITE, 1.5);
