@@ -39,8 +39,8 @@ class CreditsState extends MusicBeatState
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['Vs Eyyzu Team']
-			['hutaroz',    'hutas'                     'Artist, Animator, Programmer or coder and charter'                              'https://x.com/Hutaroz?t=cLSZ7yf6Cdj7r8zToNalSA&s=09'            'FFEFB3']
-			['Neverminds',   'never'                     'awesome composer'                                                               'https://x.com/nevermindslol?t=RU206C58UKG-JeqgBVZ61w&s=09'        'FFFFFF'],
+			['hutaroz',    'hutas',                     'Artist, Animator, Programmer or coder and charter',                              'https://x.com/Hutaroz?t=cLSZ7yf6Cdj7r8zToNalSA&s=09',            'FFEFB3'],
+			['Neverminds',   'never',                     'awesome composer',                                                               'https://x.com/nevermindslol?t=RU206C58UKG-JeqgBVZ61w&s=09',        'FFFFFF'],
 			[''],
 			['Mobile Porting Team'],
 			['mcagabe19',			'lily',             'Head Porter of Psych Engine and Author of linc_luajit-rewriten',                       'https://youtube.com/@mcagabe19',		'FFE7C0'],
