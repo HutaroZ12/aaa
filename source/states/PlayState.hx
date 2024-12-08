@@ -380,6 +380,7 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'eyzStage': new EyzStage();                        //WeekEyz
 			case 'stage': new StageWeek1(); 			//Week 1
 			case 'spooky': new Spooky();				//Week 2
 			case 'philly': new Philly();				//Week 3
@@ -391,7 +392,6 @@ class PlayState extends MusicBeatState
 			case 'tank': new Tank();					//Week 7 - Ugh, Guns, Stress
 			case 'phillyStreets': new PhillyStreets(); 	//Weekend 1 - Darnell, Lit Up, 2Hot
 			case 'phillyBlazin': new PhillyBlazin();               //Weekend 1 - Blazin
-			case 'eyzStage': new eyzStage();	       //WeekEyz
 		}
 		if(isPixelStage) introSoundsSuffix = '-pixel';
 
