@@ -2,25 +2,7 @@
 	"songs": [
 		[
 			"RayQuest",
-			"dad",
-			[
-				146,
-				113,
-				253
-			]
-		],
-		[
-			"Fresh",
-			"dad",
-			[
-				146,
-				113,
-				253
-			]
-		],
-		[
-			"Dad Battle",
-			"dad",
+			"eyz",
 			[
 				146,
 				113,
@@ -32,7 +14,7 @@
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"musican": "N/A",
-	"difficulties": "",
+	"difficulties": "normal",
 	"weekCharacters": [
 		"eyzpink",
 		"eyzcyan",
