@@ -39,10 +39,13 @@ class Template extends BaseStage
 			case GO: //num 3
 			case START: //num 4
 		}
-				
-	if (curSong == 'RayQuest') 
+	}
+
+	override function startSong()
 	{
-		if (curStep == 64)
+	if (curSong == 'RayQuest') 
+	}
+	if (curStep == 64)
 		{
 		FlxG.camera.flash(FlxColor.WHITE, 1.5);
 		defaultCamZoom = 1.1;
@@ -80,11 +83,6 @@ class Template extends BaseStage
 		FlxG.camera.flash(FlxColor.WHITE, 1.5);
 		defaultCamZoom = 1;
 		}
-
-	override function startSong()
-	{
-		//code here
-	}
 	override function stepHit()
 	{
 	       //code here
