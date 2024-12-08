@@ -38,7 +38,7 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			['Vs Eyyzu Team']
+			['Vs Eyyzu Team'],
 			['hutaroz',    'hutas',                     'Artist, Animator, Programmer or coder and charter',                              'https://x.com/Hutaroz?t=cLSZ7yf6Cdj7r8zToNalSA&s=09',            'FFEFB3'],
 			['Neverminds',   'never',                     'awesome composer',                                                               'https://x.com/nevermindslol?t=RU206C58UKG-JeqgBVZ61w&s=09',        'FFFFFF'],
 			[''],
@@ -46,7 +46,7 @@ class CreditsState extends MusicBeatState
 			['mcagabe19',			'lily',             'Head Porter of Psych Engine and Author of linc_luajit-rewriten',                       'https://youtube.com/@mcagabe19',		'FFE7C0'],
 			['Karim Akra',			'karim',			'Second Porter of Psych Engine',						'https://youtube.com/@Karim0690',		'FFB4F0'],
 			['Moxie',				'moxie',			'Helper of Psych Engine Mobile',							'https://twitter.com/moxie_specalist',  'F592C4'],
-			[''],
+			[""],
 			["Psych Engine Team"],
 			["Shadow Mario",		"shadowmario",		"Main Programmer and Head of Psych Engine",					"https://ko-fi.com/shadowmario",	"444444"],
 			["Riveren",				"riveren",			"Main Artist/Animator of Psych Engine",						"https://x.com/riverennn",			"14967B"],
