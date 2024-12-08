@@ -1,12 +1,10 @@
 package states.stages;
 
-import states.stages.objects.*;
-
 class EyzStage extends BaseStage
 {
 	var fundopapel:BGSprite 
 	   
-	override function create();
+	override function create()
 	{
 	    var bg:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
 		add(bg);
