@@ -2,12 +2,12 @@ package states.stages;
 
 class EyzStage extends BaseStage
 {
-	//var layer1:BGSprite 
-	   
+	var layer1:BGSprite 
+	    
 	override function create()
 	{
-	   // var layer1:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
-		//add(layer1);
+	   var layer1:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
+		add(layer1);
 	}
 	
 	override function createPost()
@@ -34,8 +34,8 @@ class EyzStage extends BaseStage
 			case TWO: //num 1
 			case ONE: //num 2
 			case GO: //num 3
-			bf.playAnim('hey', true);
-			dad.playAnim('hey', true);
+			//bf.playAnim('hey', true);
+			//dad.playAnim('hey', true);
 			case START: //num 4
 		}
 	}
