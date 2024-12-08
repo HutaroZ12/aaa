@@ -384,7 +384,7 @@ class StoryMenuState extends MusicBeatState
 				FlxG.camera.flash(FlxColor.WHITE, 1);
 
 				FlxG.camera.zoom = 1 + 0.015;			
-			        FlxTween.tween(FlxG.camera, {zoom: 0.6}, 0.6, {ease: FlxEase.cubeOut});
+			        FlxTween.tween(FlxG.camera, {zoom: 1.1}, 0.6, {ease: FlxEase.cubeOut});
 				
 				FlxTween.tween(FlxG.camera, {x:-3000}, 1.4, {ease: FlxEase.expoIn});
 				stopspamming = true;
@@ -437,7 +437,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			sprDifficulty.loadGraphic(newImage);
 			sprDifficulty.x = leftArrow.x + 80;
-			sprDifficulty.x += (190 - sprDifficulty.width) / 3;
+			sprDifficulty.x += (200 - sprDifficulty.width) / 3;
 			sprDifficulty.alpha = 0;
 			sprDifficulty.y = leftArrow.y - sprDifficulty.height + 70;
 
