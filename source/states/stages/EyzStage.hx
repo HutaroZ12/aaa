@@ -39,7 +39,7 @@ class Template extends BaseStage
 			case GO: //num 3
 			case START: //num 4
 		}
-	}
+				
 	if (curSong == 'RayQuest') 
 	{
 		if (curStep == 64)
