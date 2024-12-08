@@ -7,7 +7,7 @@ class eyzStage extends BaseStage
 	var fundopapel:BGSprite
 	override function create()
 	{
-	    var bg:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
+	    var fundopapel:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
 		add(bg);
 	}
 	
@@ -78,6 +78,8 @@ class eyzStage extends BaseStage
 		{
 		FlxG.camera.flash(FlxColor.WHITE, 1.5);
 		defaultCamZoom = 1;
+		}
+	
 	}
 
 /*	// Steps, Beats and Sections:
