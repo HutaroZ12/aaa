@@ -38,6 +38,10 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['Vs Eyyzu Team']
+			['hutaroz',    'hutaroz'                     'Artist, Animator, Programmer or coder, charter'
+			['Neverminds',   'never'                     'awesome composer'
+			[''],
 			['Mobile Porting Team'],
 			['mcagabe19',			'lily',             'Head Porter of Psych Engine and Author of linc_luajit-rewriten',                       'https://youtube.com/@mcagabe19',		'FFE7C0'],
 			['Karim Akra',			'karim',			'Second Porter of Psych Engine',						'https://youtube.com/@Karim0690',		'FFB4F0'],
