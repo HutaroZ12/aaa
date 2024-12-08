@@ -6,7 +6,7 @@ class EyzStage extends BaseStage
 {
 	var fundopapel:BGSprite 
 	   
-	override function create()
+	override function create();
 	{
 	    var bg:BGSprite = new BGSprite('stage/Eyz/layer1', -600, -200, 1, 1);
 		add(bg);
@@ -41,13 +41,7 @@ class EyzStage extends BaseStage
 			case START: //num 4
 		}
 	}
-	// Steps, Beats and Sections:
-	//    curStep, curDecStep
-	//    curBeat, curDecBeat
-	//    curSection
-	override function stepHit()
-	{
-		if (curSong == 'RayQuest') 
+	if (curSong == 'RayQuest') 
 	{
 		if (curStep == 64)
 		{
@@ -88,6 +82,14 @@ class EyzStage extends BaseStage
 		defaultCamZoom = 1;
 		}
 	
+}
+	// Steps, Beats and Sections:
+	//    curStep, curDecStep
+	//    curBeat, curDecBeat
+	//    curSection
+	override function stepHit()
+	{
+	//a
 	}
 	override function beatHit()
 	{
