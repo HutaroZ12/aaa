@@ -133,7 +133,7 @@ class LanguageSubState extends MusicBeatSubstate
 			changedLanguage = true;
 		}
 		
-		if(controls.ACCEPT || languages[curSelected] != 'pt-BR')
+		if(controls.ACCEPT || 'pt-BR')
 		{
 		FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
 		}
