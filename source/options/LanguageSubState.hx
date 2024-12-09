@@ -132,9 +132,6 @@ class LanguageSubState extends MusicBeatSubstate
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;
-			{
-			FlxG.sound.play(Paths.sound('Brasilsil'), 1);
-			ClientPrefs.data.language = 'pt-BR';
 			
 		switch(languages)		
 		{
