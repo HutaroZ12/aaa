@@ -132,7 +132,7 @@ class LanguageSubState extends MusicBeatSubstate
 		}
 
 		        FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
-			ClientPrefs.data.language = 'Português (Brasil)',	
+			ClientPrefs.data.language = Português (Brasil);
 		}
 	}
 
