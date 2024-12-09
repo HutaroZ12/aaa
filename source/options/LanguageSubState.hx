@@ -6,7 +6,10 @@ class LanguageSubState extends MusicBeatSubstate
 {
 	#if TRANSLATIONS_ALLOWED
 	var grpLanguages:FlxTypedGroup<Alphabet> = new FlxTypedGroup<Alphabet>();
-	var languages:Array<String> = [];
+	var languages:Array<String> = [
+	    'en-US',
+	    'pt-BR'
+	];
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
 	public function new()
@@ -133,6 +136,14 @@ class LanguageSubState extends MusicBeatSubstate
 			FlxG.sound.play(Paths.sound('Brasilsil'), 1);
 			ClientPrefs.data.language = 'pt-BR';
 		}
+			
+		switch(languages)		
+		{
+		    case 'pt-BR':
+			FlxG.sound.play(Paths.sound('Brasilsil'), 1);
+
+		}
+			
 	}
 
 	function changeSelected(change:Int = 0)
