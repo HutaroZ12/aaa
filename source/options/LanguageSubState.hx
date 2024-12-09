@@ -129,11 +129,11 @@ class LanguageSubState extends MusicBeatSubstate
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;
-
-			switch(languages[curSelected])
-			{	
-				case 'Português (Brasil)':
-					FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
+		}
+		
+		if(curSelected = 'pt-BR')
+		{
+			FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
 		}
 	}
 
