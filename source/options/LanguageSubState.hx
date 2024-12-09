@@ -11,6 +11,7 @@ class LanguageSubState extends MusicBeatSubstate
 	];
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
+	var brasaSelected:Int = 0;
 	public function new()
 	{
 		super();
@@ -133,7 +134,7 @@ class LanguageSubState extends MusicBeatSubstate
 			changedLanguage = true;
 		}
 		
-		if(languages == 'pt-BR')
+		if(languages[brasaSelected] != 'pt-BR')
 		{
 		FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
 		}
