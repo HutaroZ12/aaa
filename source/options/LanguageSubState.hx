@@ -132,7 +132,7 @@ class LanguageSubState extends MusicBeatSubstate
 
 			switch(languages[curSelected])
 			{	
-				case :'Português (Brasil)'
+				case 'Português (Brasil)':
 					FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
 		}
 	}
