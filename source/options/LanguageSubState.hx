@@ -129,9 +129,8 @@ class LanguageSubState extends MusicBeatSubstate
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;
-		}
 		
-		if(language:String = 'pt-BR';)
+		if(file.toLowerCase().endsWith('pt-BR.lang'))
 		{
 			FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
 		}
