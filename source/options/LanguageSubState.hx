@@ -131,13 +131,8 @@ class LanguageSubState extends MusicBeatSubstate
 			changedLanguage = true;
 		}
 
-		        FlxG.sound.play(Paths.sound('brasilsil'), 0.6);
-			ClientPrefs.data.language = 'Português (Brasil)',
-			//trace(ClientPrefs.data.language);
-			ClientPrefs.saveSettings();
-			Language.reloadPhrases();
-			changedLanguage = true;
-			
+		        FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
+			ClientPrefs.data.language = 'Português (Brasil)',	
 		}
 	}
 
