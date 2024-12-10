@@ -133,16 +133,15 @@ class LanguageSubState extends MusicBeatSubstate
 		else
 		{
 		changedLanguage = true;	
-			
+
+		FlxFlicker.flicker(Language, 1, 0.06, false, false, function(flick:FlxFlicker)
+	        {	
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			ClientPrefs.data.language = languages[curSelected];
 			//trace(ClientPrefs.data.language);
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;
-		}
-
-		FlxFlicker.flicker(Language, 1, 0.06, false, false, function(flick:FlxFlicker)
 		}
 	}
 
