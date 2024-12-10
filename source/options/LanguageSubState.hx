@@ -126,19 +126,13 @@ class LanguageSubState extends MusicBeatSubstate
 
 		if(controls.ACCEPT)
 		{
-			FlxG.sound.play(Paths.sound('confirmMenu'), 0.6);
+			FlxG.sound.play(Paths.sound('confirmMenuL'), 0.6);
 			ClientPrefs.data.language = languages[curSelected];
 			//trace(ClientPrefs.data.language);
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;
-		}
-
-		if(controls.ACCEPT || 'Português (Brasil)')
-		{
-		FlxG.sound.play(Paths.sound('Brasilsil'), 0.5);
-		}
-			
+		}		
 	}
 
 	function changeSelected(change:Int = 0)
