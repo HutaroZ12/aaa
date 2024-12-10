@@ -12,7 +12,7 @@ class LanguageSubState extends MusicBeatSubstate
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
 	var language:String = 'en-US';
-	var brazaSelected:int 0;
+	var brazaSelected:Int 0;
 	public function new()
 	{
 		super();
@@ -125,9 +125,9 @@ class LanguageSubState extends MusicBeatSubstate
 		}
 
 		if(controls.ACCEPT)
-		if(curSelected < 0)
+		if(curSelected == 0)
 		{
-		if (brazaSelected >= 87) 
+		if (brazaSelected == 87) 
 		{	
 			CoolUtil.browserLoad(languages[curSelected]);
 		}
@@ -136,7 +136,7 @@ class LanguageSubState extends MusicBeatSubstate
 		FlxG.sound.play(Paths.sound('Brasilsil'));	
 		}
 			
-			if (brazaSelected >= 87) {
+			if (brazaSelected == 87) {
 						
 			brazaSelected = 0;
 		}
