@@ -114,7 +114,7 @@ class LanguageSubState extends MusicBeatSubstate
 
 		if(controls.BACK)
 		{
-			if(changedLanguage)
+			if(changedLanguage || ClientPrefs.defaultData.language)
 			{
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
@@ -132,6 +132,10 @@ class LanguageSubState extends MusicBeatSubstate
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;
+
+		if(controls.ACCEPT || language == 'pt-BR')
+		{
+			FlxG.sound.play(Paths.sound('brasilsil'), 0.6);
 		}		
 	}
 
