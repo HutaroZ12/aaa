@@ -9,10 +9,10 @@ class LanguageSubState extends MusicBeatSubstate
 	var languages:Array<String> = [
 	    'pt-BR'
 	];
+	var brazaSelected:Int 0;
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
 	var language:String = 'en-US';
-	var brazaSelected:Int 0;
 	public function new()
 	{
 		super();
