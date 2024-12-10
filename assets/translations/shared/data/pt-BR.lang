@@ -262,6 +262,8 @@ description_sustains_as_one_note: "Se marcado, notas longas não poderão ser ac
 // Loading Screen
 now_loading: "Carregando{1}"
 
+// Sounds
+
 // Difficulties
 difficulty_easy: "Fácil"
 difficulty_normal: "Normal"
