@@ -11,7 +11,8 @@ class LanguageSubState extends MusicBeatSubstate
 	];
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
-	var language:String = 'en-US';
+	//var language:String = 'en-US';
+	var brazaselected:int 0;
 	public function new()
 	{
 		super();
@@ -124,8 +125,16 @@ class LanguageSubState extends MusicBeatSubstate
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
 
-		if(controls.ACCEPT || language == 'en-US')
+		if(controls.ACCEPT)
+		if (languages[curSelected] != 'pt-BR')
+	        {
+	        CoolUtil.browserLoad(languages[curSelected]);
+		}
+		else
 		{
+		FlxG.sound.play(Paths.sound('Brasilsil'));
+		}
+		
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.6);
 			ClientPrefs.data.language = languages[curSelected];
 			//trace(ClientPrefs.data.language);
@@ -133,11 +142,6 @@ class LanguageSubState extends MusicBeatSubstate
 			Language.reloadPhrases();
 			changedLanguage = true;
 		}
-		
-		if(controls.ACCEPT || language == 'pt-BR')
-		{
-			FlxG.sound.play(Paths.sound('brasilsil'), 0.6);
-		}		
 	}
 
 	function changeSelected(change:Int = 0)
