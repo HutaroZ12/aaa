@@ -9,7 +9,7 @@ class LanguageSubState extends MusicBeatSubstate
 	var languages:Array<String> = [
 	    'pt-BR'
 	];
-	var brazaSelected:Int 0;
+	//var brazaSelected:Int 0;
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
 	var language:String = 'en-US';
@@ -125,21 +125,13 @@ class LanguageSubState extends MusicBeatSubstate
 		}
 
 		if(controls.ACCEPT)
-		if(curSelected == 0)
-		{
-		if (brazaSelected == 87) 
+		if (languages[curSelected] != 'pt-BR') 
 		{	
-			CoolUtil.browserLoad(languages[curSelected]);
+			CoolUtil.browserLoad(FlxG.sound.play(Paths.sound('Brasilsil'));
 		}
 		else
 		{
-		FlxG.sound.play(Paths.sound('Brasilsil'));	
-		}
-			
-			if (brazaSelected == 87) {
-						
-			brazaSelected = 0;
-		}
+		changedLanguage = true;	
 			
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.6);
 			ClientPrefs.data.language = languages[curSelected];
