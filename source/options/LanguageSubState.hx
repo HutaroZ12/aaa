@@ -127,10 +127,11 @@ class LanguageSubState extends MusicBeatSubstate
 		if(controls.ACCEPT)
 		if (languages[curSelected] != 'pt-BR') 
 		{	
-			CoolUtil.browserLoad(FlxG.sound.play(Paths.sound('Brasilsil'));
+			CoolUtil.browserLoad(languages[curSelected]);
 		}
 		else
 		{
+		FlxG.sound.play(Paths.sound('brasilsil'), 0.6);
 		changedLanguage = true;	
 			
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.6);
