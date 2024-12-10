@@ -263,6 +263,7 @@ description_sustains_as_one_note: "Se marcado, notas longas não poderão ser ac
 now_loading: "Carregando{1}"
 
 // Sounds
+confirmMenuL: "Brasilsil" 
 
 // Difficulties
 difficulty_easy: "Fácil"
