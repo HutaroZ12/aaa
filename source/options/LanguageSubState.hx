@@ -124,9 +124,9 @@ class LanguageSubState extends MusicBeatSubstate
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}
 
-		if(controls.ACCEPT || ClientPrefs.defaultData.language)
+		if(controls.ACCEPT || language == 'en-US')
 		{
-			FlxG.sound.play(Paths.sound('confirmMenuL'), 0.6);
+			FlxG.sound.play(Paths.sound('confirmMenu'), 0.6);
 			ClientPrefs.data.language = languages[curSelected];
 			//trace(ClientPrefs.data.language);
 			ClientPrefs.saveSettings();
@@ -134,7 +134,7 @@ class LanguageSubState extends MusicBeatSubstate
 			changedLanguage = true;
 		}
 		
-		if(controls.ACCEPT || ClientPrefs.data.language == 'pt-BR')
+		if(controls.ACCEPT || language == 'pt-BR')
 		{
 			FlxG.sound.play(Paths.sound('brasilsil'), 0.6);
 		}		
