@@ -125,18 +125,22 @@ class LanguageSubState extends MusicBeatSubstate
 		}
 
 		if(controls.ACCEPT)
-		if (languages[curSelected] == 'pt-BR') 
 		{
-			FlxG.sound.play(Paths.sound('confirmMenu'));
-			FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
-		}
-		
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			ClientPrefs.data.language = languages[curSelected];
 			//trace(ClientPrefs.data.language);
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;	
+		
+		if (languages[curSelected] == 'pt-BR') 
+		{
+			FlxG.sound.play(Paths.sound('confirmMenu'));
+			FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
+		}
+		else
+		{
+		changedLanguage = true;	
 		}
 	}
 
