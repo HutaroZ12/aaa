@@ -136,8 +136,6 @@ class LanguageSubState extends MusicBeatSubstate
 
 		if(controls.ACCEPT || 'Português (Brasil)')
 		{
-		var directories:Array<String> = Paths.getSharedPath('data/pt-BR.lang');
-		{
 		FlxG.sound.play(Paths.sound('Brasilsil'), 0.5);
 		}
 			
