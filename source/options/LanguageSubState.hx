@@ -12,7 +12,7 @@ class LanguageSubState extends MusicBeatSubstate
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
 	//var language:String = 'en-US';
-	var brazaselected:int 0;
+	//var brazaselected:int 0;
 	public function new()
 	{
 		super();
