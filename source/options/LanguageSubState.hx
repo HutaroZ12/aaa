@@ -126,6 +126,7 @@ class LanguageSubState extends MusicBeatSubstate
 		}
 
 		if(controls.ACCEPT)
+		{
 		if (languages[curSelected] != 'pt-BR')
 	        {
 	        CoolUtil.browserLoad(languages[curSelected]);
