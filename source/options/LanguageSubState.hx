@@ -141,6 +141,9 @@ class LanguageSubState extends MusicBeatSubstate
 			Language.reloadPhrases();
 			changedLanguage = true;
 		}
+
+		FlxFlicker.flicker(Language, 1, 0.06, false, false, function(flick:FlxFlicker)
+		}
 	}
 
 	function changeSelected(change:Int = 0)
