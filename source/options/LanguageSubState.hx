@@ -114,7 +114,7 @@ class LanguageSubState extends MusicBeatSubstate
 
 		if(controls.BACK)
 		{
-			if(changedLanguage || ClientPrefs.defaultData.language)
+			if(changedLanguage)
 			{
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
