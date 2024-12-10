@@ -11,8 +11,8 @@ class LanguageSubState extends MusicBeatSubstate
 	];
 	var displayLanguages:Map<String, String> = [];
 	var curSelected:Int = 0;
-	//var language:String = 'en-US';
-	//var brazaselected:int 0;
+	var language:String = 'en-US';
+	var brazaSelected:int 0;
 	public function new()
 	{
 		super();
@@ -69,7 +69,6 @@ class LanguageSubState extends MusicBeatSubstate
 
 		//trace(ClientPrefs.data.language);
 		curSelected = languages.indexOf(ClientPrefs.data.language);
-		if(curSelected < 0)
 		{
 			//trace('Language not found: ' + ClientPrefs.data.language);
 			ClientPrefs.data.language = ClientPrefs.defaultData.language;
@@ -126,14 +125,22 @@ class LanguageSubState extends MusicBeatSubstate
 		}
 
 		if(controls.ACCEPT)
+		if(curSelected < 0)
 		{
-		if (languages[curSelected] != 'pt-BR')
-	        {
-	        CoolUtil.browserLoad(languages[curSelected]);
-		{
-		FlxG.sound.play(Paths.sound('Brasilsil'));
+		if (brazaSelected >= 87) 
+		{	
+			CoolUtil.browserLoad(languages[curSelected]);
 		}
-		
+		else
+		{
+		FlxG.sound.play(Paths.sound('Brasilsil'));	
+		}
+			
+			if (brazaSelected >= 87) {
+						
+			brazaSelected = 0;
+		}
+			
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.6);
 			ClientPrefs.data.language = languages[curSelected];
 			//trace(ClientPrefs.data.language);
