@@ -129,8 +129,6 @@ class LanguageSubState extends MusicBeatSubstate
 		if (languages[curSelected] != 'pt-BR')
 	        {
 	        CoolUtil.browserLoad(languages[curSelected]);
-		}
-		else
 		{
 		FlxG.sound.play(Paths.sound('Brasilsil'));
 		}
