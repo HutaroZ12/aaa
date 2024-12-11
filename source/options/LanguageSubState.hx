@@ -125,7 +125,7 @@ class LanguageSubState extends MusicBeatSubstate
 		}
 
 		if(controls.ACCEPT)
-		if (languages[curSelected] == 'pt-BR') 
+		if (languages[curSelected] != 'en-US') 
 		{
 			FlxG.sound.play(Paths.sound('confirmMenu'));
 			FlxG.sound.play(Paths.sound('Brasilsil'), 0.6);
