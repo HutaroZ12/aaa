@@ -132,6 +132,7 @@ class LanguageSubState extends MusicBeatSubstate
 			ClientPrefs.saveSettings();
 			Language.reloadPhrases();
 			changedLanguage = true;	
+		}
 		
 		if (languages[curSelected] == 'pt-BR') 
 		{
