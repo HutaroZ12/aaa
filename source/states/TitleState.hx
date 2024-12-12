@@ -744,7 +744,6 @@ class TitleState extends MusicBeatState
 	                        if (curBeat % 4 == 2)
 	                        {
 	                        FlxG.camera.zoom = 1.04;
-	                        }
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
