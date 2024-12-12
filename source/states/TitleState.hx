@@ -48,6 +48,7 @@ class TitleState extends MusicBeatState
 	var textGroup:FlxGroup = new FlxGroup();
 	var blackScreen:FlxSprite;
 	var credTextShit:Alphabet;
+	var omg:FlxSprite;
 	var ngSpr:FlxSprite;
 	
 	var titleTextColors:Array<FlxColor> = [0xFF33FFFF, 0xFF3333CC];
@@ -234,11 +235,19 @@ class TitleState extends MusicBeatState
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
 
+		omg = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('omaga'));
+		omg.visible = false;
+		omg.setGraphicSize(Std.int(ngSpr.width * 0.8));
+		omg.updateHitbox();
+		omg.screenCenter(X);
+		omg.antialiasing = ClientPrefs.data.antialiasing;
+
 		add(gfDance);
 		add(logoBl); //FNF Logo
 		add(titleText); //"Press Enter to Begin" text
 		add(credGroup);
 		add(ngSpr);
+		add(omg);
 
 		if (initialized)
 			skipIntro();
@@ -297,7 +306,7 @@ class TitleState extends MusicBeatState
 		}
 		//else trace('[WARN] No Title JSON detected, using default values.');
 	}
-
+/*
 	function easterEggData()
 	{
 		if (FlxG.save.data.psychDevsEasterEgg == null) FlxG.save.data.psychDevsEasterEgg = ''; //Crash prevention
@@ -332,7 +341,7 @@ class TitleState extends MusicBeatState
 				danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
 		}
 	}
-
+*/
 	function getIntroTextShit():Array<Array<String>>
 	{
 		#if MODS_ALLOWED
@@ -558,37 +567,103 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['Psych Engine by'], 40);
+						createCoolText(['Mob By'], 15);
+				case 3:
+						deleteCoolText();
+						createCoolText(['HutaroZ'], 15);
 				case 4:
-					addMoreText('Shadow Mario', 40);
-					addMoreText('Riveren', 40);
+						addMoreText('Neverminds', 15);
 				case 5:
-					deleteCoolText();
+						addMoreText('ShadeX', 15);
 				case 6:
-					createCoolText(['Not associated', 'with'], -40);
+						addMoreText('Tihenrry', 15);
+				case 7:
+						deleteCoolText();
+						addMoreText('Os Foda', 15);
 				case 8:
-					addMoreText('newgrounds', -40);
-					ngSpr.visible = true;
+						deleteCoolText();
+						createCoolText(['Psych Engine by'], 15);
 				case 9:
-					deleteCoolText();
-					ngSpr.visible = false;
+						addMoreText('Shadow Mario', 15);
 				case 10:
-					createCoolText([curWacky[0]]);
+						addMoreText('Riveren', 15);
+				case 11:
+						addMoreText('shubs', 15);
 				case 12:
-					addMoreText(curWacky[1]);
+						deleteCoolText();
+						createCoolText(['Mobile Porting By'], 15);
 				case 13:
-					deleteCoolText();
+						addMoreText('mcagabe19', 15);
 				case 14:
-					addMoreText('Friday');
+						addMoreText('Karim Akra', 15);
 				case 15:
-					addMoreText('Night');
+						addMoreText('Moxie', 15);
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+						deleteCoolText();
+						createCoolText(['Not associated'], -40);
 				case 17:
-					addMoreText('Vs Eyz');
-
+						deleteCoolText();
+						createCoolText(['Not associated with'], -40);
 				case 18:
-					skipIntro();
+						addMoreText('', -40);
+						addMoreText('newgrounds', -40);
+						ngSpr.visible = true;
+				case 19:
+						deleteCoolText();
+						ngSpr.visible = false;
+						createCoolText(['Mod for a'], 15);
+				case 20:
+						deleteCoolText();
+						createCoolText(['Brazillian Animator'], 15);
+				case 21:
+						deleteCoolText();
+						createCoolText(['HIHIHIHI'], 15);
+				case 22:
+						deleteCoolText();
+						createCoolText(['im'], 15);	
+				case 23:
+						deleteCoolText();
+						createCoolText(['so'], 15);	
+				case 24:
+						deleteCoolText();
+						createCoolText(['Silly lolol'], 15);
+						
+				case 25:
+						deleteCoolText();
+						addMoreText(curWacky[0]);
+						
+				case 26:
+						addMoreText(curWacky[1]);
+				case 27:
+						deleteCoolText();
+						createCoolText(['Friday'], -40);
+						
+				case 28:
+						
+						addMoreText('Night', -40);
+						
+				case 29:
+						
+						addMoreText('Funkin', -40);
+				case 30:
+						
+						addMoreText('Vs', -40);
+				case 31:
+						
+						addMoreText('Eyz', -40);
+						
+				case 32:
+						deleteCoolText();
+						addMoreText('', -40);
+						addMoreText('OOH MA GA', -40);
+					        omg.visible = true;
+						
+						
+				case 33:
+						deleteCoolText();
+					        omg.visible = false;
+
+							skipIntro();
 			}
 		}
 	}
