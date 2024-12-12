@@ -306,7 +306,7 @@ class TitleState extends MusicBeatState
 		}
 		//else trace('[WARN] No Title JSON detected, using default values.');
 	}
-/*
+
 	function easterEggData()
 	{
 		if (FlxG.save.data.psychDevsEasterEgg == null) FlxG.save.data.psychDevsEasterEgg = ''; //Crash prevention
@@ -341,7 +341,7 @@ class TitleState extends MusicBeatState
 				danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
 		}
 	}
-*/
+
 	function getIntroTextShit():Array<Array<String>>
 	{
 		#if MODS_ALLOWED
