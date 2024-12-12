@@ -541,6 +541,8 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 	       if (curBeat % 2 == 0)
+	       {
+	       FlxG.camera.zoom = 1.04;
 
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
