@@ -540,6 +540,7 @@ class TitleState extends MusicBeatState
 	override function beatHit()
 	{
 	super.beatHit();
+	
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
 
@@ -740,10 +741,9 @@ class TitleState extends MusicBeatState
 			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
 
 				override function beatHit()
+	                        if (curBeat % 4 == 2)
 	                        {
-	                             if (curBeat % 4 == 2)
-	                             {
-	                             FlxG.camera.zoom = 1.04;
+	                        FlxG.camera.zoom = 1.04;
 	                        }
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
