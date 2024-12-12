@@ -679,12 +679,12 @@ class TitleState extends MusicBeatState
 			if (playJingle) //Ignore deez
 			{
 				playJingle = false;
-				/*var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
+				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
 				easteregg = easteregg.toUpperCase();
 
 				var sound:FlxSound = null;
-				/*switch(easteregg)
+				switch(easteregg)
 				{
 					case 'RIVEREN':
 						sound = FlxG.sound.play(Paths.sound('JingleRiver'));
@@ -731,17 +731,17 @@ class TitleState extends MusicBeatState
 					};
 				}
 			}
-			*/else #end //Default! Edit this one!!
+			else #end //Default! Edit this one!!
 			{
 				remove(ngSpr);
 				remove(omg);
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
-/*
+
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
 				easteregg = easteregg.toUpperCase();
-				/*#if TITLE_SCREEN_EASTER_EGG
+				#if TITLE_SCREEN_EASTER_EGG
 				if(easteregg == 'SHADOW')
 				{
 					FlxG.sound.music.fadeOut();
@@ -752,7 +752,7 @@ class TitleState extends MusicBeatState
 				}
 				#end
 }
-		*/	skippedIntro = true;
+			skippedIntro = true;
 		}
 	}
 }
