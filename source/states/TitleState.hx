@@ -540,6 +540,7 @@ class TitleState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+	       if (curBeat % 2 == 0)
 
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
@@ -736,10 +737,6 @@ class TitleState extends MusicBeatState
 				remove(omg);
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
-
-				override function beatHit()
-				{
-		                if (curBeat % 2 == 0)
 /*
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
