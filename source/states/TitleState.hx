@@ -539,6 +539,11 @@ class TitleState extends MusicBeatState
 	public static var closedState:Bool = false;
 	override function beatHit()
 	{
+	if (curBeat % 4 == 2)
+        {
+        FlxG.camera.zoom = 1.04;
+	}
+		
 	super.beatHit();
 	
 		if(logoBl != null)
@@ -737,12 +742,6 @@ class TitleState extends MusicBeatState
 				remove(omg);
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
-				FlxG.camera.zoom = 1.4;
-			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
-
-	                        if (curBeat % 4 == 2)
-	                        {
-	                        FlxG.camera.zoom = 1.04;
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
