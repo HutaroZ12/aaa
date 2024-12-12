@@ -415,7 +415,7 @@ class TitleState extends MusicBeatState
 				
 				if(titleText != null) titleText.animation.play('press');
 
-				FlxTween.tween(FlxG.camera, {y: 3000}, .5, {ease: FlxEase.expoOut});
+				FlxTween.tween(FlxG.camera, {y: 3000}, 3.5, {ease: FlxEase.expoOut});
 
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
