@@ -588,79 +588,78 @@ class TitleState extends MusicBeatState
 						addMoreText('Shadow Mario', 15);
 				case 10:
 						addMoreText('Riveren', 15);
+					
 				case 11:
-						addMoreText('shubs', 15);
-				case 12:
 						deleteCoolText();
 						createCoolText(['Mobile Porting By'], 15);
-				case 13:
+				case 12:
 						addMoreText('mcagabe19', 15);
-				case 14:
+				case 13:
 						addMoreText('Karim Akra', 15);
-				case 15:
+				case 14:
 						addMoreText('Moxie', 15);
-				case 16:
+				case 15:
 						deleteCoolText();
 						createCoolText(['Not associated'], -40);
-				case 17:
+				case 16:
 						deleteCoolText();
 						createCoolText(['Not associated with'], -40);
-				case 18:
+				case 17:
 						addMoreText('', -40);
 						addMoreText('newgrounds', -40);
 						ngSpr.visible = true;
-				case 19:
+				case 18:
 						deleteCoolText();
 						ngSpr.visible = false;
 						createCoolText(['Mod for a'], 15);
-				case 20:
+				case 19:
 						deleteCoolText();
 						createCoolText(['Brazillian Animator'], 15);
-				case 21:
+				case 20:
 						deleteCoolText();
 						createCoolText(['HIHIHIHI'], 15);
-				case 22:
+				case 21:
 						deleteCoolText();
 						createCoolText(['im'], 15);	
-				case 23:
-						deleteCoolText();
+					
+				case 22:
 						createCoolText(['so'], 15);	
-				case 24:
-						deleteCoolText();
+					
+				case 23:
 						createCoolText(['Silly lolol'], 15);
 						
-				case 25:
+				case 24:
 						deleteCoolText();
 						addMoreText(curWacky[0]);
 						
-				case 26:
+				case 25:
 						addMoreText(curWacky[1]);
-				case 27:
+				case 26:
 						deleteCoolText();
 						createCoolText(['Friday'], -40);
 						
-				case 28:
+				case 27:
 						
 						addMoreText('Night', -40);
 						
-				case 29:
+				case 28:
 						
 						addMoreText('Funkin', -40);
-				case 30:
+				case 29:
 						
 						addMoreText('Vs', -40);
-				case 31:
+				case 30:
 						
 						addMoreText('Eyz', -40);
 						
-				case 32:
+				case 31:
 						deleteCoolText();
 						addMoreText('', -40);
-						addMoreText('OOH MA GA', -40);
+						addMoreText('OOMAGA', -40);
 					        omg.visible = true;
 						
 						
-				case 33:
+				case 32:
 						deleteCoolText();
 					        omg.visible = false;
 
