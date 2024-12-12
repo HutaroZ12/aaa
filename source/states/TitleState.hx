@@ -575,7 +575,7 @@ class TitleState extends MusicBeatState
 						createCoolText(['Mob By'], 15);
 				case 3:
 						deleteCoolText();
-						createCoolText(['HutaroZ'], 15);
+						createCoolText(['Mob By HutaroZ'], 15);
 				case 4:
 						addMoreText('Neverminds', 15);
 				case 5:
@@ -620,7 +620,7 @@ class TitleState extends MusicBeatState
 						createCoolText(['Mod for a'], 15);
 				case 20:
 						deleteCoolText();
-						createCoolText(['Brazillian Animator'], 15);
+						addMoreText('Brazillian Animator', 15);
 				case 21:
 						deleteCoolText();
 						createCoolText(['HIHIHIHI'], 15);
@@ -629,10 +629,10 @@ class TitleState extends MusicBeatState
 						createCoolText(['im'], 15);	
 					
 				case 23:
-						addMoreText(['so'], 15);	
+						addMoreText('so', 15);	
 					
 				case 24:
-						addMoreText(['Silly lolol'], 15);
+						addMoreText('Silly lolol', 15);
 						
 				case 25:
 						deleteCoolText();
