@@ -740,7 +740,6 @@ class TitleState extends MusicBeatState
 				FlxG.camera.zoom = 1.4;
 			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
 
-				override function beatHit()
 	                        if (curBeat % 4 == 2)
 	                        {
 	                        FlxG.camera.zoom = 1.04;
