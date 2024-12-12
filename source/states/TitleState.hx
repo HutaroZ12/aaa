@@ -539,11 +539,6 @@ class TitleState extends MusicBeatState
 	public static var closedState:Bool = false;
 	override function beatHit()
 	{
-	if (curBeat % 2 == 0)
-	       {
-	       FlxG.camera.zoom = 1.04;
-	 }
-		
 	super.beatHit();
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
@@ -585,84 +580,86 @@ class TitleState extends MusicBeatState
 						deleteCoolText();
 						addMoreText('Os Foda', 15);
 				case 8:
+						addMoreText(':D', 15);
+				case 9:
 						deleteCoolText();
 						createCoolText(['Psych Engine by'], 15);
-				case 9:
-						addMoreText('Shadow Mario', 15);
 				case 10:
+						addMoreText('Shadow Mario', 15);
+				case 11:
 						addMoreText('Riveren', 15);
 					
-				case 11:
+				case 12:
 						deleteCoolText();
 						createCoolText(['Mobile Porting By'], 15);
-				case 12:
-						addMoreText('mcagabe19', 15);
 				case 13:
-						addMoreText('Karim Akra', 15);
+						addMoreText('mcagabe19', 15);
 				case 14:
-						addMoreText('Moxie', 15);
+						addMoreText('Karim Akra', 15);
 				case 15:
-						deleteCoolText();
-						createCoolText(['Not associated'], -40);
+						addMoreText('Moxie', 15);
 				case 16:
 						deleteCoolText();
-						createCoolText(['Not associated with'], -40);
+						createCoolText(['Not associated'], -40);
 				case 17:
+						deleteCoolText();
+						createCoolText(['Not associated with'], -40);
+				case 18:
 						addMoreText('', -40);
 						addMoreText('newgrounds', -40);
 						ngSpr.visible = true;
-				case 18:
+				case 19:
 						deleteCoolText();
 						ngSpr.visible = false;
 						createCoolText(['Mod for a'], 15);
-				case 19:
-						deleteCoolText();
-						createCoolText(['Brazillian Animator'], 15);
 				case 20:
 						deleteCoolText();
-						createCoolText(['HIHIHIHI'], 15);
+						createCoolText(['Brazillian Animator'], 15);
 				case 21:
+						deleteCoolText();
+						createCoolText(['HIHIHIHI'], 15);
+				case 22:
 						deleteCoolText();
 						createCoolText(['im'], 15);	
 					
-				case 22:
-						createCoolText(['so'], 15);	
-					
 				case 23:
-						createCoolText(['Silly lolol'], 15);
-						
+						addMoreText(['so'], 15);	
+					
 				case 24:
+						addMoreText(['Silly lolol'], 15);
+						
+				case 25:
 						deleteCoolText();
 						addMoreText(curWacky[0]);
 						
-				case 25:
-						addMoreText(curWacky[1]);
 				case 26:
+						addMoreText(curWacky[1]);
+				case 27:
 						deleteCoolText();
 						createCoolText(['Friday'], -40);
 						
-				case 27:
+				case 28:
 						
 						addMoreText('Night', -40);
 						
-				case 28:
-						
-						addMoreText('Funkin', -40);
 				case 29:
 						
-						addMoreText('Vs', -40);
+						addMoreText('Funkin', -40);
 				case 30:
+						
+						addMoreText('Vs', -40);
+				case 31:
 						
 						addMoreText('Eyz', -40);
 						
-				case 31:
+				case 32:
 						deleteCoolText();
 						addMoreText('', -40);
 						addMoreText('OOMAGA', -40);
 					        omg.visible = true;
 						
 						
-				case 32:
+				case 33:
 						deleteCoolText();
 					        omg.visible = false;
 
@@ -741,6 +738,13 @@ class TitleState extends MusicBeatState
 				FlxG.camera.flash(FlxColor.WHITE, 4);
 				FlxG.camera.zoom = 1.4;
 			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
+
+				override function beatHit()
+	                        {
+	                             if (curBeat % 4 == 2)
+	                             {
+	                             FlxG.camera.zoom = 1.04;
+	                        }
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
