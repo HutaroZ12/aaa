@@ -415,6 +415,8 @@ class TitleState extends MusicBeatState
 				
 				if(titleText != null) titleText.animation.play('press');
 
+				FlxTween.tween(FlxG.camera, {y: 3000}, .5, {ease: FlxEase.expoOut});
+
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
@@ -541,10 +543,7 @@ class TitleState extends MusicBeatState
 	{
 	super.beatHit();
 		
-	if (curBeat % 4 == 2)
-       {
-        FlxG.camera.zoom = 1.04;
-	}
+	
 		
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
@@ -742,6 +741,8 @@ class TitleState extends MusicBeatState
 				remove(omg);
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
+				FlxG.camera.zoom = 1.4;
+			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
