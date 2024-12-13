@@ -165,7 +165,7 @@ class TitleState extends MusicBeatState
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.data.antialiasing;
 
-		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 12, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 
@@ -182,13 +182,13 @@ class TitleState extends MusicBeatState
 		gfDance.frames = Paths.getSparrowAtlas(characterImage);
 		if(!useIdle)
 		{
-			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 24, false);
-			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 24, false);
+			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
+			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
 			gfDance.animation.play('danceRight');
 		}
 		else
 		{
-			gfDance.animation.addByPrefix('idle', animationName, 24, false);
+			gfDance.animation.addByPrefix('idle', animationName, 12, false);
 			gfDance.animation.play('idle');
 		}
 
