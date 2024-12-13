@@ -170,6 +170,8 @@ class TitleState extends MusicBeatState
 		logoBl.updateHitbox();
 
 		gfDance = new FlxSprite(gfPosition.x, gfPosition.y);
+		gfDance.scale.x = 0.7;
+		gfDance.scale.y = 0.7;
 		gfDance.antialiasing = ClientPrefs.data.antialiasing;
 		
 		if(ClientPrefs.data.shaders)
@@ -217,6 +219,8 @@ class TitleState extends MusicBeatState
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.antialiasing = ClientPrefs.data.antialiasing;
+		logo.scale.x = 0.7;
+		logo.scale.y = 0.7;
 		logo.screenCenter();
 
 		blackScreen = new FlxSprite().makeGraphic(1, 1, FlxColor.BLACK);
@@ -261,8 +265,8 @@ class TitleState extends MusicBeatState
 	var characterImage:String = 'gfDanceTitle';
 	var animationName:String = 'gfDance';
 
-	var gfPosition:FlxPoint = FlxPoint.get(512, 40);
-	var logoPosition:FlxPoint = FlxPoint.get(-150, -100);
+	var gfPosition:FlxPoint = FlxPoint.get(3, 0);
+	var logoPosition:FlxPoint = FlxPoint.get(-300, -100);
 	var enterPosition:FlxPoint = FlxPoint.get(100, 576);
 	
 	var useIdle:Bool = false;
