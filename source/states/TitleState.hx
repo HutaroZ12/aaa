@@ -236,7 +236,7 @@ class TitleState extends MusicBeatState
 		credGroup.add(blackScreen);
 
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
-		bgMove.alpha = 0.1;
+		bgMove.alpha = 0.5;
 		bgMove.color = 0x5B0623;		
 		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
