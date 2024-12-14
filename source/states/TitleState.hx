@@ -32,8 +32,8 @@ typedef TitleData =
 	var bpm:Float;
 	
 	@:optional var animation:String;
-	@:optional var dance_left:Array<Int>;
-	@:optional var dance_right:Array<Int>;
+	//@:optional var dance_left:Array<Int>;
+	//@:optional var dance_right:Array<Int>;
 	@:optional var idle:Bool;
 }
 
