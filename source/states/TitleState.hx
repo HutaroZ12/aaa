@@ -196,11 +196,10 @@ class TitleState extends MusicBeatState
 			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
 			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
 			gfDance.animation.play('danceRight');
-		}
-		else
-		{
-			gfDance.animation.addByPrefix('idle', animationName, 12, false);
-			gfDance.animation.play('idle');
+		//else
+		
+	                //gfDance.animation.addByPrefix('idle', animationName, 12, false);
+			//gfDance.animation.play('idle');
 		}
 
 
