@@ -7,9 +7,4 @@
 	"gfy": -150,
 	"backgroundSprite": "",
 	"bpm": 150,
-	
-	"animation": "gfDance",
-	"dance_left": [6, 0, 1, 2, 3, 4, 5],
-	"dance_right": [6, 0, 1, 2, 3, 4, 5],
-	"idle": true
 }
