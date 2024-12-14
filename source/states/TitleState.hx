@@ -12,9 +12,9 @@ import haxe.Json;
 import openfl.Assets;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
+import flixel.addons.display.FlxBackdrop;
 
 import shaders.ColorSwap;
-import flixel.effects.FlxFlicker;
 
 import states.StoryMenuState;
 import states.OutdatedState;
