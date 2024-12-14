@@ -153,11 +153,6 @@ class TitleState extends MusicBeatState
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
-	
-	var ColorArray:Array<Int> = [
-		0x23080A
-	
-	];
 	var bgMove:FlxBackdrop;
 
 	function startIntro()
@@ -172,7 +167,7 @@ class TitleState extends MusicBeatState
 
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.alpha = 0.1;
-		bgMove.color = ColorArray[currentColor];		
+		bgMove.color = 0x23080A		
 		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
 		add(bgMove);
