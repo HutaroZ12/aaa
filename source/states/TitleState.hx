@@ -225,16 +225,6 @@ class TitleState extends MusicBeatState
 		}
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
-
-		bar = new FlxSprite(0).loadGraphic(Paths.image('movieBars'));
-		bar.antialiasing = ClientPrefs.data.antialiasing;
-
-		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
-		bgMove.alpha = 0.1;
-		bgMove.color = 0x23080A;		
-		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
-		bgMove.antialiasing = ClientPrefs.data.antialiasing;
-                bgMove.screenCenter(XY);
 		
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.antialiasing = ClientPrefs.data.antialiasing;
@@ -244,6 +234,18 @@ class TitleState extends MusicBeatState
 		blackScreen.scale.set(FlxG.width, FlxG.height);
 		blackScreen.updateHitbox();
 		credGroup.add(blackScreen);
+
+		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
+		bgMove.alpha = 0.1;
+		bgMove.color = 0x5B0623;		
+		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
+		bgMove.antialiasing = ClientPrefs.data.antialiasing;
+                bgMove.screenCenter(XY); 
+		credGroup.add(bgMove);
+
+		bar = new FlxSprite(0).loadGraphic(Paths.image('movieBars'));
+		bar.antialiasing = ClientPrefs.data.antialiasing;
+		credGroup.add(bar);
 
 		credTextShit = new Alphabet(0, 0, "", true);
 		credTextShit.screenCenter();
@@ -285,7 +287,7 @@ class TitleState extends MusicBeatState
 	var characterImage:String = 'gfDanceTitle';
 	var animationName:String = 'gfDance';
 
-	var gfPosition:FlxPoint = FlxPoint.get(-150, -150);
+	var gfPosition:FlxPoint = FlxPoint.get(-90, -100);
 	var logoPosition:FlxPoint = FlxPoint.get(-330, -100);
 	var enterPosition:FlxPoint = FlxPoint.get(100, 576);
 	
