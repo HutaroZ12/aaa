@@ -191,8 +191,6 @@ class TitleState extends MusicBeatState
 		}
 		
 		gfDance.frames = Paths.getSparrowAtlas(characterImage);
-		if(!useIdle)
-		{
 			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
 			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
 			gfDance.animation.play('danceRight');
@@ -585,7 +583,7 @@ class TitleState extends MusicBeatState
 
 		if(!closedState)
 		{
-			sickBeats++;
+			//sickBeats++;
 			switch (sickBeats)
 			{
 				case 1:
