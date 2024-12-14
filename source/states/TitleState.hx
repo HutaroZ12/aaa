@@ -14,6 +14,7 @@ import openfl.display.Bitmap;
 import openfl.display.BitmapData;
 
 import shaders.ColorSwap;
+import flixel.effects.FlxFlicker;
 
 import states.StoryMenuState;
 import states.OutdatedState;
@@ -146,10 +147,18 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
+	var mainSideT:FlxSprite;
+	var bar:FlxSprite;
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
+	
+	var ColorArray:Array<Int> = [
+		0x23080A
+	
+	];
+	var bgMove:FlxBackdrop;
 
 	function startIntro()
 	{
@@ -171,6 +180,9 @@ class TitleState extends MusicBeatState
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 
+		mainSideT = new FlxSprite(0).loadGraphic(Paths.image('MainSideTitle'));
+		mainSideT.antialiasing = ClientPrefs.data.antialiasing;
+		
 		gfDance = new FlxSprite(gfPosition.x, gfPosition.y);
 		gfDance.scale.x = 0.7;
 		gfDance.scale.y = 0.7;
@@ -219,6 +231,9 @@ class TitleState extends MusicBeatState
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
 
+		bar = new FlxSprite(0).loadGraphic(Paths.image('movieBar'));
+		bar.antialiasing = ClientPrefs.data.antialiasing;
+		
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.antialiasing = ClientPrefs.data.antialiasing;
 		logo.screenCenter();
@@ -246,8 +261,11 @@ class TitleState extends MusicBeatState
 		omg.screenCenter(X);
 		omg.antialiasing = ClientPrefs.data.antialiasing;
 
+		add(bgMove);
 		add(gfDance);
+		add(mainSideT);
 		add(logoBl); //FNF Logo
+		add(bar);
 		add(titleText); //"Press Enter to Begin" text
 		add(credGroup);
 		add(ngSpr);
