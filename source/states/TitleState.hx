@@ -163,6 +163,8 @@ class TitleState extends MusicBeatState
 
 		logoBl = new FlxSprite(logoPosition.x, logoPosition.y);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+		logo.scale.x = 0.7;
+		logo.scale.y = 0.7;
 		logoBl.antialiasing = ClientPrefs.data.antialiasing;
 
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 12, false);
@@ -219,8 +221,6 @@ class TitleState extends MusicBeatState
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.antialiasing = ClientPrefs.data.antialiasing;
-		logo.scale.x = 0.7;
-		logo.scale.y = 0.7;
 		logo.screenCenter();
 
 		blackScreen = new FlxSprite().makeGraphic(1, 1, FlxColor.BLACK);
@@ -265,7 +265,7 @@ class TitleState extends MusicBeatState
 	var characterImage:String = 'gfDanceTitle';
 	var animationName:String = 'gfDance';
 
-	var gfPosition:FlxPoint = FlxPoint.get(-10, -15);
+	var gfPosition:FlxPoint = FlxPoint.get(-50, -50);
 	var logoPosition:FlxPoint = FlxPoint.get(-350, -120);
 	var enterPosition:FlxPoint = FlxPoint.get(100, 576);
 	
