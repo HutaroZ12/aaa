@@ -52,7 +52,7 @@ class TitleState extends MusicBeatState
 	var omg:FlxSprite;
 	var ngSpr:FlxSprite;
 	
-	var titleTextColors:Array<FlxColor> = [0xFF33FFFF, 0xFF3333CC];
+	var titleTextColors:Array<FlxColor> = [0xFFFFFFF, 0xFFFFFFF];
 	var titleTextAlphas:Array<Float> = [1, .64];
 
 	var curWacky:Array<String> = [];
@@ -215,12 +215,12 @@ class TitleState extends MusicBeatState
 		if (newTitle = animFrames.length > 0)
 		{
 			titleText.animation.addByPrefix('idle', "ENTER IDLE", 24);
-			titleText.animation.addByPrefix('press', ClientPrefs.data.flashing ? "ENTER PRESSED" : "ENTER FREEZE", 24);
+			titleText.animation.addByPrefix('press', ClientPrefs.data.flashing ? "ENTER PRESSED" : "ENTER FREEZE", 12);
 		}
 		else
 		{
-			titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
-			titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
+			titleText.animation.addByPrefix('idle', "Press Enter to Begin", 12);
+			titleText.animation.addByPrefix('press', "ENTER PRESSED", 12);
 		}
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
@@ -237,7 +237,7 @@ class TitleState extends MusicBeatState
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.scale.x = 3;
 		bgMove.scale.y = 3;
-		bgMove.alpha = 0.5;
+		bgMove.alpha = 0.7;
 		bgMove.color = 0x380015;		
 		bgMove.velocity.set(FlxG.random.bool(30) ? 50 : -50, FlxG.random.bool(30) ? 50 : -50);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
@@ -267,10 +267,10 @@ class TitleState extends MusicBeatState
 		omg.antialiasing = ClientPrefs.data.antialiasing;
 
 		add(bgMove);
+		add(bar);
 		add(gfDance);
 		add(mainSideT);
 		add(logoBl); //FNF Logo
-		add(bar);
 		add(titleText); //"Press Enter to Begin" text
 		add(credGroup);
 		add(ngSpr);
@@ -290,7 +290,7 @@ class TitleState extends MusicBeatState
 
 	var gfPosition:FlxPoint = FlxPoint.get(-90, -100);
 	var logoPosition:FlxPoint = FlxPoint.get(-330, -100);
-	var enterPosition:FlxPoint = FlxPoint.get(100, 576);
+	var enterPosition:FlxPoint = FlxPoint.get(0, 0);
 	
 	var useIdle:Bool = false;
 	var musicBPM:Float = 150;
