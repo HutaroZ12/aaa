@@ -180,7 +180,7 @@ class TitleState extends MusicBeatState
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
 
-		mainSideT = new FlxSprite(0).loadGraphic(Paths.image('MainSideTitle'));
+		mainSideT = new FlxSprite(0).loadGraphic(Paths.image('mainSideTitle'));
 		mainSideT.antialiasing = ClientPrefs.data.antialiasing;
 		
 		gfDance = new FlxSprite(gfPosition.x, gfPosition.y);
@@ -231,7 +231,7 @@ class TitleState extends MusicBeatState
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
 
-		bar = new FlxSprite(0).loadGraphic(Paths.image('movieBar'));
+		bar = new FlxSprite(0).loadGraphic(Paths.image('movieBars'));
 		bar.antialiasing = ClientPrefs.data.antialiasing;
 		
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
