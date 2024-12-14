@@ -32,8 +32,8 @@ typedef TitleData =
 	var bpm:Float;
 	
 	@:optional var animation:String;
-	//@:optional var dance_left:Array<Int>;
-	//@:optional var dance_right:Array<Int>;
+	@:optional var dance_left:Array<Int>;
+	@:optional var dance_right:Array<Int>;
 	@:optional var idle:Bool;
 }
 
@@ -190,14 +190,18 @@ class TitleState extends MusicBeatState
 			logoBl.shader = swagShader.shader;
 		}
 		
-		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-			gfDance.animation.addByIndices('danceLeft', 'gfDance', 12, false);
-			gfDance.animation.addByIndices('danceRight', 'gfDance', 12, false);
+		gfDance.frames = Paths.getSparrowAtlas(characterImage);
+		if(!useIdle)
+		{
+			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
+			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
 			gfDance.animation.play('danceRight');
 		//else
 		
 	                //gfDance.animation.addByPrefix('idle', animationName, 12, false);
 			//gfDance.animation.play('idle');
+		}
+
 
 		var animFrames:Array<FlxFrame> = [];
 		titleText = new FlxSprite(enterPosition.x, enterPosition.y);
@@ -290,7 +294,7 @@ class TitleState extends MusicBeatState
 	
 	var useIdle:Bool = false;
 	var musicBPM:Float = 150;
-	var danceLeftFrames:Array<Int> = [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+	var danceLeftFrames:Array<Int> = [30, 0, 1, 2, 3, 4, 5, 6];
 	var danceRightFrames:Array<Int> = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
 
 	function loadJsonData()
@@ -570,13 +574,14 @@ class TitleState extends MusicBeatState
 			logoBl.animation.play('bump', true);
 
 		if(gfDance != null)
-		
-	                   danceLeft = !danceLeft;
+		{
+			danceLeft = !danceLeft;
 			
-	                  	if (danceLeft)
+				if (danceLeft)
 					gfDance.animation.play('danceRight');
-				//else
-				//	gfDance.animation.play('danceLeft');
+				else
+					gfDance.animation.play('danceLeft');
+		}
 
 		if(!closedState)
 		{
@@ -1274,6 +1279,7 @@ class TitleState extends MusicBeatState
 				else
 					gfDance.animation.play('danceLeft');
 			}
+			else if(curBeat % 2 == 0) gfDance.animation.play('idle', true);
 		}
 
 		if(!closedState)
