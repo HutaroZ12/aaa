@@ -265,7 +265,7 @@ class TitleState extends MusicBeatState
 	var characterImage:String = 'gfDanceTitle';
 	var animationName:String = 'gfDance';
 
-	var gfPosition:FlxPoint = FlxPoint.get(-200, -200);
+	var gfPosition:FlxPoint = FlxPoint.get(-150, -150);
 	var logoPosition:FlxPoint = FlxPoint.get(-330, -100);
 	var enterPosition:FlxPoint = FlxPoint.get(100, 576);
 	
@@ -413,16 +413,16 @@ class TitleState extends MusicBeatState
 			}
 			
 			if(pressedEnter)
-			{
+			{				
 				titleText.color = FlxColor.WHITE;
 				titleText.alpha = 1;
+
+				FlxTween.tween(FlxG.camera, {y: 2000}, 8.4, {ease: FlxEase.expoOut});
 				
 				if(titleText != null) titleText.animation.play('press');
 
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-
-				FlxTween.tween(FlxG.camera, {y: 2000}, 2.4, {ease: FlxEase.expoOut});
 				
 				transitioning = true;
 				// FlxG.sound.music.stop();
