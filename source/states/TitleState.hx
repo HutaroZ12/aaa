@@ -31,10 +31,10 @@ typedef TitleData =
 	var backgroundSprite:String;
 	var bpm:Float;
 	
-	//@:optional var animation:String;
-	//@:optional var dance_left:Array<Int>;
-	//@:optional var dance_right:Array<Int>;
-	//@:optional var idle:Bool;
+	@:optional var animation:String;
+	@:optional var dance_left:Array<Int>;
+	@:optional var dance_right:Array<Int>;
+	@:optional var idle:Bool;
 }
 
 class TitleState extends MusicBeatState
@@ -190,9 +190,16 @@ class TitleState extends MusicBeatState
 			logoBl.shader = swagShader.shader;
 		}
 		
-		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 12, false);
-		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], 12, false);
+		gfDance.frames = Paths.getSparrowAtlas(characterImage);
+		if(!useIdle)
+		{
+			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
+			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
+			gfDance.animation.play('danceRight');
+		//else
+		
+	                //gfDance.animation.addByPrefix('idle', animationName, 12, false);
+			//gfDance.animation.play('idle');
 		}
 
 
@@ -287,8 +294,8 @@ class TitleState extends MusicBeatState
 	
 	var useIdle:Bool = false;
 	var musicBPM:Float = 150;
-	//var danceLeftFrames:Array<Int> = [6, 0, 1, 2, 3, 4, 5];
-	//var danceRightFrames:Array<Int> = [6, 0, 1, 2, 3, 4, 5];
+	var danceLeftFrames:Array<Int> = [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+	var danceRightFrames:Array<Int> = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
 
 	function loadJsonData()
 	{
@@ -305,10 +312,10 @@ class TitleState extends MusicBeatState
 					enterPosition.set(titleJSON.startx, titleJSON.starty);
 					musicBPM = titleJSON.bpm;
 					
-					//if(titleJSON.animation != null && titleJSON.animation.length > 0) animationName = titleJSON.animation;
-					//if(titleJSON.dance_left != null && titleJSON.dance_left.length > 0) danceLeftFrames = titleJSON.dance_left;
-			                //if(titleJSON.dance_right != null && titleJSON.dance_right.length > 0) danceRightFrames = titleJSON.dance_right;
-					//useIdle = (titleJSON.idle == true);
+					if(titleJSON.animation != null && titleJSON.animation.length > 0) animationName = titleJSON.animation;
+					if(titleJSON.dance_left != null && titleJSON.dance_left.length > 0) danceLeftFrames = titleJSON.dance_left;
+					if(titleJSON.dance_right != null && titleJSON.dance_right.length > 0) danceRightFrames = titleJSON.dance_right;
+					useIdle = (titleJSON.idle == true);
 	
 					if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.trim().length > 0)
 					{
@@ -348,8 +355,8 @@ class TitleState extends MusicBeatState
 			case 'BBPANZU':
 				characterImage = 'BBBump';
 				animationName = 'BB Title Bump';
-				//danceLeftFrames = [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
-				//danceRightFrames = [27, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+				danceLeftFrames = [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+				danceRightFrames = [27, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 				gfPosition.x += 45;
 				gfPosition.y += 100;
 			case 'PESSY':
@@ -357,8 +364,8 @@ class TitleState extends MusicBeatState
 				animationName = 'Pessy Title Bump';
 				gfPosition.x += 165;
 				gfPosition.y += 60;
-				//danceLeftFrames = [29, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-				//danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
+				danceLeftFrames = [29, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+				danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
 		}
 	}
 
@@ -433,7 +440,7 @@ class TitleState extends MusicBeatState
 				titleText.color = FlxColor.WHITE;
 				titleText.alpha = 1;
 
-				FlxTween.tween(FlxG.camera, {y: 2000}, 20.4, {ease: FlxEase.expoOut});
+				FlxTween.tween(FlxG.camera, {y: 2000}, 8.4, {ease: FlxEase.expoOut});
 				
 				if(titleText != null) titleText.animation.play('press');
 
@@ -1272,7 +1279,6 @@ class TitleState extends MusicBeatState
 				else
 					gfDance.animation.play('danceLeft');
 			}
-			else if(curBeat % 2 == 0) gfDance.animation.play('idle', true);
 		}
 
 		if(!closedState)
