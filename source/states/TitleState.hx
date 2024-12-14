@@ -193,14 +193,14 @@ class TitleState extends MusicBeatState
 		gfDance.frames = Paths.getSparrowAtlas(characterImage);
 		if(!useIdle)
 		{
-			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
-			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
+			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 16, false);
+			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 16, false);
 			gfDance.animation.play('danceRight');
-		else
+		//else
 		
-	                gfDance.animation.addByPrefix('idle', animationName, 12, false);
-			gfDance.animation.play('idle');
-		}
+	               // gfDance.animation.addByPrefix('idle', animationName, 12, false);
+			//gfDance.animation.play('idle');
+                }
 
 
 		var animFrames:Array<FlxFrame> = [];
@@ -294,8 +294,8 @@ class TitleState extends MusicBeatState
 	
 	var useIdle:Bool = false;
 	var musicBPM:Float = 150;
-	var danceLeftFrames:Array<Int> = [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-	var danceRightFrames:Array<Int> = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
+	var danceLeftFrames:Array<Int> = [6, 0, 1, 2, 3, 4, 5];
+	var danceRightFrames:Array<Int> = [6, 0, 1, 2, 3, 4, 5];
 
 	function loadJsonData()
 	{
