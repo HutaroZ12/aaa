@@ -190,7 +190,7 @@ class TitleState extends MusicBeatState
 			logoBl.shader = swagShader.shader;
 		}
 		
-		gfDance.frames = Paths.getSparrowAtlas(characterImage);
+		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 			gfDance.animation.addByIndices('danceLeft', 'gfDance', 12, false);
 			gfDance.animation.addByIndices('danceRight', 'gfDance', 12, false);
 			gfDance.animation.play('danceRight');
