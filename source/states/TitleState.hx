@@ -239,7 +239,7 @@ class TitleState extends MusicBeatState
 		bgMove.scale.x = 3;
 		bgMove.scale.y = 3;
 		bgMove.alpha = 0.3;
-		bgMove.color = 0x5B0623;		
+		bgMove.color = 0x380015;		
 		bgMove.velocity.set(FlxG.random.bool(30) ? 50 : -50, FlxG.random.bool(30) ? 50 : -50);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
                 bgMove.screenCenter(XY); 
