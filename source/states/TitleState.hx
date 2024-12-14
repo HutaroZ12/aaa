@@ -237,7 +237,7 @@ class TitleState extends MusicBeatState
 		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
 		bgMove.scale.x = 3;
 		bgMove.scale.y = 3;
-		bgMove.alpha = 0.3;
+		bgMove.alpha = 0.5;
 		bgMove.color = 0x380015;		
 		bgMove.velocity.set(FlxG.random.bool(30) ? 50 : -50, FlxG.random.bool(30) ? 50 : -50);
 		bgMove.antialiasing = ClientPrefs.data.antialiasing;
@@ -294,8 +294,8 @@ class TitleState extends MusicBeatState
 	
 	var useIdle:Bool = false;
 	var musicBPM:Float = 150;
-	var danceLeftFrames:Array<Int> = [30, 0, 1, 2, 3, 4, 5, 6];
-	var danceRightFrames:Array<Int> = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
+	var danceLeftFrames:Array<Int> = [11, 0, 1, 2, 3, 4, 5];
+	var danceRightFrames:Array<Int> = [6, 7, 8, 9, 10, 11];
 
 	function loadJsonData()
 	{
@@ -439,8 +439,6 @@ class TitleState extends MusicBeatState
 			{				
 				titleText.color = FlxColor.WHITE;
 				titleText.alpha = 1;
-
-				FlxTween.tween(FlxG.camera, {y: 2000}, 8.4, {ease: FlxEase.expoOut});
 				
 				if(titleText != null) titleText.animation.play('press');
 
