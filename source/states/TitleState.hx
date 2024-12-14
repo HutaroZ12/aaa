@@ -164,15 +164,6 @@ class TitleState extends MusicBeatState
 		loadJsonData();
 		#if TITLE_SCREEN_EASTER_EGG easterEggData(); #end
 		Conductor.bpm = musicBPM;
-
-		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
-		bgMove.alpha = 0.1;
-		bgMove.color = 0x23080A		
-		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
-		bgMove.antialiasing = ClientPrefs.data.antialiasing;
-		add(bgMove);
-                bgMove.screenCenter(XY);
-		bg.scrollFactor.set(0, 0);
 		
 		logoBl = new FlxSprite(logoPosition.x, logoPosition.y);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -237,6 +228,13 @@ class TitleState extends MusicBeatState
 
 		bar = new FlxSprite(0).loadGraphic(Paths.image('movieBars'));
 		bar.antialiasing = ClientPrefs.data.antialiasing;
+
+		bgMove = new FlxBackdrop(Paths.image('backdrop'), XY, 0, 0);
+		bgMove.alpha = 0.1;
+		bgMove.color = 0x23080A;		
+		bgMove.velocity.set(FlxG.random.bool(50) ? 90 : -90, FlxG.random.bool(50) ? 90 : -90);
+		bgMove.antialiasing = ClientPrefs.data.antialiasing;
+                bgMove.screenCenter(XY);
 		
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.antialiasing = ClientPrefs.data.antialiasing;
