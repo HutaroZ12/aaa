@@ -196,10 +196,10 @@ class TitleState extends MusicBeatState
 			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
 			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
 			gfDance.animation.play('danceRight');
-		//else
+		else
 		
-	                //gfDance.animation.addByPrefix('idle', animationName, 12, false);
-			//gfDance.animation.play('idle');
+	                gfDance.animation.addByPrefix('idle', animationName, 12, false);
+			gfDance.animation.play('idle');
 		}
 
 
@@ -440,7 +440,7 @@ class TitleState extends MusicBeatState
 				titleText.color = FlxColor.WHITE;
 				titleText.alpha = 1;
 
-				FlxTween.tween(FlxG.camera, {y: 2000}, 8.4, {ease: FlxEase.expoOut});
+				FlxTween.tween(FlxG.camera, {y: 2000}, 20.4, {ease: FlxEase.expoOut});
 				
 				if(titleText != null) titleText.animation.play('press');
 
