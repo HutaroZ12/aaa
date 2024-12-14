@@ -191,7 +191,6 @@ class TitleState extends MusicBeatState
 		}
 		
 		gfDance.frames = Paths.getSparrowAtlas(characterImage);
-		{
 			gfDance.animation.addByIndices('danceLeft', animationName, danceLeftFrames, "", 12, false);
 			gfDance.animation.addByIndices('danceRight', animationName, danceRightFrames, "", 12, false);
 			gfDance.animation.play('danceRight');
@@ -199,8 +198,6 @@ class TitleState extends MusicBeatState
 		
 	                //gfDance.animation.addByPrefix('idle', animationName, 12, false);
 			//gfDance.animation.play('idle');
-		}
-
 
 		var animFrames:Array<FlxFrame> = [];
 		titleText = new FlxSprite(enterPosition.x, enterPosition.y);
