@@ -445,6 +445,7 @@ class TitleState extends MusicBeatState
 
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
+				FlxG.camera.zoom = 1.2;
 				
 				transitioning = true;
 				// FlxG.sound.music.stop();
@@ -1140,6 +1141,7 @@ class TitleState extends MusicBeatState
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
+				FlxTween.tween(FlxG.camera, {zoom: 1.1}, 5.5, {ease: FlxEase.expoOut});
 				transitioning = true;
 				// FlxG.sound.music.stop();
 
