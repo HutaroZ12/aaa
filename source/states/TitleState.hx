@@ -176,7 +176,7 @@ class TitleState extends MusicBeatState
 		logoBl.updateHitbox();
 
 		mainSideT = new FlxSprite(0).loadGraphic(Paths.image('mainSideTitle'));
-		mainSideT.x = -1500
+		mainSideT.x = -1500;
 		mainSideT.antialiasing = ClientPrefs.data.antialiasing;
 		
 		gfDance = new FlxSprite(gfPosition.x, gfPosition.y);
