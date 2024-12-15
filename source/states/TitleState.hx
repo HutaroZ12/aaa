@@ -265,7 +265,7 @@ class TitleState extends MusicBeatState
 		omg.updateHitbox();
 		omg.screenCenter(X);
 		omg.antialiasing = ClientPrefs.data.antialiasing;
-
+		
 		add(bgMove);
 		add(bar);
 		add(gfDance);
@@ -288,7 +288,7 @@ class TitleState extends MusicBeatState
 	var characterImage:String = 'gfDanceTitle';
 	var animationName:String = 'gfDance';
 
-	var gfPosition:FlxPoint = FlxPoint.get(-90, -100);
+	var gfPosition:FlxPoint = FlxPoint.get(-90, 1200);
 	var logoPosition:FlxPoint = FlxPoint.get(-330, -100);
 	var enterPosition:FlxPoint = FlxPoint.get(0, 0);
 	
@@ -1132,7 +1132,7 @@ class TitleState extends MusicBeatState
 				titleText.color = FlxColor.WHITE;
 				titleText.alpha = 1;
 
-				FlxTween.tween(FlxG.camera, {y: 2000}, 3.4, {ease: FlxEase.expoOut});
+				//FlxTween.tween(FlxG.camera, {y: 2000}, 3.4, {ease: FlxEase.expoOut});
 				
 				if(titleText != null) titleText.animation.play('press');
 
@@ -1461,6 +1461,7 @@ class TitleState extends MusicBeatState
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
 				FlxG.camera.zoom = 1.4;
+				FlxTween.tween(gfDance, {y: -100}, 2.4, {ease: FlxEase.expoOut});
 			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
@@ -1530,6 +1531,7 @@ class TitleState extends MusicBeatState
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
 				FlxG.camera.zoom = 1.4;
+				FlxTween.tween(gfDance, {y: -100}, 2.4, {ease: FlxEase.expoOut});
 			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
