@@ -4,7 +4,7 @@
 	"startx": 0,
 	"starty": 0,
 	"gfx": -150,
-	"gfy": -150,
+	"gfy": 1200,
 	"backgroundSprite": "",
 	"bpm": 150,
 	
