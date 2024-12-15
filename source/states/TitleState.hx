@@ -424,18 +424,6 @@ class TitleState extends MusicBeatState
 
 		if (initialized && !transitioning && skippedIntro)
 		{
-			if (newTitle && !pressedEnter)
-			{
-				var timer:Float = titleTimer;
-				if (timer >= 1)
-					timer = (-timer) + 2;
-				
-				timer = FlxEase.quadInOut(timer);
-				
-				titleText.color = FlxColor.interpolate(titleTextColors[0], titleTextColors[1], timer);
-				titleText.alpha = FlxMath.lerp(titleTextAlphas[0], titleTextAlphas[1], timer);
-			}
-			
 			if(pressedEnter)
 			{				
 				titleText.color = FlxColor.WHITE;
@@ -1141,7 +1129,7 @@ class TitleState extends MusicBeatState
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
-				FlxTween.tween(FlxG.camera, {zoom: 1.1}, 5.5, {ease: FlxEase.expoOut});
+				//FlxTween.tween(FlxG.camera, {zoom: 1.1}, 5.5, {ease: FlxEase.expoOut});
 				transitioning = true;
 				// FlxG.sound.music.stop();
 
