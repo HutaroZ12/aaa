@@ -1,6 +1,13 @@
-{
-  "name": "aaa",
-  "dependencies": {
-    "flixel": "https://github.com/HutaroZ12/aaa"
-  }
+"name": "aaa",
+	"url" : "https://github.com/HutaroZ12/aaa",
+	"license": "MIT",
+	"tags": ["game", "openfl", "flash", "html5", "neko", "cpp", "android", "ios", "cross"],
+	"description": "HaxeFlixel is a 2D game engine based on OpenFL that delivers cross-platform games.",
+	"version": "5.9.0",
+	"releasenote": "Added FlxInputText, FlxG.assets, FlxBasePath and more",
+	"contributors": ["haxeflixel", "Gama11", "GeoKureli"],
+	"dependencies": {
+		"lime": "",
+		"openfl": ""
+	}
 }
