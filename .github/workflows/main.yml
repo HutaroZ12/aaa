@@ -35,19 +35,20 @@ jobs:
           - name: Android
             os: macos-15
             buildArgs: "android -ONLY_ARMV7"
-            artifactName: androidBuild
             setupCommand: sh ./setup/mobile.sh
+            artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
             os: macos-15
             buildArgs: "ios -nosign"
-            artifactName: iOSBuild
             setupCommand: sh ./setup/mobile.sh
+            artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
     uses: ./.github/workflows/build.yml
     with:
         name: ${{ matrix.name }}
         os: ${{ matrix.os }}
         buildArgs: ${{ matrix.buildArgs }}
+        setupCommand: ${{ matrix.setupCommand }}
         artifactName: ${{ matrix.artifactName }}
         artifactPath: ${{ matrix.artifactPath }}
