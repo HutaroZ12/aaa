@@ -1,0 +1,6 @@
+{
+  "name": "aaa",
+  "dependencies": {
+    "flixel": "https://github.com/HutaroZ12/aaa"
+  }
+}
