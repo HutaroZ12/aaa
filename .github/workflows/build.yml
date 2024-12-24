@@ -31,8 +31,11 @@ jobs:
     name: Build
     runs-on: ${{ inputs.os }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@main
+  - name: Install dependencies
+    run: |
+      haxelib git flixel https://github.com/HaxeFlixel/flixel.git
+      haxelib install lime
+      haxelib install openfl
 
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
