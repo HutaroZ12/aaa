@@ -14,6 +14,7 @@ import openfl.display.Bitmap;
 import openfl.display.BitmapData;
 
 import shaders.ColorSwap;
+import flixel.addons.display.FlxBackdrop;
 
 import states.StoryMenuState;
 import states.OutdatedState;
@@ -566,21 +567,18 @@ class TitleState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-
+		
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
 
 		if(gfDance != null)
 		{
 			danceLeft = !danceLeft;
-			if(!useIdle)
-			{
+			
 				if (danceLeft)
 					gfDance.animation.play('danceRight');
 				else
 					gfDance.animation.play('danceLeft');
-			}
-			else if(curBeat % 2 == 0) gfDance.animation.play('idle', true);
 		}
 
 		if(!closedState)
@@ -593,35 +591,104 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['Psych Engine by'], 40);
+						createCoolText(['Mob By'], 15);
+				case 3:
+						deleteCoolText();
+						createCoolText(['Mob By HutaroZ'], 15);
 				case 4:
-					addMoreText('Shadow Mario', 40);
-					addMoreText('Riveren', 40);
+						addMoreText('Neverminds', 15);
 				case 5:
-					deleteCoolText();
+						addMoreText('ShadeX', 15);
 				case 6:
-					createCoolText(['Not associated', 'with'], -40);
+						addMoreText('Tihenrry', 15);
+				case 7:
+						deleteCoolText();
+						addMoreText('Os Foda', 15);
 				case 8:
-					addMoreText('newgrounds', -40);
-					ngSpr.visible = true;
+						addMoreText(':D', 15);
 				case 9:
-					deleteCoolText();
-					ngSpr.visible = false;
+						deleteCoolText();
+						createCoolText(['Psych Engine by'], 15);
 				case 10:
-					createCoolText([curWacky[0]]);
+						addMoreText('Shadow Mario', 15);
+				case 11:
+						addMoreText('Riveren', 15);
+					
 				case 12:
-					addMoreText(curWacky[1]);
+						deleteCoolText();
+						createCoolText(['Mobile Porting By'], 15);
 				case 13:
-					deleteCoolText();
+						addMoreText('mcagabe19', 15);
 				case 14:
-					addMoreText('Friday');
+						addMoreText('Karim Akra', 15);
 				case 15:
-					addMoreText('Night');
+						addMoreText('Moxie', 15);
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
-
+						deleteCoolText();
+						createCoolText(['Not associated'], -40);
 				case 17:
-					skipIntro();
+						deleteCoolText();
+						createCoolText(['Not associated with'], -40);
+				case 18:
+						addMoreText('', -40);
+						addMoreText('newgrounds', -40);
+						ngSpr.visible = true;
+				case 19:
+						deleteCoolText();
+						ngSpr.visible = false;
+						createCoolText(['Mod for a'], 15);
+				case 20:
+						deleteCoolText();
+						addMoreText('Brazillian Animator', 15);
+				case 21:
+						deleteCoolText();
+						createCoolText(['HIHIHIHI'], 15);
+				case 22:
+						deleteCoolText();
+						createCoolText(['im'], 15);	
+					
+				case 23:
+						addMoreText('so', 15);	
+					
+				case 24:
+						addMoreText('Silly lolol', 15);
+						
+				case 25:
+						deleteCoolText();
+						addMoreText(curWacky[0]);
+						
+				case 26:
+						addMoreText(curWacky[1]);
+				case 27:
+						deleteCoolText();
+						createCoolText(['Friday'], -40);
+						
+				case 28:
+						
+						addMoreText('Night', -40);
+						
+				case 29:
+						
+						addMoreText('Funkin', -40);
+				case 30:
+						
+						addMoreText('Vs', -40);
+				case 31:
+						
+						addMoreText('Eyz', -40);
+						
+				case 32:
+						deleteCoolText();
+						addMoreText('', -40);
+						addMoreText('OOMAGA', -40);
+					        omg.visible = true;
+						
+						
+				case 33:
+						deleteCoolText();
+					        omg.visible = false;
+
+							skipIntro();
 			}
 		}
 	}
@@ -691,8 +758,12 @@ class TitleState extends MusicBeatState
 			*/else #end //Default! Edit this one!!
 			{
 				remove(ngSpr);
+				remove(omg);
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
+				FlxG.camera.zoom = 1.4;
+				FlxTween.tween(gfDance, {y: -150}, 2.4, {ease: FlxEase.expoOut});
+			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
 
 				/*var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 		                if (easteregg == null) easteregg = '';
