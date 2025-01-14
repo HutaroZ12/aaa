@@ -334,7 +334,7 @@ class TitleState extends MusicBeatState
 		//else trace('[WARN] No Title JSON detected, using default values.');
 	}
 
-	/*function easterEggData()
+	function easterEggData()
 	{
 		if (FlxG.save.data.psychDevsEasterEgg == null) FlxG.save.data.psychDevsEasterEgg = ''; //Crash prevention
 		var easterEgg:String = FlxG.save.data.psychDevsEasterEgg;
@@ -368,7 +368,7 @@ class TitleState extends MusicBeatState
 				danceRightFrames = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
 		}
 	}
-*/
+
 	function getIntroTextShit():Array<Array<String>>
 	{
 		#if MODS_ALLOWED
@@ -397,7 +397,7 @@ class TitleState extends MusicBeatState
 	{
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
-		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
+		//FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
 
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER || controls.ACCEPT || TouchUtil.justPressed;
 
@@ -457,9 +457,9 @@ class TitleState extends MusicBeatState
 
 					closedState = true;
 				});
-				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
+				FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 			}
-			/*#if TITLE_SCREEN_EASTER_EGG
+			#if TITLE_SCREEN_EASTER_EGG
 			else if (FlxG.keys.firstJustPressed() != FlxKey.NONE)
 			{
 				var keyPressed:FlxKey = FlxG.keys.firstJustPressed();
@@ -511,9 +511,8 @@ class TitleState extends MusicBeatState
 				}
 			}
 			#end
-		}
-*/
-		if (initialized && pressedEnter && !skippedIntro)
+}
+	        if (initialized && pressedEnter && !skippedIntro)
 		{
 			skipIntro();
 		}
@@ -699,7 +698,7 @@ class TitleState extends MusicBeatState
 	{
 		if (!skippedIntro)
 		{
-			/*#if TITLE_SCREEN_EASTER_EGG
+			#if TITLE_SCREEN_EASTER_EGG
 			if (playJingle) //Ignore deez
 			{
 				playJingle = false;
@@ -765,7 +764,7 @@ class TitleState extends MusicBeatState
 				FlxTween.tween(gfDance, {y: -150}, 2.4, {ease: FlxEase.expoOut});
 			        FlxTween.tween(FlxG.camera, {zoom: 1}, 3.5, {ease: FlxEase.expoOut});
 
-				/*var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
+				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 		                if (easteregg == null) easteregg = '';
 		                 easteregg = easteregg.toUpperCase();
 				#if TITLE_SCREEN_EASTER_EGG
@@ -775,7 +774,7 @@ class TitleState extends MusicBeatState
 					if(FreeplayState.vocals != null)
 					{
 						FreeplayState.vocals.fadeOut();
-					*/}
+					}
 				}
 				#end
 			}
