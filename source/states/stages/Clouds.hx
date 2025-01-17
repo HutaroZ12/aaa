@@ -47,7 +47,9 @@ class Clounds extends BaseStage
 	
 	override function createPost()
 	{
-		// Use this function to layer things above characters!
+		layer5 = new BGSprite('stages/sky/layer5', -500, -300);
+        layer5.scrollFactor.set(1, 1);
+        add(layer5);
 	}
 
 	override function update(elapsed:Float)
