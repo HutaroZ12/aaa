@@ -1,5 +1,5 @@
 {
-	"directory": "week1",
+	"directory": "",
 	"defaultZoom": 0.8,
 	"stageUI": "",
 
@@ -16,11 +16,21 @@
 	"preload": {
 		"images":
 		[
-			"stage/Eyz/layer1"
+			"stage/sky/layer0",
+			"stage/sky/layer1",
+			"stage/sky/layer2",
+			"stage/sky/layer3",
+			"stage/sky/layer4",
+			"stage/sky/layer5"
 		],
 		"images_low":
 		[
-			"stage/Eyz/layer1"
+			"stage/sky/layer0",
+			"stage/sky/layer1",
+			"stage/sky/layer2",
+			"stage/sky/layer3",
+			"stage/sky/layer4",
+			"stage/sky/layer5"
 		]
 	}
 }
