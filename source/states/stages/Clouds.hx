@@ -45,7 +45,8 @@ class Clounds extends BaseStage
         blackBars.camera = camHUD;
         add(blackBars);
 	}
-	
+}
+
 	override function createPost()
 	{
 		layer5 = new BGSprite('stages/sky/layer5', -500, -300);
