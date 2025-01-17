@@ -45,7 +45,6 @@ class Clounds extends BaseStage
         blackBars.camera = camHUD;
         add(blackBars);
 	}
-}
 
 	override function createPost()
 	{
@@ -53,7 +52,6 @@ class Clounds extends BaseStage
         layer5.scrollFactor.set(1, 1);
         add(layer5);
 	}
-}
 
 	override function countdownTick(count:Countdown, num:Int)
 	{
@@ -63,8 +61,6 @@ class Clounds extends BaseStage
 			case TWO: //num 1
 			case ONE: //num 2
 			case GO: //num 3
-				boyfriend.playAnim('hey');
-				dad.playAnim('hey');
 			case START: //num 4
 		}
 }
