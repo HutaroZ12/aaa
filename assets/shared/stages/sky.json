@@ -16,21 +16,21 @@
 	"preload": {
 		"images":
 		[
-			"stage/sky/layer0",
-			"stage/sky/layer1",
-			"stage/sky/layer2",
-			"stage/sky/layer3",
-			"stage/sky/layer4",
-			"stage/sky/layer5"
+			"stages/sky/layer0",
+			"stages/sky/layer1",
+			"stages/sky/layer2",
+			"stages/sky/layer3",
+			"stages/sky/layer4",
+			"stages/sky/layer5"
 		],
 		"images_low":
 		[
-			"stage/sky/layer0",
-			"stage/sky/layer1",
-			"stage/sky/layer2",
-			"stage/sky/layer3",
-			"stage/sky/layer4",
-			"stage/sky/layer5"
+			"stages/sky/layer0",
+			"stages/sky/layer1",
+			"stages/sky/layer2",
+			"stages/sky/layer3",
+			"stages/sky/layer4",
+			"stages/sky/layer5"
 		]
 	}
 }
