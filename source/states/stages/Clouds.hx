@@ -52,6 +52,7 @@ class Clounds extends BaseStage
         layer5.scrollFactor.set(1, 1);
         add(layer5);
 	}
+}
 
 	override function countdownTick(count:Countdown, num:Int)
 	{
