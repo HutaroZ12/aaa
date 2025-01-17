@@ -38,6 +38,8 @@ class Clounds extends BaseStage
 			case TWO: //num 1
 			case ONE: //num 2
 			case GO: //num 3
+				boyfriend.playAnim('hey');
+				dad.playAnim('hey');
 			case START: //num 4
 		}
 	}
