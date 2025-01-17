@@ -45,22 +45,4 @@ class Clounds extends BaseStage
         blackBars.camera = camHUD;
         add(blackBars);
 	}
-
-	override function createPost()
-	{
-		layer5 = new BGSprite('stages/sky/layer5', -500, -300);
-        layer5.scrollFactor.set(1, 1);
-        add(layer5);
-	}
-
-	override function countdownTick(count:Countdown, num:Int)
-	{
-		switch(count)
-		{
-			case THREE: //num 0
-			case TWO: //num 1
-			case ONE: //num 2
-			case GO: //num 3
-			case START: //num 4
-		}
 }
