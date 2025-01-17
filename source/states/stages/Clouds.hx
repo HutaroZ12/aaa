@@ -44,6 +44,7 @@ class Clounds extends BaseStage
         blackBars.scale.y = 1;
         blackBars.camera = camHUD;
         add(blackBars);
+	}
 	
 	override function createPost()
 	{
