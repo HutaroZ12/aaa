@@ -111,7 +111,7 @@ class StageData {
 			case 'ugh' | 'guns' | 'stress':
 				return 'tank';
 			case 'rayquest':
-				return 'eyzStage';
+				return 'sky';
 		}
 		return 'stage';
 	}
