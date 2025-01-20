@@ -10,7 +10,7 @@ class Clouds extends BaseStage
 	var layer3:FlxSprite;
 	var layer4:FlxSprite;
 	var layer5:FlxSprite;
-	var blackBars:FlxSprite;
+	//var blackBars:FlxSprite;
 	
 	override function create()
 	{
@@ -29,16 +29,16 @@ class Clouds extends BaseStage
 	layer3 = new BGSprite('stages/sky/layer3', -500, -300);
         add(layer3);
 
-	layer4 = new BGSprite('stages/sky/layer4', -500, -300);
+	/*layer4 = new BGSprite('stages/sky/layer4', -500, -300);
         add(layer4);
 
-	blackBars = new BGSprite('movieBars', 0, 0);
+	/*blackBars = new BGSprite('movieBars', 0, 0);
         blackBars.scrollFactor.set(1, 1);
         blackBars.scale.x = 1;
         blackBars.scale.y = 1;
         blackBars.camera = camHUD;
         add(blackBars);
-	}
+	*/}
 
 	override function createPost()
 	{
