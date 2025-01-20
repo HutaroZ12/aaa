@@ -36,6 +36,7 @@ class Clouds extends BaseStage
 
 	layer5 = new BGSprite('stages/sky/layer5', -500, -300);
         layer5.scrollFactor.set(1, 1);
+	layer5.blend = ADD;
         add(layer5);
 
 	blackBars = new BGSprite('movieBars', 0, 0);
