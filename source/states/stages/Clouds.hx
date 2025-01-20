@@ -34,11 +34,6 @@ class Clouds extends BaseStage
         layer4.scrollFactor.set(1, 1);
         add(layer4);
 
-	layer5 = new BGSprite('stages/sky/layer5', -500, -300);
-        layer5.scrollFactor.set(1, 1);
-	layer5.blend = ADD;
-        add(layer5);
-
 	blackBars = new BGSprite('movieBars', 0, 0);
         blackBars.scrollFactor.set(1, 1);
         blackBars.scale.x = 1;
@@ -46,4 +41,23 @@ class Clouds extends BaseStage
         blackBars.camera = camHUD;
         add(blackBars);
 	}
+
+	override function createPost()
+	{
+	layer5 = new BGSprite('stages/sky/layer5', -500, -300);
+        layer5.scrollFactor.set(1, 1);
+	layer5.blend = ADD;
+        add(layer5);
+	}
+
+	override function countdownTick(count:Countdown, num:Int)
+	{
+		switch(count)
+		{
+			case THREE: //num 0
+			case TWO: //num 1
+			case ONE: //num 2
+			case GO: //num 3
+			case START: //num 4
+		}
 }
