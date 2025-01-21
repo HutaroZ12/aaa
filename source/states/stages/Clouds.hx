@@ -23,10 +23,11 @@ class Clouds extends BaseStage
         add(layer1);
 
 	layer2 = new BGSprite('stages/sky/layer2', -500, -300);
-        layer2.scrollFactor.set(1, 1);
+        layer2.scrollFactor.set(0.85, 0.85);
         add(layer2);
 
 	layer3 = new BGSprite('stages/sky/layer3', -500, -300);
+	layer3.scrollFactor.set(0.9, 0.9);
         add(layer3);
 
 	/*layer4 = new BGSprite('stages/sky/layer4', -500, -300);
