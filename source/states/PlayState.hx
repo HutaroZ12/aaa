@@ -539,7 +539,7 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 		uiGroup.add(healthBar);
 
-		if(ClientPrefs.data.downScroll) healthBar.y = -600;
+		if(ClientPrefs.data.downScroll) healthBar.y = -610;
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
