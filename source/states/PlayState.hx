@@ -531,11 +531,12 @@ class PlayState extends MusicBeatState
 		moveCameraSection();
 
 		healthBarBG = new FlxSprite(30, FlxG.height - 75).loadGraphic(Paths.image('healthBar'));
+		healthBarBG.screenCenter(X);
+		healthBarBG.y = 610;
 		healthBarBG.scrollFactor.set();
 		healthBarBG.visible = !ClientPrefs.data.hideHud;
 		healthBarBG.alpha = ClientPrefs.data.healthBarAlpha;
-		add(healthBarBG);
-		healthBarBG.cameras = [camHUD];
+		uiGroup.add(healthBarBG);
 		
 		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : -600), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
