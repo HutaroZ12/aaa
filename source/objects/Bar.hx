@@ -35,7 +35,7 @@ class Bar extends FlxSpriteGroup
 		leftBar.antialiasing = antialiasing = ClientPrefs.data.antialiasing;
 
 		rightBar = new FlxSprite().loadGraphic(Paths.image('healthBar'), FlxColor.WHITE);
-		//rightBar.color = FlxColor.BLACK;
+		rightBar.color = FlxColor.BLACK;
 		rightBar.antialiasing = ClientPrefs.data.antialiasing;
 
 		add(leftBar);
