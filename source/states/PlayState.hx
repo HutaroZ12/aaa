@@ -538,13 +538,13 @@ class PlayState extends MusicBeatState
 		healthBarBG.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(healthBarBG);
 		
-		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : -600), 'healthBar', function() return health, 0, 2);
-		healthBar.screenCenter(X);
-		healthBar.y = 610;
-		healthBar.leftToRight = false;
+		healthBar = new Bar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
+			'health', 0, 2);
 		healthBar.scrollFactor.set();
-		healthBar.visible = !ClientPrefs.data.hideHud;
-		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
+		// healthBar
+		healthBar.visible = !ClientPrefs.hideHud;
+		healthBar.alpha = ClientPrefs.healthBarAlpha;
+		healthBarBG.sprTracker = healthBar;
 		reloadHealthBarColors();
 		uiGroup.add(healthBar);
 
