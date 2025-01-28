@@ -173,6 +173,7 @@ class PlayState extends MusicBeatState
 	public var health(default, set):Float = 1;
 	public var combo:Int = 0;
 
+	public var healthBarBG:FlxSprite;
 	public var healthBar:Bar;
 	public var timeBar:Bar;
 	var songPercent:Float = 0;
@@ -529,6 +530,13 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 
+		healthBarBG = new FlxSprite(30, FlxG.height - 75).loadGraphic(Paths.image('healthBar'));
+		healthBarBG.scrollFactor.set();
+		healthBarBG.visible = !ClientPrefs.data.hideHud;
+		healthBarBG.alpha = ClientPrefs.data.healthBarAlpha;
+		add(healthBarBG);
+		healthBarBG.cameras = [camHUD];
+		
 		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : -600), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
 		healthBar.y = 610;
