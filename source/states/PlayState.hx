@@ -537,7 +537,6 @@ class PlayState extends MusicBeatState
 		healthBar.scrollFactor.set();
 		healthBar.visible = !ClientPrefs.data.hideHud;
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
-		reloadHealthBarColors();
 		uiGroup.add(healthBar);
 
 		if(ClientPrefs.data.downScroll) healthBar.y = -610;
@@ -549,6 +548,8 @@ class PlayState extends MusicBeatState
 		healthBarBG.visible = !ClientPrefs.data.hideHud;
 		healthBarBG.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(healthBarBG);
+
+		reloadHealthBarColors();
 		
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
