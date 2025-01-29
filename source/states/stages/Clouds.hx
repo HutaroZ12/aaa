@@ -55,7 +55,7 @@ class Clouds extends BaseStage
 			case TWO: //num 1
 			case ONE: //num 2
 			case GO: //num 3
-				dad.playAnim('hey', 12, true);
+				dad.playAnim('hey', true);
 				boyfriend.playAnim('hey', true);
 			case START: //num 4
 		}
