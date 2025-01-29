@@ -533,7 +533,6 @@ class PlayState extends MusicBeatState
 		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : -600), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
 		healthBar.y = 610;
-		healthBar.color = reloadHealthBarColors;
 		healthBar.leftToRight = false;
 		healthBar.scrollFactor.set();
 		healthBar.visible = !ClientPrefs.data.hideHud;
