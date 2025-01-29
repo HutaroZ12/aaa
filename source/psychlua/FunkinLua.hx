@@ -1115,10 +1115,10 @@ class FunkinLua {
 		});
 
 		set("setHealthBarColors", function(left:String, right:String) {
-			var left:FlxColor = Std.parseInt(leftHex);
-			if(!leftHex.startsWith('0x')) left = Std.parseInt('0xff' + leftHex);
-			var right:FlxColor = Std.parseInt(rightHex);
-			if(!rightHex.startsWith('0x')) right = Std.parseInt('0xff' + rightHex);
+			var left:FlxColor = Std.parseInt(leftBar);
+			if(!leftBar.startsWith('0x')) left = Std.parseInt('0xff' + leftBar);
+			var right:FlxColor = Std.parseInt(rightBar);
+			if(!rightBar.startsWith('0x')) right = Std.parseInt('0xff' + rightBar);
 		});
 		
 		set("setTimeBarColors", function(left:String, right:String) {
