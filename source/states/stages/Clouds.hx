@@ -15,10 +15,12 @@ class Clouds extends BaseStage
 	override function create()
 	{
 	layer0 = new BGSprite('stages/sky/layer0', -500, -300);
+	layer0.velocity.set(5, 0);
         layer0.scrollFactor.set(1, 1);
         add(layer0);
 
 	layer1 = new BGSprite('stages/sky/layer1', -500, -300);
+	layer1.velocity.set(10, 0);
         layer1.scrollFactor.set(1, 1);
         add(layer1);
 
