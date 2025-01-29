@@ -26,8 +26,7 @@ class Clouds extends BaseStage
         layer2.scrollFactor.set(0.85, 0.85);
         add(layer2);
 
-	layer3 = new BGSprite('stages/sky/layer3', -500, -300);
-	layer3.scrollFactor.set(0.9, 0.9);
+	layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
 
 	/*layer4 = new BGSprite('stages/sky/layer4', -500, -300);
@@ -56,7 +55,7 @@ class Clouds extends BaseStage
 			case TWO: //num 1
 			case ONE: //num 2
 			case GO: //num 3
-				dad.playAnim('hey', true);
+				dad.playAnim('hey', 12, true);
 				boyfriend.playAnim('hey', true);
 			case START: //num 4
 		}
