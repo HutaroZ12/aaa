@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "Eyz Idle",
-			"indices": []
+			"indices": [],
+			"name": "Eyz Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				0
+				3,
+				2
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "Eyz Down",
-			"indices": []
+			"indices": [],
+			"name": "Eyz Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "Eyz Left",
-			"indices": []
+			"indices": [],
+			"name": "Eyz Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "Eyz Up",
-			"indices": []
+			"indices": [],
+			"name": "Eyz Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 12,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "Eyz Right",
-			"indices": []
+			"indices": [],
+			"name": "Eyz Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "hey",
+			"loop": false,
 			"fps": 12,
-			"name": "Eyz Hey",
-			"indices": []
+			"anim": "hey",
+			"indices": [],
+			"name": "Eyz Hey"
 		}
 	],
 	"vocals_file": "",
@@ -77,9 +77,9 @@
 	"healthicon": "eyz",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		255,
-		255
+		49,
+		176,
+		209
 	],
 	"camera_position": [
 		-10,
