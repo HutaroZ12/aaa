@@ -530,7 +530,7 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 		
-		healthBar = new Bar(30, FlxG.height - 75).loadGraphic(Paths.image('healthBar'));
+		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : -600), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
 		healthBar.y = 610;
 		healthBar.leftToRight = false;
