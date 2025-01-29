@@ -31,11 +31,11 @@ class Bar extends FlxSpriteGroup
 		barHeight = Std.int(bg.height - 6);
 
 		leftBar = new FlxSprite().loadGraphic(Paths.image('healthBar'), FlxColor.WHITE);
-		//leftBar.color = FlxColor.WHITE;
+		leftBar.color = FlxColor.WHITE;
 		leftBar.antialiasing = antialiasing = ClientPrefs.data.antialiasing;
 
 		rightBar = new FlxSprite().loadGraphic(Paths.image('healthBar'), FlxColor.WHITE);
-		//rightBar.color = FlxColor.BLACK;
+		rightBar.color = FlxColor.BLACK;
 		rightBar.antialiasing = ClientPrefs.data.antialiasing;
 
 		add(leftBar);
