@@ -22,7 +22,3 @@ haxelib install hxvlc 1.9.2 --quiet --skip-dependencies
 haxelib git funkin.vis https://github.com/FunkinCrew/funkVis 22b1ce089dd924f15cdc4632397ef3504d464e90 --quiet --skip-dependencies
 haxelib git grig.audio https://gitlab.com/haxe-grig/grig.audio.git cbf91e2180fd2e374924fe74844086aab7891666 --quiet
 echo Finished!
-
-# Add parallel compilation
-echo Compiling with parallel jobs...
-haxelib run lime rebuild hxcpp linux -j$(nproc)
