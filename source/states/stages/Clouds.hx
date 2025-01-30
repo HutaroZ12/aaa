@@ -15,11 +15,7 @@ class Clouds extends BaseStage
     //var blackBars:FlxSprite;
     
     override function create()
-    {
-        super.create();
-    skyShader = new FlxShader("assets/shaders/skyShader.frag");
-    FlxG.cameras.setDefaultDrawTarget(skyShader);
-        
+    {       
         layer0 = new BGSprite('stages/sky/layer0', -500, -300);
         layer0.scrollFactor.set(1, 1);
         add(layer0);
