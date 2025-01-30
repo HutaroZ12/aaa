@@ -59,11 +59,6 @@ class Clouds extends BaseStage
 
     function parallaxUpdate(elapsed:Float)
     {
-        accumulatedTime += elapsed;
-
-        // Verifica se o tempo acumulado é menor que 40 segundos
-        if (accumulatedTime < 70)
-        {
             // Atualizar a posição das camadas
             layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
             layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
