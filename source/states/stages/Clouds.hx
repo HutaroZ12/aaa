@@ -1,5 +1,8 @@
 package states.stages;
 
+import flixel.FlxG;
+import flixel.addons.effects.FlxShader;
+
 import states.stages.objects.*;
 
 class Clouds extends BaseStage
@@ -10,10 +13,15 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
+    var skyShader:FlxShader;
     //var blackBars:FlxSprite;
     
     override function create()
     {
+    super.create();
+    skyShader = new FlxShader("assets/shaders/skyShader.frag");
+    FlxG.cameras.setDefaultDrawTarget(skyShader);
+        
         layer0 = new BGSprite('stages/sky/layer0', -500, -300);
         layer0.scrollFactor.set(1, 1);
         add(layer0);
