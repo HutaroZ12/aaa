@@ -3,7 +3,7 @@
 # REMINDER THAT YOU NEED HAXE INSTALLED PRIOR TO USING THIS
 # https://haxe.org/download
 cd ..
-echo Makking the main haxelib and setuping folder in same time..
+echo Making the main haxelib and setting up folder at the same time..
 mkdir ~/haxelib && haxelib setup ~/haxelib
 echo Installing dependencies...
 echo This might take a few moments depending on your internet speed.
@@ -22,3 +22,7 @@ haxelib install hxvlc 1.9.2 --quiet --skip-dependencies
 haxelib git funkin.vis https://github.com/FunkinCrew/funkVis 22b1ce089dd924f15cdc4632397ef3504d464e90 --quiet --skip-dependencies
 haxelib git grig.audio https://gitlab.com/haxe-grig/grig.audio.git cbf91e2180fd2e374924fe74844086aab7891666 --quiet
 echo Finished!
+
+# Add parallel compilation
+echo Compiling with parallel jobs...
+haxelib run lime rebuild hxcpp linux -j$(nproc)
