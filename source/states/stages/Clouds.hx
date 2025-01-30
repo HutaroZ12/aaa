@@ -1,7 +1,3 @@
-package states.stages;
-
-import states.stages.objects.*;
-
 class Clouds extends BaseStage
 {
     var layer0:FlxSprite;
@@ -10,7 +6,7 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
- 
+
     override function create()
     {       
         layer0 = new BGSprite('stages/sky/layer0', -500, -300);
@@ -29,6 +25,9 @@ class Clouds extends BaseStage
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
+
+        // Start parallax movement
+        FlxG.update.add(parallaxUpdate);
     }
 
     override function createPost()
@@ -39,7 +38,22 @@ class Clouds extends BaseStage
         add(layer5);
     }
 
+    function parallaxUpdate(elapsed:Float)
+    {
+        layer1.x -= 1; // Adjust speed as needed
+        layer2.x -= 0.85; // Adjust speed as needed
+
+        if (layer1.x <= -layer1.width) {
+            layer1.x = 0;
+        }
+
+        if (layer2.x <= -layer2.width) {
+            layer2.x = 0;
+        }
+    }
+
     override function countdownTick(count:Countdown, num:Int)
+    {
         switch(count)
         {
             case THREE:
@@ -50,4 +64,5 @@ class Clouds extends BaseStage
                 boyfriend.playAnim('hey', true);
             case START:
         }
+    }
 }
