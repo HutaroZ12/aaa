@@ -68,7 +68,7 @@ class Clouds extends BaseStage
         FlxTween.tween(layer0, {x: -1500}, 100, {ease: FlxEase.linear, onComplete: resetLayer0});
     }
 
-    function resetLayer0()
+    function resetLayer0(tween:FlxTween):Void
     {
         layer0.x = 0;
         moveLayer0();
@@ -79,7 +79,7 @@ class Clouds extends BaseStage
         FlxTween.tween(layer1, {x: -1500}, 20, {ease: FlxEase.linear, onComplete: resetLayer1});
     }
 
-    function resetLayer1()
+    function resetLayer1(tween:FlxTween):Void
     {
         layer1.x = 500;
         moveLayer1();
@@ -90,7 +90,7 @@ class Clouds extends BaseStage
         FlxTween.tween(layer2, {x: -1500}, 20, {ease: FlxEase.linear, onComplete: resetLayer2});
     }
 
-    function resetLayer2()
+    function resetLayer2(tween:FlxTween):Void
     {
         layer2.x = 500;
         moveLayer2();
