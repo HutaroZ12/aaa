@@ -1,7 +1,7 @@
 package states.stages;
 
 import flixel.FlxG;
-import flixel.addons.effects.FlxShader;
+import shaders.skyShader;
 
 import states.stages.objects.*;
 
