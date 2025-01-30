@@ -1,5 +1,6 @@
 package states.stages;
 
+import shaders.SkyShader;
 import states.stages.objects.*;
 
 class Clouds extends BaseStage
@@ -96,7 +97,7 @@ class Clouds extends BaseStage
         };
     }
 
-    function addShader(layer:FlxSprite)
+    dynamic function addShader(layer:FlxSprite) // Declare como dynamic
     {
         // Adicione seu código de shader aqui, se necessário
     }
