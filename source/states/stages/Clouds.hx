@@ -12,7 +12,6 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
-    var accumulatedTime:Float = 0; // Variável para acumular o tempo
 
     override function create()
     {       
@@ -69,8 +68,8 @@ class Clouds extends BaseStage
             layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
             layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
 
-            layer2.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
-            layer2b.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
+            layer2.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
+            layer2b.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
 
             // Reposicionar camadas para loop infinito
             if (layer1.x + layer1.width <= 0){
