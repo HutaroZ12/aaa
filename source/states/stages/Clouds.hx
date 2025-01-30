@@ -1,8 +1,5 @@
 package states.stages;
 
-import flixel.FlxG;
-import shaders.skyShader;
-
 import states.stages.objects.*;
 
 class Clouds extends BaseStage
@@ -13,15 +10,10 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
-    var skyShader:FlxShader;
     //var blackBars:FlxSprite;
     
     override function create()
     {
-    super.create();
-    skyShader = new FlxShader("assets/shaders/skyShader.frag");
-    FlxG.cameras.setDefaultDrawTarget(skyShader);
-        
         layer0 = new BGSprite('stages/sky/layer0', -500, -300);
         layer0.scrollFactor.set(1, 1);
         add(layer0);
@@ -30,12 +22,12 @@ class Clouds extends BaseStage
         layer1 = new BGSprite('stages/sky/layer1', -500, -300);
         layer1.scrollFactor.set(1, 1);
         add(layer1);
-        moveLayer(layer1, 20);
+        moveLayerContinuous(layer1, 20);
 
         layer2 = new BGSprite('stages/sky/layer2', -500, -300);
         layer2.scrollFactor.set(0.85, 0.85);
         add(layer2);
-        moveLayer(layer2, 20);
+        moveLayerContinuous(layer2, 20);
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
@@ -82,14 +74,14 @@ class Clouds extends BaseStage
         moveLayer0();
     }
 
-    function moveLayer(layer:FlxSprite, duration:Float)
+    function moveLayerContinuous(layer:FlxSprite, speed:Float)
     {
-        var startX = layer.x;
-        var endX = -1500;
-        
-        FlxTween.tween(layer, {x: endX}, duration, {ease: FlxEase.linear, onComplete: function(tween:FlxTween):Void {
-            layer.x = startX;
-            moveLayer(layer, duration);
-        }});
+        addShader(layer);
+        layer.velocity.x = -speed;
+    }
+
+    function addShader(layer:FlxSprite)
+    {
+        // Adicione seu código de shader aqui, se necessário
     }
 }
