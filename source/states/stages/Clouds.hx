@@ -12,6 +12,7 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
+    var accumulatedTime:Float = 0; // Variável para acumular o tempo
 
     override function create()
     {       
@@ -59,26 +60,32 @@ class Clouds extends BaseStage
 
     function parallaxUpdate(elapsed:Float)
     {
-        // Atualizar a posição das camadas
-        layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
-        layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
+        accumulatedTime += elapsed;
 
-        layer2.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
-        layer2b.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
+        // Verifica se o tempo acumulado é menor que 40 segundos
+        if (accumulatedTime < 70)
+        {
+            // Atualizar a posição das camadas
+            layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
+            layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
 
-        // Reposicionar camadas para loop infinito
-        if (layer1.x <= -layer1.width){
-            layer1.x = layer1b.x + layer1b.width;
-        }
-        if (layer1b.x <= -layer1b.width){
-            layer1b.x = layer1.x + layer1.width;
-        }
+            layer2.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
+            layer2b.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
 
-        if (layer2.x <= -layer2.width){
-            layer2.x = layer2b.x + layer2b.width;
-        }
-        if (layer2b.x <= -layer2b.width){
-            layer2b.x = layer2.x + layer2.width;
+            // Reposicionar camadas para loop infinito
+            if (layer1.x + layer1.width <= 0){
+                layer1.x = layer1b.x + layer1b.width;
+            }
+            if (layer1b.x + layer1b.width <= 0){
+                layer1b.x = layer1.x + layer1.width;
+            }
+
+            if (layer2.x + layer2.width <= 0){
+                layer2.x = layer2b.x + layer2b.width;
+            }
+            if (layer2b.x + layer2b.width <= 0){
+                layer2b.x = layer2.x + layer2.width;
+            }
         }
     }
 
