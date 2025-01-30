@@ -1,3 +1,7 @@
+package states.stages;
+
+import states.stages.objects.*;
+
 class Clouds extends BaseStage
 {
     var layer0:FlxSprite;
