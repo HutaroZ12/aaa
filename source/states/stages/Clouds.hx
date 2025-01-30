@@ -33,29 +33,6 @@ class Clouds extends BaseStage
         // Start parallax movement
         //FlxG.update.add(parallaxUpdate);
     }
-
-    override function createPost()
-    {
-        layer5 = new BGSprite('stages/sky/layer5', -500, -300);
-        layer5.scrollFactor.set(1, 1);
-        layer5.blend = ADD;
-        add(layer5);
-    }
-
-    function parallaxUpdate(elapsed:Float)
-    {
-        // Atualizar a posição das camadas
-        layer1.x -= 1; // Ajuste a velocidade conforme necessário
-        layer2.x -= 0.85; // Ajuste a velocidade conforme necessário
-
-        // Se a camada sair da tela, reposicione-a para o infinito
-        if (layer1.x <= -layer1.width){
-            layer1.x += layer1.width * 2;
-        }
-        if (layer2.x <= -layer2.width){
-            layer2.x += layer2.width * 2;
-        }
-    }
     
     override function countdownTick(count:Countdown, num:Int)
     {
