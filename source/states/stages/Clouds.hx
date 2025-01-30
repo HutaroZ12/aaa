@@ -64,22 +64,21 @@ class Clouds extends BaseStage
         }
 
     function moveLayerContinuous(layer:FlxSprite, layerb:FlxSprite, speed:Float)
-    {
-        // Define a velocidade de movimento das camadas
-        layer.velocity.x = -speed;
-        layerb.velocity.x = -speed;
+{
+    // Define a velocidade de movimento das camadas
+    layer.velocity.x = -speed;
+    layerb.velocity.x = -speed;
 
-        // Atualiza a posição das camadas continuamente
-        layer.setUpdate(function(elapsed:Float):Void {
-            if (layer.x + layer.width < 0) {
-                layer.x = layerb.x + layerb.width;
-            }
-        });
+    // Atualiza a posição das camadas continuamente
+    layer.update = function(elapsed:Float):Void {
+        if (layer.x + layer.width < 0) {
+            layer.x = layerb.x + layerb.width;
+        }
+    };
 
-        layerb.setUpdate(function(elapsed:Float):Void {
-            if (layerb.x + layerb.width < 0) {
-                layerb.x = layer.x + layer.width;
-            }
-        });
-    }
+    layerb.update = function(elapsed:Float):Void {
+        if (layerb.x + layerb.width < 0) {
+            layerb.x = layer.x + layer.width;
+        }
+    };
 }
