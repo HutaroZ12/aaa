@@ -70,16 +70,16 @@ class Clouds extends BaseStage
         layerb.velocity.x = -speed;
 
         // Atualiza a posição das camadas continuamente
-        dynamic layer.update = function(elapsed:Float):Void {
+        layer.setUpdate(function(elapsed:Float):Void {
             if (layer.x + layer.width < 0) {
                 layer.x = layerb.x + layerb.width;
             }
-        }};
+        });
 
-        dynamic layerb.update = function(elapsed:Float):Void {
+        layerb.setUpdate(function(elapsed:Float):Void {
             if (layerb.x + layerb.width < 0) {
                 layerb.x = layer.x + layer.width;
             }
-        }};
+        });
     }
 }
