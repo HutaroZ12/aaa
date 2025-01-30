@@ -10,7 +10,7 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
- 
+
     override function create()
     {       
         layer0 = new BGSprite('stages/sky/layer0', -500, -300);
@@ -29,6 +29,10 @@ class Clouds extends BaseStage
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
+
+        // Set looping movement
+        setLoopingMovement(layer1, 0.5);
+        setLoopingMovement(layer2, 0.3);
     }
 
     override function createPost()
@@ -39,7 +43,29 @@ class Clouds extends BaseStage
         add(layer5);
     }
 
+    override function update(elapsed:Float)
+    {
+        super.update(elapsed);
+        updateLayerPosition(layer1, 0.5, elapsed);
+        updateLayerPosition(layer2, 0.3, elapsed);
+    }
+
+    function setLoopingMovement(layer:FlxSprite, speed:Float)
+    {
+        layer.velocity.x = speed * 100; // Adjust speed as needed
+    }
+
+    function updateLayerPosition(layer:FlxSprite, speed:Float, elapsed:Float)
+    {
+        layer.x += speed * elapsed;
+        if (layer.x > 800) // Assuming 800 is the width of the screen
+        {
+            layer.x = -layer.width;
+        }
+    }
+
     override function countdownTick(count:Countdown, num:Int)
+    {
         switch(count)
         {
             case THREE:
@@ -50,4 +76,5 @@ class Clouds extends BaseStage
                 boyfriend.playAnim('hey', true);
             case START:
         }
+    }
 }
