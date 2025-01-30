@@ -1,6 +1,5 @@
 package states.stages;
 
-import shaders.SkyShader;
 import states.stages.objects.*;
 
 class Clouds extends BaseStage
