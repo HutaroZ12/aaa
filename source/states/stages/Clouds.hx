@@ -22,12 +22,12 @@ class Clouds extends BaseStage
         layer1 = new BGSprite('stages/sky/layer1', -500, -300);
         layer1.scrollFactor.set(1, 1);
         add(layer1);
-        moveLayer1();
+        moveLayer(layer1, 20);
 
         layer2 = new BGSprite('stages/sky/layer2', -500, -300);
         layer2.scrollFactor.set(0.85, 0.85);
         add(layer2);
-        moveLayer2();
+        moveLayer(layer2, 20);
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
@@ -74,25 +74,14 @@ class Clouds extends BaseStage
         moveLayer0();
     }
 
-    function moveLayer1()
+    function moveLayer(layer:FlxSprite, duration:Float)
     {
-        FlxTween.tween(layer1, {x: -1500}, 20, {ease: FlxEase.linear, onComplete: resetLayer1});
-    }
-
-    function resetLayer1(tween:FlxTween):Void
-    {
-        layer1.x = 500;
-        moveLayer1();
-    }
-
-    function moveLayer2()
-    {
-        FlxTween.tween(layer2, {x: -1500}, 20, {ease: FlxEase.linear, onComplete: resetLayer2});
-    }
-
-    function resetLayer2(tween:FlxTween):Void
-    {
-        layer2.x = 500;
-        moveLayer2();
+        var startX = layer.x;
+        var endX = -1500;
+        
+        FlxTween.tween(layer, {x: endX}, duration, {ease: FlxEase.linear, onComplete: function(tween:FlxTween):Void {
+            layer.x = startX;
+            moveLayer(layer, duration);
+        }});
     }
 }
