@@ -27,7 +27,7 @@ class Clouds extends BaseStage
         add(layer3);
 
         // Start parallax movement
-        FlxG.update.add(parallaxUpdate);
+        //FlxG.update.add(parallaxUpdate);
     }
 
     override function createPost()
@@ -40,18 +40,19 @@ class Clouds extends BaseStage
 
     function parallaxUpdate(elapsed:Float)
     {
-        layer1.x -= 1; // Adjust speed as needed
-        layer2.x -= 0.85; // Adjust speed as needed
+        // Atualizar a posição das camadas
+        layer1.x -= 1; // Ajuste a velocidade conforme necessário
+        layer2.x -= 0.85; // Ajuste a velocidade conforme necessário
 
-        if (layer1.x <= -layer1.width) {
-            layer1.x = 0;
+        // Se a camada sair da tela, reposicione-a para o infinito
+        if (layer1.x <= -layer1.width){
+            layer1.x += layer1.width * 2;
         }
-
-        if (layer2.x <= -layer2.width) {
-            layer2.x = 0;
+        if (layer2.x <= -layer2.width){
+            layer2.x += layer2.width * 2;
         }
     }
-
+    
     override function countdownTick(count:Countdown, num:Int)
     {
         switch(count)
