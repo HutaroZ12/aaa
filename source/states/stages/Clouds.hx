@@ -80,7 +80,6 @@ class Clouds extends BaseStage
             if (layer2b.x + layer2b.width <= 0){
                 layer2b.x = layer2.x + layer2.width;
             }
-        }
     }
 
     override function countdownTick(count:Countdown, num:Int)
