@@ -81,4 +81,5 @@ class Clouds extends BaseStage
             layerb.x = layer.x + layer.width;
         }
     };
+  }
 }
