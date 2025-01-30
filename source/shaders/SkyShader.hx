@@ -1,3 +1,5 @@
+package shaders;
+
 class SkyShader {
     public static function loadShaders():ShaderProgram {
         var vertexShader = Assets.loadText("assets/shaders/sky_vertex.glsl");
