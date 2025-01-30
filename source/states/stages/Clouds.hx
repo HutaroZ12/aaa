@@ -60,11 +60,11 @@ class Clouds extends BaseStage
     function parallaxUpdate(elapsed:Float)
     {
         // Atualizar a posição das camadas
-        layer1.x -= 100 * elapsed; // Ajuste a velocidade conforme necessário
-        layer1b.x -= 100 * elapsed; // Ajuste a velocidade conforme necessário
+        layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
+        layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
 
-        layer2.x -= 110 * elapsed; // Ajuste a velocidade conforme necessário
-        layer2b.x -= 110 * elapsed; // Ajuste a velocidade conforme necessário
+        layer2.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
+        layer2b.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
 
         // Reposicionar camadas para loop infinito
         if (layer1.x <= -layer1.width){
