@@ -19,18 +19,26 @@ class Clouds extends BaseStage
 
         // Camada 1
         layer1 = new BGSprite('stages/sky/layer1', -500, -300);
-        layer1.scrollFactor.set(1, 1);
+        layer1.scrollFactor.set(0.85, 0.85);
         add(layer1);
 
         // Camada 2
         layer2 = new BGSprite('stages/sky/layer2', -500, -300);
-        layer2.scrollFactor.set(0.85, 0.85);
+        layer2.scrollFactor.set(0.9, 0.9);
         add(layer2);
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
     }
 
+    override function createPost()
+    {
+        layer5 = new BGSprite('stages/sky/layer5', -500, -300);
+        layer5.scrollFactor.set(1, 1);
+        layer5.blend = ADD;
+        add(layer5);
+    }
+    
     override function update(elapsed:Float)
     {
         super.update(elapsed);
@@ -41,7 +49,7 @@ class Clouds extends BaseStage
     {
         // Atualizar a posição das camadas
         layer1.x -= 1 * elapsed; // Ajuste a velocidade conforme necessário
-        layer2.x -= 0.85 * elapsed; // Ajuste a velocidade conforme necessário
+        layer2.x -= 1.1 * elapsed; // Ajuste a velocidade conforme necessário
 
         // Se a camada sair da tela, reposicione-a para o infinito
         if (layer1.x <= -layer1.width){
