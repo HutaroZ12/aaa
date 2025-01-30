@@ -74,12 +74,12 @@ class Clouds extends BaseStage
             if (layer.x + layer.width < 0) {
                 layer.x = layerb.x + layerb.width;
             }
-        };
+        }};
 
         dynamic layerb.update = function(elapsed:Float):Void {
             if (layerb.x + layerb.width < 0) {
                 layerb.x = layer.x + layer.width;
             }
-        };
+        }};
     }
 }
