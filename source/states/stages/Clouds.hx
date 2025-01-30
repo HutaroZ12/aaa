@@ -31,7 +31,7 @@ class Clouds extends BaseStage
         add(layer3);
 
         // Start parallax movement
-        FlxG.update.add(parallaxUpdate);
+        FlxG.elapsed.add(parallaxUpdate);
     }
 
     function parallaxUpdate(elapsed:Float)
