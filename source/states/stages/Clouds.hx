@@ -54,6 +54,14 @@ class Clouds extends BaseStage
         }
     }
 
+    override function stepHit()
+    {
+    if (curSong == 'clouding')
+    {
+    if (curStep == 256) {
+    FlxG.camera.flash(FlxColor.WHITE, 2);
+    }
+                
     override function createPost()
     {
         layer5 = new BGSprite('stages/sky/layer5', -500, -300);
