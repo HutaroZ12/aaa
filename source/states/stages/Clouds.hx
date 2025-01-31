@@ -42,16 +42,13 @@ class Clouds extends BaseStage
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
         
-        switch(songName && count)
+        switch(songName)
         {
             case 'clouding':
                 var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
                 blackScreen.cameras = [camHUD];
                 blackScreen.scrollFactor.set();
                 add(blackScreen);
-
-            case START:
-                FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear});
         }
     }
 
@@ -105,6 +102,9 @@ class Clouds extends BaseStage
                 dad.playAnim('hey', true);
                 boyfriend.playAnim('hey', true);
             case START:
+                if (songName)
+                case 'clouding':
+                     FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear});
         }
     }
 }
