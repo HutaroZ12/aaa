@@ -42,12 +42,14 @@ class Clouds extends BaseStage
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
 
-        if (isStoryMode)
-        {
             switch(songName)
             {
                 case 'clouding':
-                    setStartCallback(cloudingIntro);
+                    var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+        blackScreen.cameras = [camHUD];
+        blackScreen.scrollFactor.set();
+         add(blackScreen);
+        FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear});
             }
         }
     }
@@ -75,15 +77,6 @@ class Clouds extends BaseStage
         if (layer2b.x + layer2b.width <= 0){
             layer2b.x = layer2.x + layer2.width;
         }
-    }
-
-    function cloudingIntro()
-    {             
-        var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
-        blackScreen.cameras = [camHUD];
-        blackScreen.scrollFactor.set();
-        add(blackScreen);
-        FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear});
     }
 
     override function countdownTick(count:Countdown, num:Int)
