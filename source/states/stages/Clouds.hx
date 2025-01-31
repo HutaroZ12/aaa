@@ -41,19 +41,26 @@ class Clouds extends BaseStage
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
-
-            switch(songName)
-            {
-                case 'clouding':
-                    var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
-        blackScreen.cameras = [camHUD];
-        blackScreen.scrollFactor.set();
-         add(blackScreen);
-        FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear});
-            }
+        
+        switch(songName)
+        {
+            case 'clouding':
+                var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+                blackScreen.cameras = [camHUD];
+                blackScreen.scrollFactor.set();
+                add(blackScreen);
+                FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear});
         }
     }
 
+    override function createPost()
+    {
+        layer5 = new BGSprite('stages/sky/layer5', -500, -300);
+        layer5.scrollFactor.set(1, 1);
+        layer5.blend = ADD;
+        add(layer5);
+    }
+    
     function parallaxUpdate(elapsed:Float)
     {
         // Atualizar a posição das camadas
@@ -79,7 +86,7 @@ class Clouds extends BaseStage
         }
     }
 
-    override function countdownTick(count:Countdown, num:Int)
+    function countdownTick(count:Countdown, num:Int)
     {
         switch(count)
         {
