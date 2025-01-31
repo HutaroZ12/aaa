@@ -41,6 +41,15 @@ class Clouds extends BaseStage
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
+
+    if (isStoryMode)
+    {
+    switch(songName)
+    {
+	case 'clouding':
+	     setStartCallback(cloudingIntro);
+		}
+	  }
     }
 
     function parallaxUpdate(elapsed:Float)
@@ -67,16 +76,6 @@ class Clouds extends BaseStage
                 layer2b.x = layer2.x + layer2.width;
             }
     }
-
-    if (isStoryMode)
-    {
-    switch(songName)
-    {
-	case 'clouding':
-	     setStartCallback(cloudingIntro);
-		}
-	}
-                    
     function cloudingIntro()
     {             
     var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
@@ -84,7 +83,7 @@ class Clouds extends BaseStage
 		blackScreen.scrollFactor.set();
 		add(blackScreen);
     }
-            
+		    
     override function countdownTick(count:Countdown, num:Int)
     {
         switch(count)
