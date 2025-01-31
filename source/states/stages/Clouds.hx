@@ -42,48 +42,49 @@ class Clouds extends BaseStage
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
 
-    if (isStoryMode)
-    {
-    switch(songName)
-    {
-	case 'clouding':
-	     setStartCallback(cloudingIntro);
-		}
-	  }
+        if (isStoryMode)
+        {
+            switch(songName)
+            {
+                case 'clouding':
+                    setStartCallback(cloudingIntro);
+            }
+        }
     }
 
     function parallaxUpdate(elapsed:Float)
     {
-            // Atualizar a posição das camadas
-            layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
-            layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
+        // Atualizar a posição das camadas
+        layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
+        layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
 
-            layer2.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
-            layer2b.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
+        layer2.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
+        layer2b.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
 
-            // Reposicionar camadas para loop infinito
-            if (layer1.x + layer1.width <= 0){
-                layer1.x = layer1b.x + layer1b.width;
-            }
-            if (layer1b.x + layer1b.width <= 0){
-                layer1b.x = layer1.x + layer1.width;
-            }
+        // Reposicionar camadas para loop infinito
+        if (layer1.x + layer1.width <= 0){
+            layer1.x = layer1b.x + layer1b.width;
+        }
+        if (layer1b.x + layer1b.width <= 0){
+            layer1b.x = layer1.x + layer1.width;
+        }
 
-            if (layer2.x + layer2.width <= 0){
-                layer2.x = layer2b.x + layer2b.width;
-            }
-            if (layer2b.x + layer2b.width <= 0){
-                layer2b.x = layer2.x + layer2.width;
-            }
+        if (layer2.x + layer2.width <= 0){
+            layer2.x = layer2b.x + layer2b.width;
+        }
+        if (layer2b.x + layer2b.width <= 0){
+            layer2b.x = layer2.x + layer2.width;
+        }
     }
+
     function cloudingIntro()
     {             
-    var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+        var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
         blackScreen.cameras = [camHUD];
-		blackScreen.scrollFactor.set();
-		add(blackScreen);
+        blackScreen.scrollFactor.set();
+        add(blackScreen);
     }
-		    
+
     override function countdownTick(count:Countdown, num:Int)
     {
         switch(count)
@@ -95,11 +96,13 @@ class Clouds extends BaseStage
                 dad.playAnim('hey', true);
                 boyfriend.playAnim('hey', true);
             case START:
-         if (curSong == 'clouding') //função da tela preta desaparecer
-			{
-				if (curStep == 128)
-					{
-					FlxTween.tween(whiteScreen, {alpha: 0}, 15, {ease: FlxEase.linear});	    
+                if (curSong == 'clouding') //função da tela preta desaparecer
+                {
+                    if (curStep == 128)
+                    {
+                        FlxTween.tween(whiteScreen, {alpha: 0}, 15, {ease: FlxEase.linear});
+                    }
+                }
         }
     }
 }
