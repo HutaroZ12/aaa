@@ -82,7 +82,13 @@ class Clouds extends BaseStage
         blackScreen.cameras = [camHUD];
 		blackScreen.scrollFactor.set();
 		add(blackScreen);
-    }
+
+    if (curSong == 'clouding') //função da tela preta desaparecer
+			{
+				if (curStep == 128)
+					{
+					FlxTween.tween(whiteScreen, {alpha: 0}, 15, {ease: FlxEase.linear});
+					}
 		    
     override function countdownTick(count:Countdown, num:Int)
     {
