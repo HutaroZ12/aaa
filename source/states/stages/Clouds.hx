@@ -49,7 +49,7 @@ class Clouds extends BaseStage
                 blackScreen.cameras = [camHUD];
                 blackScreen.scrollFactor.set();
                 add(blackScreen);
-                FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear});
+                FlxTween.tween(blackScreen, {alpha: 0}, 45, {ease: FlxEase.linear});
         }
     }
 
@@ -64,8 +64,8 @@ class Clouds extends BaseStage
     function parallaxUpdate(elapsed:Float)
     {
         // Atualizar a posição das camadas
-        layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
-        layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
+        layer1.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
+        layer1b.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
 
         layer2.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
         layer2b.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
