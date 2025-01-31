@@ -49,7 +49,6 @@ class Clouds extends BaseStage
                 blackScreen.cameras = [camHUD];
                 blackScreen.scrollFactor.set();
                 add(blackScreen);
-                FlxTween.tween(blackScreen, {alpha: 0}, 45, {ease: FlxEase.linear});
         }
     }
 
@@ -103,6 +102,7 @@ class Clouds extends BaseStage
                 dad.playAnim('hey', true);
                 boyfriend.playAnim('hey', true);
             case START:
+                FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear});
         }
     }
 }
