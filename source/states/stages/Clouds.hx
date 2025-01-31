@@ -12,6 +12,8 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
+    var blackScreen:FlxSprite; // Declare blackScreen at the class level
+    var songStarted:Bool = false; // Flag to check if the song has started
 
     override function create()
     {       
@@ -45,7 +47,7 @@ class Clouds extends BaseStage
         switch(songName)
         {
             case 'clouding':
-                var blackScreen:FlxSprite = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
+                blackScreen = new FlxSprite().makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.BLACK);
                 blackScreen.cameras = [camHUD];
                 blackScreen.scrollFactor.set();
                 add(blackScreen);
@@ -64,6 +66,15 @@ class Clouds extends BaseStage
     {
         super.update(elapsed);
         parallaxUpdate(elapsed);
+
+        // Fade out blackScreen if song has started
+        if (songStarted && blackScreen != null) {
+            FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) {
+                remove(blackScreen);
+                blackScreen = null;
+            }});
+            songStarted = false; // Reset flag after tweening
+        }
     }
 
     function parallaxUpdate(elapsed:Float)
@@ -102,9 +113,9 @@ class Clouds extends BaseStage
                 dad.playAnim('hey', true);
                 boyfriend.playAnim('hey', true);
             case START:
-                if (songName)
-                case 'clouding':
-                     FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear});
+                if (songName == 'clouding') {
+                    songStarted = true; // Set flag to start fading out blackScreen
+                }
         }
     }
-}
+        }
