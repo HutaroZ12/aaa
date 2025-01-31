@@ -89,7 +89,8 @@ class Clouds extends BaseStage
 					{
 					FlxTween.tween(whiteScreen, {alpha: 0}, 15, {ease: FlxEase.linear});
 					}
-		    
+			}
+	    
     override function countdownTick(count:Countdown, num:Int)
     {
         switch(count)
