@@ -69,12 +69,11 @@ class Clouds extends BaseStage
     }
 
     if (isStoryMode)
-		{
-			switch(songName)
-			{
-				case 'clouding':
-					setStartCallback(cloudingIntro);
-			}
+    {
+    switch(songName)
+    {
+	case 'clouding':
+	     setStartCallback(cloudingIntro);
 		}
 	}
                     
