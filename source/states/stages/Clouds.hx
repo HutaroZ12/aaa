@@ -61,29 +61,35 @@ class Clouds extends BaseStage
         add(layer5);
     }
     
+    override function update(elapsed:Float)
+    {
+        super.update(elapsed);
+        parallaxUpdate(elapsed);
+    }
+
     function parallaxUpdate(elapsed:Float)
     {
-        // Atualizar a posição das camadas
-        layer1.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
-        layer1b.x -= 70 * elapsed; // Ajuste a velocidade conforme necessário
+            // Atualizar a posição das camadas
+            layer1.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
+            layer1b.x -= 50 * elapsed; // Ajuste a velocidade conforme necessário
 
-        layer2.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
-        layer2b.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
+            layer2.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
+            layer2b.x -= 8 * elapsed; // Ajuste a velocidade conforme necessário
 
-        // Reposicionar camadas para loop infinito
-        if (layer1.x + layer1.width <= 0){
-            layer1.x = layer1b.x + layer1b.width;
-        }
-        if (layer1b.x + layer1b.width <= 0){
-            layer1b.x = layer1.x + layer1.width;
-        }
+            // Reposicionar camadas para loop infinito
+            if (layer1.x + layer1.width <= 0){
+                layer1.x = layer1b.x + layer1b.width;
+            }
+            if (layer1b.x + layer1b.width <= 0){
+                layer1b.x = layer1.x + layer1.width;
+            }
 
-        if (layer2.x + layer2.width <= 0){
-            layer2.x = layer2b.x + layer2b.width;
-        }
-        if (layer2b.x + layer2b.width <= 0){
-            layer2b.x = layer2.x + layer2.width;
-        }
+            if (layer2.x + layer2.width <= 0){
+                layer2.x = layer2b.x + layer2b.width;
+            }
+            if (layer2b.x + layer2b.width <= 0){
+                layer2b.x = layer2.x + layer2.width;
+            }
     }
 
     override function countdownTick(count:Countdown, num:Int)
