@@ -83,7 +83,7 @@ class Clouds extends BaseStage
         blackScreen.cameras = [camHUD];
         blackScreen.scrollFactor.set();
         add(blackScreen);
-        FlxTween.tween(whiteScreen, {alpha: 0}, 25, {ease: FlxEase.linear});
+        FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear});
     }
 
     override function countdownTick(count:Countdown, num:Int)
