@@ -59,7 +59,7 @@ class Clouds extends BaseStage
         if (songName == 'clouding')
         {
             if (curStep == 256) {
-                FlxG.camera.flash(FlxColor.WHITE, 2);
+                FlxG.camera.flash(FlxColor.WHITE, 1);
             }
         }
     } 
