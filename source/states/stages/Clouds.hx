@@ -56,7 +56,7 @@ class Clouds extends BaseStage
 
     override function stepHit()
     {
-        if (curSong == 'clouding')
+        if (songName == 'clouding')
         {
             if (curStep == 256) {
                 FlxG.camera.flash(FlxColor.WHITE, 2);
