@@ -82,7 +82,6 @@ class Clouds extends BaseStage
     {
         super.update(elapsed);
         parallaxUpdate(elapsed);
-        }
     }
 
     function parallaxUpdate(elapsed:Float)
