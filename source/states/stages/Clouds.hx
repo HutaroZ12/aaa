@@ -110,18 +110,17 @@ class Clouds extends BaseStage
         }
     }
 
-    override function countdownTick(count:Countdown, num:Int)
+    function countdownTick(count:Countdown, num:Int)
+{
+    switch(count)
     {
-        switch(count)
-        {
-            case THREE:
-            case TWO:
-            case ONE:
-            case GO:
-                dad.playAnim('hey', true);
-                boyfriend.playAnim('hey', true);
-            case START:
-                }
+        case THREE:
+        case TWO:
+        case ONE:
+        case GO:
+            dad.playAnim('hey', true);
+            boyfriend.playAnim('hey', true);
+        case START:
         }
     }
 }
