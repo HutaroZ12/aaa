@@ -58,6 +58,10 @@ class Clouds extends BaseStage
     {
         if (songName == 'clouding')
         {
+            if (curStep == 128) {
+                FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) 
+        }
+            
             if (curStep == 256) {
                 FlxG.camera.flash(FlxColor.WHITE, 1);
             }
@@ -76,14 +80,6 @@ class Clouds extends BaseStage
     {
         super.update(elapsed);
         parallaxUpdate(elapsed);
-
-        // Fade out blackScreen if song has started
-        if (songStarted && blackScreen != null) {
-            FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) {
-                remove(blackScreen);
-                blackScreen = null;
-            }});
-            songStarted = false; // Reset flag after tweening
         }
     }
 
@@ -123,8 +119,6 @@ class Clouds extends BaseStage
                 dad.playAnim('hey', true);
                 boyfriend.playAnim('hey', true);
             case START:
-                if (songName == 'clouding') {
-                    songStarted = true; // Set flag to start fading out blackScreen
                 }
         }
     }
