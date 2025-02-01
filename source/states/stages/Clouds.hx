@@ -56,19 +56,13 @@ class Clouds extends BaseStage
 
     override function stepHit()
     {
-    if (songName == 'clouding')
-    {
-        if (curStep == 128) {
-            FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) {
-                // Add any additional logic needed on completion
-            }});
-        }
-        
-        if (curStep == 256) {
-            FlxG.camera.flash(FlxColor.WHITE, 1);
+        if (songName == 'clouding')
+        {
+            if (curStep == 256) {
+                FlxG.camera.flash(FlxColor.WHITE, 1);
             }
-       }
-    }
+        }
+    } 
 
     override function createPost()
     {
@@ -82,6 +76,15 @@ class Clouds extends BaseStage
     {
         super.update(elapsed);
         parallaxUpdate(elapsed);
+
+        // Fade out blackScreen if song has started
+        if (songStarted && blackScreen != null) {
+            FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) {
+                remove(blackScreen);
+                blackScreen = null;
+            }});
+            songStarted = false; // Reset flag after tweening
+        }
     }
 
     function parallaxUpdate(elapsed:Float)
@@ -109,17 +112,20 @@ class Clouds extends BaseStage
         }
     }
 
-    function countdownTick(count:Countdown, num:Int)
-{
-    switch(count)
+    override function countdownTick(count:Countdown, num:Int)
     {
-        case THREE:
-        case TWO:
-        case ONE:
-        case GO:
-            dad.playAnim('hey', true);
-            boyfriend.playAnim('hey', true);
-        case START:
+        switch(count)
+        {
+            case THREE:
+            case TWO:
+            case ONE:
+            case GO:
+                dad.playAnim('hey', true);
+                boyfriend.playAnim('hey', true);
+            case START:
+                if (songName == 'clouding') {
+                    songStarted = true; // Set flag to start fading out blackScreen
+                }
         }
     }
-}
+        }
