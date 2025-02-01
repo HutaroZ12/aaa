@@ -56,17 +56,19 @@ class Clouds extends BaseStage
 
     override function stepHit()
     {
-        if (songName == 'clouding')
-        {
-            if (curStep == 128) {
-                FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) 
+    if (songName == 'clouding')
+    {
+        if (curStep == 128) {
+            FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) {
+                // Add any additional logic needed on completion
+            }});
         }
-            
-            if (curStep == 256) {
-                FlxG.camera.flash(FlxColor.WHITE, 1);
+        
+        if (curStep == 256) {
+            FlxG.camera.flash(FlxColor.WHITE, 1);
             }
-        }
-    } 
+       }
+    }
 
     override function createPost()
     {
