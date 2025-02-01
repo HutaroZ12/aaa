@@ -59,7 +59,7 @@ class Clouds extends BaseStage
         if (songName == 'clouding')
         {
             if (curStep == 128) {
-                FlxTween.tween(blackScreen, {alpha: 0}, 25, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) 
+                FlxTween.tween(blackScreen, {alpha: 0}, 15, {ease: FlxEase.linear, onComplete: function(twn:FlxTween) 
         }
             
             if (curStep == 256) {
