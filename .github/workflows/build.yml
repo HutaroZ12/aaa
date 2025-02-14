@@ -50,6 +50,9 @@ jobs:
         if: inputs.name == 'Linux'
         run: sudo apt install libvlc-dev libvlccore-dev
 
+      - name: Install hxcpp
+        run: haxelib install hxcpp
+
       - name: Install Libraries
         run: ${{ inputs.setupCommand }}
 
