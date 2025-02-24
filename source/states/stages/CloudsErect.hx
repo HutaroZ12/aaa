@@ -2,7 +2,7 @@ package states.stages;
 
 import states.stages.objects.*;
 
-class Clouds extends BaseStage
+class CloudsErect extends BaseStage
 {
     var layer0:FlxSprite;
     var layer1:FlxSprite;
