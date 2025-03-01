@@ -6,7 +6,7 @@ permissions:
   discussions: write
 
 env:
-  PROJECT_NAME: PsychEngine
+  PROJECT_NAME: aaa
   REPO_PATH: HutaroZ12/aaa
 
 jobs:
