@@ -68,7 +68,7 @@ class DiscordClient
 
     public static function initialize()
     {
-        var discordHandlers:DiscordEventHandlers = {};
+        var discordHandlers:DiscordEventHandlers = new DiscordEventHandlers();
         discordHandlers.ready = cpp.Function.fromStaticFunction(onReady);
         discordHandlers.disconnected = cpp.Function.fromStaticFunction(onDisconnected);
         discordHandlers.errored = cpp.Function.fromStaticFunction(onError);
@@ -231,7 +231,7 @@ private final class DiscordPresence
         return __presence.largeImageKey;
     }
     
-    @:noCompletion inline function set_largeImageKey(value:String):String
+    @:noCompletion inline function set_largeImageKey(value:String)
     {
         return __presence.largeImageKey = value;
     }
@@ -241,7 +241,7 @@ private final class DiscordPresence
         return __presence.largeImageText;
     }
 
-    @:noCompletion inline function set_largeImageText(value:String):String
+    @:noCompletion inline function set_largeImageText(value:String)
     {
         return __presence.largeImageText = value;
     }
@@ -261,7 +261,7 @@ private final class DiscordPresence
         return __presence.endTimestamp;
     }
 
-    @:noCompletion inline function set_endTimestamp(value:Int):Int
+    @:noCompletion inline function set_endTimestamp(value:Int)
     {
         return __presence.endTimestamp = value;
     }
