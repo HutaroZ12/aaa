@@ -68,28 +68,34 @@ class DiscordClient
 
 	public static function initialize()
 	{
-    var discordHandlers:DiscordEventHandlers = {};
-    discordHandlers.ready = cpp.Function.fromStaticFunction(onReady);
-    discordHandlers.disconnected = cpp.Function.fromStaticFunction(onDisconnected);
-    discordHandlers.errored = cpp.Function.fromStaticFunction(onError);
-    Discord.Initialize(clientID, cpp.RawPointer.addressOf(discordHandlers), 1, null);
+        var discordHandlers:DiscordEventHandlers = DiscordEventHandlers.create();
+		discordHandlers.ready = cpp.Function.fromStaticFunction(onReady);
+		discordHandlers.disconnected = cpp.Function.fromStaticFunction(onDisconnected);
+		discordHandlers.errored = cpp.Function.fromStaticFunction(onError);
+		Discord.Initialize(clientID, cpp.RawPointer.addressOf(discordHandlers), 1, null);
 
-    if (!isInitialized) trace("Discord Client initialized");
+		if(!isInitialized) trace("Discord Client initialized");
 
-    if (__thread == null) {
-        __thread = Thread.create(() -> {
-            while (true) {
-                if (isInitialized) {
-                    #if DISCORD_DISABLE_IO_THREAD
-                    Discord.UpdateConnection();
-                    #end
-                    Discord.RunCallbacks();
-                }
-                Sys.sleep(1.0);
-            }
-        });
-    }
-    isInitialized = true;
+		if (__thread == null)
+		{
+			__thread = Thread.create(() ->
+			{
+				while (true)
+				{
+					if (isInitialized)
+					{
+						#if DISCORD_DISABLE_IO_THREAD
+						Discord.UpdateConnection();
+						#end
+						Discord.RunCallbacks();
+					}
+
+					// Wait 1 second until the next loop...
+					Sys.sleep(1.0);
+				}
+			});
+		}
+		isInitialized = true;
 	}
 
 	public static function changePresence(details:String = 'In the Menus', ?state:String, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float, largeImageKey:String = 'icon')
