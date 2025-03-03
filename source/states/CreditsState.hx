@@ -38,9 +38,15 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			['Vs Eyyzu Team'],
-			['hutaroz',    'hutas',                     'Artist, Animator, Programmer or coder and charter',                              'https://x.com/Hutaroz?t=cLSZ7yf6Cdj7r8zToNalSA&s=09',            'FFEFB3'],
-			['Neverminds',   'never',                     'awesome composer',                                                               'https://x.com/nevermindslol?t=RU206C58UKG-JeqgBVZ61w&s=09',        'FFFFFF'],
+			['Vs Eyyzu'],
+			['hutaroz',    'hutas',                     'director, Artist, Animator, composer, Programmer and charter',                              'https://x.com/Hutaroz?t=cLSZ7yf6Cdj7r8zToNalSA&s=09',            'FFEFB3'],
+			['Neverminds',   'never',   'composer',                                                               'https://x.com/nevermindslol?t=RU206C58UKG-JeqgBVZ61w&s=09',        'FFFFFF'],
+			['willzey13',    'will',       'coder',                  'https://x.com/wilzey13lol?t=wKrQKbjNle0afqboPMKdrA&s=09',        'FF7A0E'],
+			['Mike Nakimy',  'nakimy',   'background artist',       'https://x.com/Nakimy_oficial?t=wxuS-fdLETp-sZRClz8r0w&s=09',        'FF453659'],
+			['Tihenrry',     'tihe',     'logo artist',                   'https://x.com/tihe7417dgf?t=R_4KC7ieJ3GxzlIvMcVvmg&s=09',        'FFFFFF'],
+			['Fita',           'fino',   'charter',                'https://x.com/FittedBarley89?t=xc3KMe1P_CHP15s2KwRetg&s=09',        'FFFFFF'],
+		        ['Daniel Gamer Legal',   'dgl',      'composer',                    'https://x.com/DGLDaniOfc1?t=LUYfwTFDN5KHNGme_pJ9hQ&s=09',        'FF0090FF'],
+			['shadeX',      'shadeX',     'composer',                      'https://youtube.com/@adryanxsongs?si=hWr0on0SeC_4uE_S',        'FFFFFF'],
 			[''],
 			['Mobile Porting Team'],
 			['mcagabe19',			'lily',             'Head Porter of Psych Engine and Author of linc_luajit-rewriten',                       'https://youtube.com/@mcagabe19',		'FFE7C0'],
