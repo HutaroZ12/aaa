@@ -56,27 +56,11 @@ jobs:
             setupCommand: sh ./setup/mobile.sh
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
-    runs-on: ${{ matrix.os }}
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y haxe hxcpp
-        export HXCPP=$(haxelib path hxcpp | head -n 1)
-
-    - name: Setup environment
-      run: ${{ matrix.setupCommand }}
-
-    - name: Build project
-      run: |
-        haxe ${{ matrix.buildArgs }}
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: ${{ matrix.artifactName }}
-        path: ${{ matrix.artifactPath }}
+    uses: ./.github/workflows/build.yml
+    with:
+        name: ${{ matrix.name }}
+        os: ${{ matrix.os }}
+        buildArgs: ${{ matrix.buildArgs }}
+        setupCommand: ${{ matrix.setupCommand }}
+        artifactName: ${{ matrix.artifactName }}
+        artifactPath: ${{ matrix.artifactPath }}
