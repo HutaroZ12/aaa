@@ -39,7 +39,7 @@ class CreditsState extends MusicBeatState
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['Vs Eyyzu'],
-			['hutaroz',    'hutas',                     'director, Artist, Animator, composer, Programmer and charter',                              'https://x.com/Hutaroz?t=cLSZ7yf6Cdj7r8zToNalSA&s=09',            'FFEFB3'],
+			['hutaroz',    'hutas',                     'director, Artist, Animator, composer, Programmer and charter',                              'https://x.com/Hutaroz?t=cLSZ7yf6Cdj7r8zToNalSA&s=09',            'FFDD9E'],
 			['Neverminds',   'never',   'composer',                                                               'https://x.com/nevermindslol?t=RU206C58UKG-JeqgBVZ61w&s=09',        'FFFFFF'],
 			['willzey13',    'will',       'coder',                  'https://x.com/wilzey13lol?t=wKrQKbjNle0afqboPMKdrA&s=09',        'FF7A0E'],
 			['Mike Nakimy',  'nakimy',   'background artist',       'https://x.com/Nakimy_oficial?t=wxuS-fdLETp-sZRClz8r0w&s=09',        'FF453659'],
