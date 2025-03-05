@@ -13,7 +13,7 @@ class Clouds extends BaseStage
     var layer4:FlxSprite;
     var layer5:FlxSprite;
     var movieBars:FlxSprite;
-    var songinfo:AttachedSprite;
+    var songinfo:FlxSprite;
     var blackScreen:FlxSprite; // Declare blackScreen at the class level
     var songStarted:Bool = false; // Flag to check if the song has started
 
@@ -50,7 +50,7 @@ class Clouds extends BaseStage
         movieBars.cameras = [camHUD];
         add(movieBars);
 
-        songinfo = new AttachedSprite('songs/song-' + curSong);
+        songinfo = new FlxSprite('songs/song-' + curSong);
 	songinfo.animation.addByPrefix('idle', 'idle', 8, true);
 	songinfo.scrollFactor.set();
 	songinfo.visible = !ClientPrefs.hideHud;
