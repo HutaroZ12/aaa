@@ -81,19 +81,20 @@ class Clouds extends BaseStage
             FlxTween.tween(songinfo, {x: -500}, 2.6, {
                 ease: FlxEase.expoIn,
                 onComplete: function(twn:FlxTween) {
-                    // Add the necessary completion code here
+                 
                 }
             });
         }
     }
+}
 
-    override function createPost()
-    {
-        layer5 = new BGSprite('stages/sky/layer5', -500, -300);
-        layer5.scrollFactor.set(1, 1);
-        layer5.blend = ADD;
-        add(layer5);
-    }
+override function createPost()
+{
+    layer5 = new BGSprite('stages/sky/layer5', -500, -300);
+    layer5.scrollFactor.set(1, 1);
+    layer5.blend = ADD;
+    add(layer5);
+}
     
     override function update(elapsed:Float)
     {
