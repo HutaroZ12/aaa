@@ -13,6 +13,7 @@ class Clouds extends BaseStage
     var layer4:FlxSprite;
     var layer5:FlxSprite;
     var movieBars:FlxSprite;
+    var songinfo:FlxSprite;
     var blackScreen:FlxSprite; // Declare blackScreen at the class level
     var songStarted:Bool = false; // Flag to check if the song has started
 
@@ -48,6 +49,12 @@ class Clouds extends BaseStage
         movieBars = new BGSprite('movieBars', 0, 0);
         movieBars.cameras = [camHUD];
         add(movieBars);
+
+        songinfo = new AttachedSprite('songs/song-' + curSong);
+		songinfo.scrollFactor.set();
+		songinfo.visible = !ClientPrefs.hideHud;
+		songinfo.x -= 500;
+		add(songinfo);
         
         switch(songName)
         {
@@ -65,6 +72,14 @@ class Clouds extends BaseStage
         {
             if (curStep == 256) {
                 FlxG.camera.flash(FlxColor.WHITE, 1);
+        }
+            if (curStep == 258) {    
+                FlxTween.tween(songinfo, {x: 0}, 2.6, {ease: FlxEase.expoOut});
+        }
+        if (curStep == 292) {    
+                FlxTween.tween(songinfo, {x: -500}, 2.6, {
+					ease: FlxEase.expoIn,
+					onComplete: function(twn:FlxTween)
             }
         }
     } 
