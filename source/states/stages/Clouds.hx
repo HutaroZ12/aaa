@@ -51,10 +51,11 @@ class Clouds extends BaseStage
         add(movieBars);
 
         songinfo = new AttachedSprite('songs/song-' + curSong);
-		songinfo.scrollFactor.set();
-		songinfo.visible = !ClientPrefs.hideHud;
-		songinfo.x -= 500;
-		add(songinfo);
+	songinfo.animation.addByPrefix('idle', 'idle', 8, true);
+	songinfo.scrollFactor.set();
+	songinfo.visible = !ClientPrefs.hideHud;
+	songinfo.x -= 500;
+	add(songinfo);
         
         switch(songName)
         {
@@ -73,7 +74,7 @@ class Clouds extends BaseStage
             if (curStep == 256) {
                 FlxG.camera.flash(FlxColor.WHITE, 1);
         }
-            if (curStep == 258) {    
+            if (curStep == 260) {    
                 FlxTween.tween(songinfo, {x: 0}, 2.6, {ease: FlxEase.expoOut});
         }
         if (curStep == 292) {    
