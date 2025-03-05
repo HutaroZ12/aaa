@@ -12,6 +12,7 @@ class Clouds extends BaseStage
     var layer3:FlxSprite;
     var layer4:FlxSprite;
     var layer5:FlxSprite;
+    var movieBars:FlxSprite;
     var blackScreen:FlxSprite; // Declare blackScreen at the class level
     var songStarted:Bool = false; // Flag to check if the song has started
 
@@ -43,6 +44,10 @@ class Clouds extends BaseStage
 
         layer3 = new BGSprite('stages/sky/layer3', -500, -300, 1, 1);
         add(layer3);
+
+        movieBars = new BGSprite('movieBars', 0, 0);
+        movieBars.cameras = [camHUD];
+        add(movieBars);
         
         switch(songName)
         {
