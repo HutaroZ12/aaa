@@ -51,7 +51,7 @@ class Clouds extends BaseStage
         add(movieBars);
 
         songinfo = new FlxSprite();
-        rairum.frames = Paths.getSparrowAtlas('songs/song-' + songName);
+        songinfo.frames = Paths.getSparrowAtlas('songs/song-' + songName);
 	songinfo.animation.addByPrefix('idle', 'idle', 8, true);
 	songinfo.scrollFactor.set();
 	songinfo.visible = !ClientPrefs.hideHud;
