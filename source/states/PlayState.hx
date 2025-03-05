@@ -533,13 +533,13 @@ class PlayState extends MusicBeatState
 
 		healthBarBG = new FlxSprite(30, FlxG.height - 75).loadGraphic(Paths.image('healthBarBG'));
 		healthBarBG.screenCenter(X);
-		healthBarBG.y = 620;
+		healthBarBG.y = 619;
 		healthBarBG.scrollFactor.set();
 		healthBarBG.visible = !ClientPrefs.data.hideHud;
 		healthBarBG.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(healthBarBG);
 
-		if(ClientPrefs.data.downScroll) healthBarBG.y = 20;
+		if(ClientPrefs.data.downScroll) healthBarBG.y = 39;
 		
 		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : -600), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
@@ -550,7 +550,7 @@ class PlayState extends MusicBeatState
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(healthBar);
 
-		if(ClientPrefs.data.downScroll) healthBar.y = 20;
+		if(ClientPrefs.data.downScroll) healthBar.y = 40;
 		reloadHealthBarColors();
 		
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
