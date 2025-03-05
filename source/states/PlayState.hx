@@ -584,7 +584,7 @@ class PlayState extends MusicBeatState
 
 		uiGroup.cameras = [camHUD];
 		noteGroup.cameras = [camHUD];
-		comboGroup.cameras = [camGame];
+		comboGroup.cameras = [camHUD];
 
 		startingSong = true;
 
