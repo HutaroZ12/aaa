@@ -54,7 +54,7 @@ class Clouds extends BaseStage
         songinfo.frames = Paths.getSparrowAtlas('songs/song-' + songName);
 	songinfo.animation.addByPrefix('idle', 'idle', 8, true);
 	songinfo.scrollFactor.set();
-	songinfo.visible = !ClientPrefs.hideHud;
+	songinfo.visible = !ClientPrefs.data.hideHud;
 	songinfo.x -= 500;
 	songinfo.animation.play('idle');
 	songinfo.cameras = [camHUD];
